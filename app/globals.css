@@ -533,7 +533,19 @@ svg {
   font-weight: 800;
 }
 
-.symbol-tags button { border: 0; cursor: pointer; }
+.symbol-tags button {
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.symbol-tags button:hover,
+.symbol-tags button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
 
 .hero-story .symbol-tags span {
   background: rgba(255, 255, 255, 0.11);
