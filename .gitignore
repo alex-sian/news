@@ -1,7 +1,7 @@
-.DS_Store
-.env
-.env.*
-!.env.example
+.next/
 node_modules/
-dist/
-README.local.md
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+.DS_Store
