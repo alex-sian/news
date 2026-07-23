@@ -1,26 +1,9 @@
-# Stock News
+# News
 
-Blank-slate site for viewing stock news and basic market charts. This repository is independent of the existing pAnalyst MVP application, while initially deploying inside the same Render workspace.
+The authoritative project tracker is the [News project sheet](https://docs.google.com/spreadsheets/d/1--iDsQqfvfayQPTnnTkV06HgTSHeCyt64gxES1_DyU8/edit). This README is only its hot-read table of contents.
 
-## Current state
-
-- Static foundation only; no production data integrations are active.
-- No user accounts, database, or server component yet.
-- No secret values belong in this repository or in browser-side JavaScript.
-
-## Architecture direction
-
-The static page can remain the frontend, but live news, charts, and future member accounts require a server-side API and database:
-
-1. Browser UI renders public pages and authenticated member views.
-2. Server-side routes call market-data providers and keep provider keys private.
-3. A database stores members, saved symbols, cached news, and preferences.
-4. Render owns production environment variables; `.env` files remain local and uncommitted.
-
-## Local preview
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open http://localhost:8000.
+| Hot read | Tracker pointer |
+|---|---|
+| Product overview, current state, and next actions | [Overview · A1:F13](https://docs.google.com/spreadsheets/d/1--iDsQqfvfayQPTnnTkV06HgTSHeCyt64gxES1_DyU8/edit#gid=0&range=A1:F13) |
+| Render workspace, service, deploy, repository, and migration status | [Render · A1:F20](https://docs.google.com/spreadsheets/d/1--iDsQqfvfayQPTnnTkV06HgTSHeCyt64gxES1_DyU8/edit#gid=910000001&range=A1:F20) |
+| Neon project, branch, compute, database, and connection metadata | [Neon · A1:F18](https://docs.google.com/spreadsheets/d/1--iDsQqfvfayQPTnnTkV06HgTSHeCyt64gxES1_DyU8/edit#gid=910000002&range=A1:F18) |
