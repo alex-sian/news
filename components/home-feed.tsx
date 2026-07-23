@@ -8,6 +8,118 @@ import { SiteHeader } from "./site-header";
 
 const filters = ["Top", "Latest", "Markets", "Technology", "Economy"];
 
+const marketSymbols = new Set([
+  "SPY",
+  "DIA",
+  "QQQ",
+  "IWM",
+  "VXX",
+  "VIX",
+  "TLT",
+  "GLD",
+  "USO",
+  "XLF",
+  "XLE",
+  "XLK",
+]);
+
+const technologySymbols = new Set([
+  "AAPL",
+  "AMD",
+  "AMZN",
+  "AVGO",
+  "GOOG",
+  "GOOGL",
+  "INTC",
+  "META",
+  "MSFT",
+  "MU",
+  "NFLX",
+  "NVDA",
+  "ORCL",
+  "PLTR",
+  "TSLA",
+]);
+
+const economyTerms = [
+  "fed",
+  "federal reserve",
+  "inflation",
+  "jobs",
+  "payroll",
+  "cpi",
+  "gdp",
+  "tariff",
+  "treasury",
+  "yield",
+  "interest rate",
+  "economy",
+  "recession",
+];
+
+const marketTerms = [
+  "market",
+  "stocks",
+  "shares",
+  "futures",
+  "wall street",
+  "rally",
+  "selloff",
+  "s&p",
+  "nasdaq",
+  "dow",
+  "volatility",
+];
+
+const technologyTerms = [
+  "ai",
+  "artificial intelligence",
+  "chip",
+  "semiconductor",
+  "software",
+  "cloud",
+  "data center",
+  "technology",
+  "cyber",
+];
+
+function includesTopic(
+  article: HomePayload["articles"][number],
+  symbols: Set<string>,
+  terms: string[],
+) {
+  const text = `${article.headline} ${article.summary}`.toLowerCase();
+  return article.symbols.some((symbol) => symbols.has(symbol)) ||
+    terms.some((term) => text.includes(term));
+}
+
+function filterArticles(
+  articles: HomePayload["articles"],
+  filter: string,
+) {
+  if (filter === "Top") return articles;
+  if (filter === "Latest") {
+    return [...articles].sort(
+      (left, right) =>
+        new Date(right.updated_at).getTime() -
+        new Date(left.updated_at).getTime(),
+    );
+  }
+  if (filter === "Markets") {
+    return articles.filter((article) =>
+      includesTopic(article, marketSymbols, marketTerms),
+    );
+  }
+  if (filter === "Technology") {
+    return articles.filter((article) =>
+      includesTopic(article, technologySymbols, technologyTerms),
+    );
+  }
+  return articles.filter((article) =>
+    includesTopic(article, new Set(), economyTerms),
+  );
+}
+
 export function HomeFeed({ initialData }: { initialData: HomePayload }) {
   const [data, setData] = useState(initialData);
   const [active, setActive] = useState("Top");
@@ -23,7 +135,8 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
     }
   }, []);
 
-  const [lead, ...rest] = data.articles;
+  const visibleArticles = filterArticles(data.articles, active);
+  const [lead, ...rest] = visibleArticles;
   const topStories = rest.slice(0, 3);
   const latest = rest.slice(3);
 
@@ -82,14 +195,30 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
             <div className="section-heading latest-heading">
               <div>
                 <p className="kicker">News desk</p>
-                <h2>Latest</h2>
+                <h2>{active === "Top" ? "Latest" : active}</h2>
               </div>
-              <span>Newest first</span>
+              <span>
+                {visibleArticles.length
+                  ? `${visibleArticles.length} stories`
+                  : "No matching stories"}
+              </span>
             </div>
             <div className="feed-list">
-              {(latest.length ? latest : topStories).map((article) => (
-                <FeedStory article={article} key={article.id} />
-              ))}
+              {visibleArticles.length ? (
+                (latest.length ? latest : topStories).map((article) => (
+                  <FeedStory article={article} key={article.id} />
+                ))
+              ) : (
+                <div className="empty-topic">
+                  <strong>No current {active.toLowerCase()} stories.</strong>
+                  <p>
+                    Try another topic or refresh for the newest Alpaca feed.
+                  </p>
+                  <button type="button" onClick={() => setActive("Top")}>
+                    Show top stories
+                  </button>
+                </div>
+              )}
             </div>
           </div>
 

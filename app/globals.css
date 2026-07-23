@@ -618,6 +618,36 @@ svg {
   border-bottom: 2px solid var(--ink);
 }
 
+.empty-topic {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.empty-topic strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+}
+
+.empty-topic p {
+  max-width: 34rem;
+  margin: 0.45rem 0 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.empty-topic button {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+
 .feed-story {
   display: grid;
   grid-template-columns: 1fr 5.7rem;
