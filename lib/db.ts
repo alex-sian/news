@@ -1,7 +1,9 @@
 import { neon } from "@neondatabase/serverless";
 import type { ManagedTopic, TopicArticle } from "./topics";
 import {
+  DALLAS_MAVERICKS_SEEDS,
   RA_MANAGED_TOPIC,
+  SPORTS_TEAM_CATEGORIES,
   SOLID_STATE_BATTERIES_TOPIC,
   SOLID_STATE_BATTERY_SEEDS,
 } from "./topics";
@@ -64,6 +66,26 @@ function sqlClient() {
 }
 
 function topicFromRow(row: DbTopicRow): ManagedTopic {
+  const sportsTeamOverride =
+    row.slug === "dallas-mavericks"
+      ? {
+          categories: [...SPORTS_TEAM_CATEGORIES],
+          sourcePolicy: {
+            prefer: [
+              "official team sources",
+              "league sources",
+              "box score and schedule data",
+              "credible beat reporting",
+              "statistics references",
+            ],
+            caution: [
+              "trade rumors without named reporting",
+              "engagement-bait fan speculation",
+              "thin rewrites of official announcements",
+            ],
+          },
+        }
+      : null;
   return {
     id: row.id,
     slug: row.slug,
@@ -74,8 +96,11 @@ function topicFromRow(row: DbTopicRow): ManagedTopic {
     refreshHours: row.refresh_hours,
     publishMode: row.publish_mode,
     status: row.status,
-    categories: row.categories ?? [],
-    sourcePolicy: row.source_policy ?? { prefer: [], caution: [] },
+    categories: sportsTeamOverride?.categories ?? row.categories ?? [],
+    sourcePolicy:
+      sportsTeamOverride?.sourcePolicy ??
+      row.source_policy ??
+      { prefer: [], caution: [] },
     publicPath: row.public_path ?? `/topics/${row.slug}`,
     createdAt: String(row.created_at).slice(0, 10),
     updatedAt: String(row.updated_at).slice(0, 10),
@@ -131,6 +156,7 @@ function raArticles(): TopicArticle[] {
 function fallbackArticlesForSlug(slug: string) {
   if (slug === "ra-news") return raArticles();
   if (slug === "solid-state-batteries") return SOLID_STATE_BATTERY_SEEDS;
+  if (slug === "dallas-mavericks") return DALLAS_MAVERICKS_SEEDS;
   return [];
 }
 

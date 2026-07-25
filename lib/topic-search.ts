@@ -35,6 +35,62 @@ function suggestedTags(title: string, query: string) {
   return [...new Set(tags)];
 }
 
+function draftForQuery(query: string) {
+  const draftTitle = normalizeTopicTitle(query);
+  const slug = slugify(draftTitle);
+  const sportsTeam =
+    /\b(mavericks|nba|basketball|cowboys|rangers|stars|fc dallas|wings)\b/i.test(query);
+
+  if (sportsTeam) {
+    return {
+      title: draftTitle,
+      slug,
+      purpose: "personal sports/team monitoring",
+      geography: ["Dallas", "Texas", "United States"],
+      categories: [
+        "Latest",
+        "Best & evergreen",
+        "Official team news",
+        "Roster & injuries",
+        "Schedule & results",
+        "Transactions",
+        "Analysis",
+        "Stats",
+      ],
+      prefer: [
+        "official team sources",
+        "league sources",
+        "box score and schedule data",
+        "credible beat reporting",
+        "statistics references",
+      ],
+      caution: [
+        "trade rumors without named reporting",
+        "engagement-bait fan speculation",
+        "thin rewrites of official announcements",
+      ],
+    };
+  }
+
+  return {
+    title: draftTitle,
+    slug,
+    purpose: "personal research and monitoring",
+    geography: ["United States"],
+    categories: [
+      "Latest",
+      "Best & evergreen",
+      "Technology basics",
+      "Manufacturing & scale-up",
+      "Safety",
+      "Research papers",
+      "Timelines & skepticism",
+    ],
+    prefer: ["primary sources", "government sources", "peer-reviewed research", "credible trade coverage"],
+    caution: ["company claims without independent validation", "content farms", "thin recaps of press releases"],
+  };
+}
+
 export async function searchTopicCandidates(query: string): Promise<TopicSearchResult[]> {
   const normalized = query.trim();
   if (!normalized) return [];
@@ -57,7 +113,7 @@ export async function searchTopicCandidates(query: string): Promise<TopicSearchR
     });
     if (!response.ok) throw new Error(`Crossref failed ${response.status}`);
     const payload = await response.json();
-    const draftTitle = normalizeTopicTitle(normalized);
+    const topicDraft = draftForQuery(normalized);
     return (payload.message?.items ?? [])
       .map((item: {
         title?: string[];
@@ -83,33 +139,17 @@ export async function searchTopicCandidates(query: string): Promise<TopicSearchR
           publishedAt: dateFromParts(item.published),
           evidence: title.toLowerCase().includes("review") ? "Review" : "Research paper",
           suggestedTags: tags,
-          topicDraft: {
-            title: draftTitle,
-            slug: slugify(draftTitle),
-            purpose: "personal research and monitoring",
-            geography: ["United States"],
-            categories: [
-              "Latest",
-              "Best & evergreen",
-              "Technology basics",
-              "Manufacturing & scale-up",
-              "Safety",
-              "Research papers",
-              "Timelines & skepticism",
-            ],
-            prefer: ["primary sources", "government sources", "peer-reviewed research", "credible trade coverage"],
-            caution: ["company claims without independent validation", "content farms", "thin recaps of press releases"],
-          },
+          topicDraft,
         } satisfies TopicSearchResult;
       })
       .filter(Boolean)
       .slice(0, 8);
   } catch {
-    const draftTitle = normalizeTopicTitle(normalized);
+    const topicDraft = draftForQuery(normalized);
     return [
       {
         id: `manual-${slugify(normalized)}`,
-        title: draftTitle,
+        title: topicDraft.title,
         summary:
           "Search could not reach the candidate-source API from this environment. You can still add the topic and let the scheduled collector populate it later.",
         source: "Manual topic draft",
@@ -117,15 +157,7 @@ export async function searchTopicCandidates(query: string): Promise<TopicSearchR
         publishedAt: new Date().toISOString().slice(0, 10),
         evidence: "Context",
         suggestedTags: ["Latest", "Best & evergreen"],
-        topicDraft: {
-          title: draftTitle,
-          slug: slugify(draftTitle),
-          purpose: "personal research and monitoring",
-          geography: ["United States"],
-          categories: ["Latest", "Best & evergreen", "Research papers"],
-          prefer: ["primary sources", "government sources", "credible specialist coverage"],
-          caution: ["content farms", "thin recaps", "unverified claims"],
-        },
+        topicDraft,
       },
     ];
   }

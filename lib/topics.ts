@@ -275,6 +275,88 @@ export const SOLID_STATE_BATTERY_SEEDS: TopicArticle[] = [
   },
 ];
 
+export const SPORTS_TEAM_CATEGORIES = [
+  "Latest",
+  "Best & evergreen",
+  "Official team news",
+  "Roster & injuries",
+  "Schedule & results",
+  "Transactions",
+  "Analysis",
+  "Stats",
+] as const;
+
+export const DALLAS_MAVERICKS_SEEDS: TopicArticle[] = [
+  {
+    id: "mavs-official-site",
+    title: "Official Dallas Mavericks news",
+    summary:
+      "The team’s own news hub for announcements, game coverage, community items, roster updates, and official media.",
+    whyItMatters:
+      "Official team sources are the cleanest baseline for confirmed announcements before commentary starts echoing around.",
+    limitation:
+      "Team-owned coverage is not independent and will naturally frame news in the organization’s voice.",
+    source: "Dallas Mavericks",
+    url: "https://www.mavs.com/",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "Primary source",
+    tags: ["Best & evergreen", "Official team news"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-nba-team-page",
+    title: "Dallas Mavericks on NBA.com",
+    summary:
+      "NBA.com’s team page centralizes official league coverage, roster context, schedule, highlights, standings, and team media.",
+    whyItMatters:
+      "League pages are useful for schedule/results context and official NBA framing around a team.",
+    limitation:
+      "It is still an official league surface, not independent analysis.",
+    source: "NBA.com",
+    url: "https://www.nba.com/mavericks/",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "Primary source",
+    tags: ["Best & evergreen", "Schedule & results", "Roster & injuries"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-espn-team-page",
+    title: "Dallas Mavericks scores, stats, and highlights",
+    summary:
+      "ESPN’s Mavericks page tracks scores, schedule, standings, roster, injuries, statistics, and related coverage.",
+    whyItMatters:
+      "This is a practical dashboard source for checking the team state quickly.",
+    limitation:
+      "ESPN mixes data, wire coverage, and commentary; individual stories still need source-by-source judgment.",
+    source: "ESPN",
+    url: "https://www.espn.com/nba/team/_/name/dal/dallas-mavericks",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "News report",
+    tags: ["Stats", "Schedule & results", "Roster & injuries"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-basketball-reference",
+    title: "Dallas Mavericks franchise statistics",
+    summary:
+      "Basketball Reference provides historical team records, rosters, season summaries, player statistics, and franchise context.",
+    whyItMatters:
+      "It gives the topic desk durable statistical context instead of only reacting to today’s headlines.",
+    limitation:
+      "It is a reference/statistics source, not a breaking-news source.",
+    source: "Basketball Reference",
+    url: "https://www.basketball-reference.com/teams/DAL/",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "Context",
+    tags: ["Best & evergreen", "Stats"],
+    evergreen: true,
+  },
+];
+
 export function slugify(value: string) {
   return value
     .toLowerCase()
