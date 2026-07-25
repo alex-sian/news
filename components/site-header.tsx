@@ -5,10 +5,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CloseIcon, MenuIcon, SearchIcon } from "./icons";
 
-const links = [
+type NavLink = {
+  href: string;
+  label: string;
+  eyebrow: string;
+};
+
+const baseLinks: NavLink[] = [
   { href: "/", label: "Home", eyebrow: "Latest market news" },
-  { href: "/ra-news", label: "RA News", eyebrow: "Research, treatment & relief" },
-  { href: "/topics/solid-state-batteries", label: "Solid State Batteries", eyebrow: "Battery research desk" },
   { href: "/archive", label: "Viewed Archive", eyebrow: "Previously opened articles" },
   { href: "/admin", label: "Admin", eyebrow: "Topic management" },
   { href: "/watchlists", label: "Watchlists", eyebrow: "Symbols you follow" },
@@ -18,6 +22,10 @@ const links = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [topicLinks, setTopicLinks] = useState<NavLink[]>([
+    { href: "/ra-news", label: "RA News", eyebrow: "Research, treatment & relief" },
+    { href: "/topics/solid-state-batteries", label: "Solid State Batteries", eyebrow: "Research desk" },
+  ]);
 
   useEffect(() => {
     setOpen(false);
@@ -29,6 +37,32 @@ export function SiteHeader() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadTopics() {
+      try {
+        const response = await fetch("/api/topics", { cache: "no-store" });
+        if (!response.ok) return;
+        const payload = (await response.json()) as { topics?: NavLink[] };
+        if (!cancelled && Array.isArray(payload.topics)) {
+          setTopicLinks(payload.topics);
+        }
+      } catch {
+        // Keep the built-in topic links if the dynamic list is unavailable.
+      }
+    }
+    loadTopics();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const links = [
+    baseLinks[0],
+    ...topicLinks,
+    ...baseLinks.slice(1),
+  ];
 
   return (
     <>

@@ -39,6 +39,27 @@ function tagsFor(title, topicTitle, categories = []) {
   return [...new Set(tags)];
 }
 
+function sportsTagsFor(article) {
+  const text = `${article.title} ${article.summary}`.toLowerCase();
+  const tags = ["Latest"];
+  if (/injur|ankle|knee|hamstring|illness|questionable|probable|out\b/i.test(text)) {
+    tags.push("Roster & injuries");
+  }
+  if (/trade|sign|waive|contract|extension|free agent|transaction/i.test(text)) {
+    tags.push("Transactions");
+  }
+  if (/score|schedule|standings|playoff|final|win|loss/i.test(text)) {
+    tags.push("Schedule & results");
+  }
+  if (/stat|rating|rank|efficiency|points|rebounds|assists/i.test(text)) {
+    tags.push("Stats");
+  }
+  if (/analysis|why|how|grade|takeaway|preview/i.test(text)) {
+    tags.push("Analysis");
+  }
+  return [...new Set(tags)];
+}
+
 async function crossrefForTopic(topic) {
   const url = new URL("https://api.crossref.org/works");
   url.search = new URLSearchParams({
@@ -76,6 +97,53 @@ async function crossrefForTopic(topic) {
       };
     })
     .filter(Boolean);
+}
+
+async function espnMavericksArticles() {
+  const url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news";
+  const response = await fetch(url, {
+    headers: { "User-Agent": "MarketBriefTopicRefresh/1.0 (personal research project)" },
+  });
+  if (!response.ok) throw new Error(`ESPN NBA news failed: ${response.status}`);
+  const payload = await response.json();
+  return (payload.articles ?? [])
+    .map((item) => {
+      const title = clean(item.headline);
+      const summary = clean(item.description);
+      const categoryText = (item.categories ?? [])
+        .map((category) => clean(category.description ?? category.text ?? category.type))
+        .join(" ");
+      const text = `${title} ${summary} ${categoryText}`.toLowerCase();
+      if (!/\bdallas\b|\bmavericks\b|\bmavs\b|\bluka\b|\bkyrie\b|\banthony davis\b|\bcooper flagg\b/.test(text)) {
+        return null;
+      }
+      const url =
+        item.links?.web?.href ??
+        item.link?.href ??
+        `https://www.espn.com/nba/story/_/id/${item.id}`;
+      const article = {
+        id: stableId("espn", String(item.id ?? url ?? title)),
+        title,
+        summary:
+          summary ||
+          "Current Mavericks-related coverage from ESPN's NBA news feed.",
+        whyItMatters:
+          "This adds current, non-official coverage so the team topic is more useful than a list of reference links.",
+        limitation:
+          "ESPN is a broad sports-news source. Treat rumors, anonymous sourcing, and opinion as weaker than official team or league confirmation.",
+        source: "ESPN NBA",
+        url,
+        publishedAt: String(item.published ?? item.lastModified ?? today).slice(0, 10),
+        evidence: "News report",
+      };
+      return {
+        ...article,
+        tags: sportsTagsFor(article),
+        canonicalKey: url,
+      };
+    })
+    .filter(Boolean)
+    .slice(0, maxPerTopic);
 }
 
 async function upsertArticle(sql, topic, article) {
@@ -127,7 +195,10 @@ async function main() {
 
   let inserted = 0;
   for (const topic of topics) {
-    const articles = await crossrefForTopic(topic);
+    const articles =
+      topic.slug === "dallas-mavericks"
+        ? await espnMavericksArticles()
+        : await crossrefForTopic(topic);
     for (const article of articles) {
       await upsertArticle(sql, topic, article);
       inserted += 1;
