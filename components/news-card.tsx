@@ -15,18 +15,18 @@ export function sourceLabel(source: string) {
   return source.charAt(0).toUpperCase() + source.slice(1);
 }
 
-function SymbolTags({ symbols, onSymbol }: { symbols: string[]; onSymbol?: (symbol: string) => void }) {
+function SymbolTags({ symbols }: { symbols: string[] }) {
   if (!symbols.length) return null;
   return (
     <div className="symbol-tags" aria-label="Related symbols">
       {symbols.slice(0, 3).map((symbol) => (
-        <button type="button" key={symbol} onClick={() => onSymbol?.(symbol)}>{symbol}</button>
+        <a key={symbol} href={`/symbol/${symbol}`}>{symbol}</a>
       ))}
     </div>
   );
 }
 
-export function HeroStory({ article, onSymbol }: { article: NewsArticle; onSymbol?: (symbol: string) => void }) {
+export function HeroStory({ article }: { article: NewsArticle }) {
   const image = article.images?.find((item) => item.size === "large")?.url ??
     article.images?.[0]?.url;
   return (
@@ -51,7 +51,7 @@ export function HeroStory({ article, onSymbol }: { article: NewsArticle; onSymbo
         <h1>{article.headline}</h1>
         <p>{article.summary}</p>
         <div className="story-actions">
-          <SymbolTags symbols={article.symbols} onSymbol={onSymbol} />
+          <SymbolTags symbols={article.symbols} />
           <a href={article.url} target="_blank" rel="noreferrer">
             Read story <ArrowIcon />
           </a>
@@ -61,7 +61,7 @@ export function HeroStory({ article, onSymbol }: { article: NewsArticle; onSymbo
   );
 }
 
-export function CompactStory({ article, onSymbol }: { article: NewsArticle; onSymbol?: (symbol: string) => void }) {
+export function CompactStory({ article }: { article: NewsArticle }) {
   const image = article.images?.[0]?.url;
   return (
     <article className="compact-story">
@@ -75,7 +75,7 @@ export function CompactStory({ article, onSymbol }: { article: NewsArticle; onSy
             {article.headline}
           </a>
         </h2>
-        <SymbolTags symbols={article.symbols} onSymbol={onSymbol} />
+        <SymbolTags symbols={article.symbols} />
       </div>
       {image ? (
         // eslint-disable-next-line @next/next/no-img-element
@@ -89,7 +89,7 @@ export function CompactStory({ article, onSymbol }: { article: NewsArticle; onSy
   );
 }
 
-export function FeedStory({ article, onSymbol }: { article: NewsArticle; onSymbol?: (symbol: string) => void }) {
+export function FeedStory({ article }: { article: NewsArticle }) {
   const image = article.images?.[0]?.url;
   return (
     <article className="feed-story">
@@ -104,7 +104,7 @@ export function FeedStory({ article, onSymbol }: { article: NewsArticle; onSymbo
           </a>
         </h3>
         {article.summary && <p>{article.summary}</p>}
-        <SymbolTags symbols={article.symbols} onSymbol={onSymbol} />
+        <SymbolTags symbols={article.symbols} />
       </div>
       <div className="feed-side">
         {image ? (

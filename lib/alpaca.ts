@@ -237,17 +237,21 @@ export async function getHomePayload(): Promise<HomePayload> {
   }
 }
 
-export async function getSymbolPayload(input: string): Promise<SymbolPayload> {
+export async function getSymbolPayload(input: string, requestedRange?: string): Promise<SymbolPayload> {
   const symbol = input.toUpperCase().replace(/[^A-Z.]/g, "").slice(0, 12);
   const { key, secret } = credentials();
   if (!symbol || !key || !secret) return { symbol, price: null, change: null, changePercent: null, bars: [], articles: [] };
 
   try {
     const end = new Date();
-    const start = new Date(end.getTime() - 14 * 86_400_000);
+    const marketHours = end.getUTCDay() > 0 && end.getUTCDay() < 6 && end.getUTCHours() >= 13 && end.getUTCHours() < 20;
+    const range = requestedRange ?? (marketHours ? "1D" : "1D");
+    const config: Record<string, { days: number; timeframe: string }> = { "1D": { days: 1, timeframe: marketHours ? "5Min" : "1Day" }, "5D": { days: 5, timeframe: "15Min" }, "10D": { days: 10, timeframe: "30Min" }, "30D": { days: 30, timeframe: "1Hour" }, "6M": { days: 183, timeframe: "1Day" }, "1Y": { days: 365, timeframe: "1Day" } };
+    const selection = config[range] ?? config["1D"];
+    const start = new Date(end.getTime() - selection.days * 86_400_000);
     const [snapshotResponse, barsResponse, newsResponse] = await Promise.all([
       fetch(`https://data.alpaca.markets/v2/stocks/${symbol}/snapshot?feed=iex`, { headers: headers(key, secret), next: { revalidate: 60 } }),
-      fetch(`https://data.alpaca.markets/v2/stocks/${symbol}/bars?timeframe=1Day&start=${start.toISOString()}&end=${end.toISOString()}&feed=iex`, { headers: headers(key, secret), next: { revalidate: 300 } }),
+      fetch(`https://data.alpaca.markets/v2/stocks/${symbol}/bars?timeframe=${selection.timeframe}&start=${start.toISOString()}&end=${end.toISOString()}&feed=iex`, { headers: headers(key, secret), next: { revalidate: 300 } }),
       fetch(`https://data.alpaca.markets/v1beta1/news?symbols=${symbol}&sort=desc&limit=8&include_content=false`, { headers: headers(key, secret), next: { revalidate: 60 } }),
     ]);
     const snapshot = snapshotResponse.ok ? await snapshotResponse.json() as Snapshot : {};

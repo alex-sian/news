@@ -5,7 +5,6 @@ import type { HomePayload } from "@/lib/alpaca";
 import { FeedStory, HeroStory, CompactStory } from "./news-card";
 import { MarketStrip } from "./market-strip";
 import { SiteHeader } from "./site-header";
-import { SymbolWorkspace } from "./symbol-workspace";
 
 const filters = ["Top", "Latest", "Markets", "Technology", "Economy"];
 
@@ -125,8 +124,6 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
   const [data, setData] = useState(initialData);
   const [active, setActive] = useState("Top");
   const [refreshing, setRefreshing] = useState(false);
-  const [symbol, setSymbol] = useState<string | null>(null);
-  const [expanded, setExpanded] = useState(false);
 
   const refresh = useCallback(async () => {
     setRefreshing(true);
@@ -147,8 +144,7 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
     <>
       <SiteHeader />
       <MarketStrip markets={data.markets} />
-      <main className={`page-shell ${symbol ? "has-workspace" : ""} ${expanded ? "workspace-expanded" : ""}`}>
-        <div className="home-context">
+      <main className="page-shell">
         <section className="page-intro">
           <div>
             <p className="kicker">Your market, in focus</p>
@@ -178,7 +174,7 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
 
         {lead && (
           <section className="lead-grid" aria-label="Top market stories">
-            <HeroStory article={lead} onSymbol={setSymbol} />
+            <HeroStory article={lead} />
             <div className="top-stories">
               <div className="section-heading">
                 <div>
@@ -188,7 +184,7 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
                 <span>{topStories.length} updates</span>
               </div>
               {topStories.map((article) => (
-                <CompactStory article={article} key={article.id} onSymbol={setSymbol} />
+                <CompactStory article={article} key={article.id} />
               ))}
             </div>
           </section>
@@ -210,7 +206,7 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
             <div className="feed-list">
               {visibleArticles.length ? (
                 (latest.length ? latest : topStories).map((article) => (
-                  <FeedStory article={article} key={article.id} onSymbol={setSymbol} />
+                  <FeedStory article={article} key={article.id} />
                 ))
               ) : (
                 <div className="empty-topic">
@@ -267,8 +263,7 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
               </div>
             </section>
           </aside>
-        </section></div>
-        {symbol && <SymbolWorkspace symbol={symbol} onClose={() => { setSymbol(null); setExpanded(false); }} onExpand={() => setExpanded(value => !value)} />}
+        </section>
       </main>
       <footer className="site-footer">
         <span>Market Brief</span>
