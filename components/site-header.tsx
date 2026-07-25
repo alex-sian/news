@@ -8,6 +8,9 @@ import { CloseIcon, MenuIcon, SearchIcon } from "./icons";
 const links = [
   { href: "/", label: "Home", eyebrow: "Latest market news" },
   { href: "/ra-news", label: "RA News", eyebrow: "Research, treatment & relief" },
+  { href: "/topics/solid-state-batteries", label: "Solid State Batteries", eyebrow: "Battery research desk" },
+  { href: "/archive", label: "Viewed Archive", eyebrow: "Previously opened articles" },
+  { href: "/admin", label: "Admin", eyebrow: "Topic management" },
   { href: "/watchlists", label: "Watchlists", eyebrow: "Symbols you follow" },
   { href: "/settings", label: "Settings", eyebrow: "Your news preferences" },
 ];
@@ -44,12 +47,12 @@ export function SiteHeader() {
             <span className="wordmark-mark">M</span>
             <span>Market Brief</span>
           </Link>
-          <form className="search" action="/" role="search">
+          <form className="search" action="/search" role="search">
             <SearchIcon />
             <input
-              aria-label="Search news or symbols"
+              aria-label="Search symbols or stocks"
               name="q"
-              placeholder="Search news, symbols or companies"
+              placeholder="Search symbol or company"
             />
             <kbd>/</kbd>
           </form>

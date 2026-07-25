@@ -1286,6 +1286,224 @@ svg {
   line-height: 1.5;
 }
 
+.topic-masthead h1 {
+  max-width: 11ch;
+  font-size: clamp(3.7rem, 15vw, 8.5rem);
+}
+
+.topic-context strong {
+  color: var(--navy);
+}
+
+.topic-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 0 0 auto;
+}
+
+.topic-card-actions button {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-shell {
+  width: min(calc(100% - 2rem), 88rem);
+  margin: 0 auto;
+  padding: 2rem 0 5rem;
+}
+
+.admin-hero {
+  padding: clamp(2rem, 7vw, 5rem) 0 1.5rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.admin-hero.compact {
+  padding-top: 2.5rem;
+}
+
+.admin-hero h1 {
+  max-width: 12ch;
+  margin: 0.4rem 0 1rem;
+  font-family: var(--serif);
+  font-size: clamp(3.4rem, 12vw, 7.2rem);
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+}
+
+.admin-hero p {
+  max-width: 44rem;
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+
+.admin-toolbar {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-search {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.admin-search label,
+.topic-settings-form label {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.admin-search span,
+.topic-settings-form span {
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-search input,
+.topic-settings-form input {
+  min-width: 0;
+  min-height: 2.7rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 0.3rem;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.admin-search button,
+.topic-settings-form button,
+.admin-secondary {
+  min-height: 2.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.9rem;
+  border: 1px solid var(--ink);
+  border-radius: 0.3rem;
+  background: var(--ink);
+  color: white;
+  font-size: 0.74rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.admin-secondary {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.admin-panel {
+  margin-top: 1.5rem;
+  padding: 1.2rem 0;
+  border-top: 2px solid var(--ink);
+}
+
+.admin-panel > h2,
+.add-topic-panel h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 2rem;
+}
+
+.admin-panel > p {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.topic-table {
+  display: grid;
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.topic-table article {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.topic-table h3 {
+  margin: 0 0 0.3rem;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+}
+
+.topic-table p {
+  max-width: 46rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.topic-table span,
+.topic-table a {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+
+.topic-table a {
+  color: var(--green);
+}
+
+.topic-settings-form {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.admin-list {
+  display: grid;
+  margin-top: 1.2rem;
+}
+
+.admin-list article {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-list article > div:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-weight: 750;
+}
+
+.admin-list h2 {
+  max-width: 42rem;
+  margin: 0.5rem 0;
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 5vw, 2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.admin-list p {
+  max-width: 58rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
 .back-link {
   display: inline-block;
   padding-bottom: 0.25rem;
@@ -1421,6 +1639,33 @@ svg {
 
   .placeholder-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .admin-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: end;
+  }
+
+  .admin-search {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+  }
+
+  .topic-table article {
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    align-items: center;
+  }
+
+  .topic-settings-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topic-settings-form label:nth-child(3),
+  .topic-settings-form label:nth-child(6),
+  .topic-settings-form label:nth-child(7),
+  .topic-settings-form label:nth-child(8),
+  .topic-settings-form button {
+    grid-column: 1 / -1;
   }
 
   .placeholder-grid article {

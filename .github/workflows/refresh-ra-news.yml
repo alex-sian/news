@@ -1,4 +1,4 @@
-name: Refresh RA News
+name: Refresh Managed News
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: refresh-ra-news
+  group: refresh-managed-news
   cancel-in-progress: false
 
 jobs:
@@ -27,22 +27,27 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Refresh authoritative RA sources
-        run: npm run refresh:ra
-
       - name: Validate the production build
         run: |
           npm ci
+          npm run refresh:ra
+          if [ -n "${DATABASE_URL}" ]; then
+            npm run refresh:topics
+          else
+            echo "DATABASE_URL secret not set; skipping DB topic refresh."
+          fi
           npm run lint
           npm run build
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: Publish changed content
         run: |
           if git diff --quiet -- data/ra-news.json; then
-            echo "No RA News changes."
+            echo "No file-backed RA News changes."
             exit 0
           fi
-          git config user.name "RA News Bot"
+          git config user.name "Managed News Bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/ra-news.json
           git commit -m "Refresh RA News"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { RaNewsDesk } from "@/components/ra-news-desk";
-import { getRaNews } from "@/lib/ra-news";
+import { headers } from "next/headers";
+import { TopicDesk } from "@/components/topic-desk";
+import { getTopicArticles, getTopicBySlug, ownerTrackingFromCookie } from "@/lib/db";
 
 export const metadata: Metadata = {
   title: "RA News",
@@ -8,6 +9,19 @@ export const metadata: Metadata = {
     "Evidence-ranked rheumatoid arthritis research, treatment news, and practical relief guidance.",
 };
 
-export default function RaNewsPage() {
-  return <RaNewsDesk initialData={getRaNews()} />;
+export default async function RaNewsPage() {
+  const ownerTracking = ownerTrackingFromCookie((await headers()).get("cookie"));
+  const topic = await getTopicBySlug("ra-news");
+  if (!topic) return null;
+  const articles = await getTopicArticles("ra-news", ownerTracking);
+  return (
+    <TopicDesk
+      initialData={{
+        topic,
+        articles,
+        generatedAt: new Date().toISOString(),
+        ownerTracking,
+      }}
+    />
+  );
 }
