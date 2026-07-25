@@ -24,6 +24,71 @@ function displayDate(value: string) {
   }).format(new Date(`${value.slice(0, 10)}T12:00:00`));
 }
 
+function youtubeVideoId(url: string) {
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname.includes("youtu.be")) return parsed.pathname.split("/").filter(Boolean)[0];
+    if (parsed.hostname.includes("youtube.com")) return parsed.searchParams.get("v");
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function sourceMark(source: string) {
+  return source
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
+}
+
+function sourceTone(source: string) {
+  const key = source.toLowerCase();
+  if (key.includes("mavericks") || key.includes("mavs")) return "team";
+  if (key.includes("espn") || key.includes("yahoo")) return "news";
+  if (key.includes("hoops") || key.includes("realgm") || key.includes("spotrac")) return "roster";
+  if (key.includes("smoking") || key.includes("moneyball")) return "fan";
+  return "default";
+}
+
+function TopicMedia({ article, linked = true }: { article: TopicArticle; linked?: boolean }) {
+  const videoId = youtubeVideoId(article.url);
+  const isVideo = article.tags.includes("Video") || Boolean(videoId);
+  const content = (
+    <>
+      {videoId ? (
+        <img
+          src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+          alt=""
+          loading="lazy"
+        />
+      ) : (
+        <span>{sourceMark(article.source)}</span>
+      )}
+      {isVideo && <b aria-hidden="true" />}
+    </>
+  );
+
+  return linked ? (
+    <a
+      className={`topic-media ${isVideo ? "is-video" : ""} tone-${sourceTone(article.source)}`}
+      href={article.url}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`Open ${article.title}`}
+    >
+      {content}
+    </a>
+  ) : (
+    <span className={`topic-media ${isVideo ? "is-video" : ""} tone-${sourceTone(article.source)}`}>
+      {content}
+    </span>
+  );
+}
+
 function TopicArticleCard({
   article,
   topicSlug,
@@ -59,48 +124,51 @@ function TopicArticleCard({
 
   return (
     <article className={`ra-card ${read ? "is-read" : ""}`}>
-      <div className="ra-card-topline">
-        <span className={`evidence-badge ${evidenceTone[article.evidence]}`}>
-          {article.evidence}
-        </span>
-        <span>{displayDate(article.publishedAt)}</span>
-        {article.evergreen && <span className="hawaii-badge">Evergreen</span>}
-        {read && <span className="read-label">Viewed</span>}
-      </div>
-      <h2>
-        <a href={article.url} target="_blank" rel="noreferrer" onClick={markViewed}>
-          {article.title}
-        </a>
-      </h2>
-      <p className="ra-summary">{article.summary}</p>
-      <div className="ra-analysis">
-        <p>
-          <strong>Why it matters</strong>
-          {article.whyItMatters}
-        </p>
-        <p>
-          <strong>Keep in mind</strong>
-          {article.limitation}
-        </p>
-      </div>
-      <div className="ra-tags" aria-label="Article topics">
-        {article.tags.map((tag) => (
-          <span key={tag}>{tag}</span>
-        ))}
-      </div>
-      <footer>
-        <span>{article.source}</span>
-        <div className="topic-card-actions">
-          {read && (
-            <button type="button" onClick={markUnread}>
-              Mark unread
-            </button>
-          )}
-          <a href={article.url} target="_blank" rel="noreferrer" onClick={markViewed}>
-            Read original <span aria-hidden="true">↗</span>
-          </a>
+      <TopicMedia article={article} />
+      <div className="ra-card-body">
+        <div className="ra-card-topline">
+          <span className={`evidence-badge ${evidenceTone[article.evidence]}`}>
+            {article.evidence}
+          </span>
+          <span>{displayDate(article.publishedAt)}</span>
+          {article.evergreen && <span className="hawaii-badge">Evergreen</span>}
+          {read && <span className="read-label">Viewed</span>}
         </div>
-      </footer>
+        <h2>
+          <a href={article.url} target="_blank" rel="noreferrer" onClick={markViewed}>
+            {article.title}
+          </a>
+        </h2>
+        <p className="ra-summary">{article.summary}</p>
+        <div className="ra-analysis">
+          <p>
+            <strong>Why it matters</strong>
+            {article.whyItMatters}
+          </p>
+          <p>
+            <strong>Keep in mind</strong>
+            {article.limitation}
+          </p>
+        </div>
+        <div className="ra-tags" aria-label="Article topics">
+          {article.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+        <footer>
+          <span>{article.source}</span>
+          <div className="topic-card-actions">
+            {read && (
+              <button type="button" onClick={markUnread}>
+                Mark unread
+              </button>
+            )}
+            <a href={article.url} target="_blank" rel="noreferrer" onClick={markViewed}>
+              Read original <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </footer>
+      </div>
     </article>
   );
 }
@@ -177,6 +245,9 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
     article.tags.some((tag) => ["Trades & roster", "Transactions", "Roster & injuries"].includes(tag)),
   ).length;
   const videoCount = initialData.articles.filter((article) => article.tags.includes("Video")).length;
+  const videoArticles = initialData.articles
+    .filter((article) => article.tags.includes("Video"))
+    .slice(0, 3);
 
   return (
     <>
@@ -221,6 +292,24 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
               <strong>{videoCount}</strong>
               <small>highlights and interviews</small>
             </button>
+          </section>
+        )}
+
+        {isMavs && videoArticles.length > 0 && (
+          <section className="topic-video-strip" aria-label="Latest Mavericks videos">
+            <div>
+              <p className="kicker">Video</p>
+              <h2>Latest Mavericks video</h2>
+            </div>
+            <div className="topic-video-list">
+              {videoArticles.map((article) => (
+                <a href={article.url} target="_blank" rel="noreferrer" key={article.id}>
+                  <TopicMedia article={article} linked={false} />
+                  <strong>{article.title}</strong>
+                  <span>{article.source}</span>
+                </a>
+              ))}
+            </div>
           </section>
         )}
 
