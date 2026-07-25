@@ -32,7 +32,7 @@ export function PlaceholderPage({
           ))}
         </div>
         <Link href="/" className="back-link">
-          Return to today’s market brief
+          Return to your latest briefing
         </Link>
       </main>
     </>

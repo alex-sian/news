@@ -159,7 +159,7 @@ export function HomeFeed({
         <section className="page-intro">
           <div>
             <p className="kicker">{marketsOnly ? "Market desk" : "Your news desks"}</p>
-            <h2>{marketsOnly ? "Market Brief." : "Latest across your topics."}</h2>
+            <h2>{marketsOnly ? "Markets." : "Latest across your topics."}</h2>
           </div>
           <div className="feed-status">
             <span className={data.isLive ? "live-dot" : "status-dot"} />
@@ -216,7 +216,7 @@ export function HomeFeed({
           </aside>
         </section>
       </main>
-      <footer className="site-footer"><span>Market Brief</span><p>Information for context, not investment advice.</p><span>Powered by your selected sources</span></footer>
+      <footer className="site-footer"><span>Alex&apos;s Curated News</span><p>Information for context, not investment advice.</p><span>Powered by your selected sources</span></footer>
     </>
   );
 }

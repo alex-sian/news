@@ -64,6 +64,7 @@ export function SiteHeader() {
     ...topicLinks,
     ...baseLinks.slice(1),
   ];
+  const searchTopic = topicLinks.find((topic) => topic.href === pathname);
 
   return (
     <>
@@ -78,19 +79,23 @@ export function SiteHeader() {
           >
             <MenuIcon />
           </button>
-          <Link href="/" className="wordmark" aria-label="Market Brief home">
-            <span className="wordmark-mark">M</span>
-            <span>Market Brief</span>
+          <Link href="/" className="wordmark" aria-label="Alex's Curated News home">
+            <span className="wordmark-mark">A</span>
+            <span>Alex&apos;s Curated News</span>
           </Link>
           <form className="search" action="/search" role="search">
             <SearchIcon />
+            {searchTopic && <input type="hidden" name="scope" value={searchTopic.href} />}
             <input
-              aria-label="Search symbols or stocks"
+              aria-label="Search news, topics, or symbols"
               name="q"
-              placeholder="Search symbol or company"
+              placeholder={searchTopic ? `Search ${searchTopic.label}` : "Search news, topics, or symbols"}
             />
             <kbd>/</kbd>
           </form>
+          <Link href="/search" className="mobile-search-link" aria-label="Search news, topics, or symbols">
+            <SearchIcon />
+          </Link>
           <button className="avatar" type="button" aria-label="Account">
             AS
           </button>
@@ -110,8 +115,8 @@ export function SiteHeader() {
         <aside className="drawer" aria-label="Main navigation">
           <div className="drawer-heading">
             <div className="wordmark">
-              <span className="wordmark-mark">M</span>
-              <span>Market Brief</span>
+              <span className="wordmark-mark">A</span>
+              <span>Alex&apos;s Curated News</span>
             </div>
             <button
               className="icon-button"

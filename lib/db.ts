@@ -47,6 +47,11 @@ type DbArticleRow = {
   viewed_at: string | null;
 };
 
+export type TopicSearchArticle = {
+  topic: Pick<ManagedTopic, "slug" | "title" | "publicPath">;
+  article: TopicArticle;
+};
+
 export function ownerTrackingFromCookie(cookieHeader: string | null | undefined) {
   return Boolean(
     cookieHeader
@@ -239,6 +244,61 @@ export async function getTopicArticles(
     );
   } catch {
     return fallback;
+  }
+}
+
+export async function searchTopicArticles(query: string): Promise<TopicSearchArticle[]> {
+  const normalized = query.trim();
+  if (!normalized) return [];
+  const fallback = fallbackTopics().flatMap((topic) =>
+    fallbackArticlesForSlug(topic.slug).map((article) => ({ topic, article })),
+  );
+  const matchesFallback = fallback.filter(({ article }) =>
+    [article.title, article.summary, article.source, article.evidence, ...article.tags]
+      .join(" ")
+      .toLowerCase()
+      .includes(normalized.toLowerCase()),
+  );
+  const sql = sqlClient();
+  if (!sql) return matchesFallback.slice(0, 60);
+  try {
+    const rows = await sql`
+      select t.slug, t.title as topic_title, t.public_path,
+        a.id, a.title, a.summary, a.why_it_matters, a.limitation,
+        a.source, a.url, a.published_at::text, a.reviewed_at::text,
+        a.evidence, a.tags, a.evergreen, a.automated, a.canonical_key,
+        null::text as viewed_at
+      from articles a
+      join topic_articles ta on ta.article_id = a.id
+      join managed_topics t on t.id = ta.topic_id
+      where t.status = 'active'
+        and ta.status = 'published'
+        and (
+          a.title ilike ${`%${normalized}%`}
+          or a.summary ilike ${`%${normalized}%`}
+          or a.source ilike ${`%${normalized}%`}
+          or array_to_string(a.tags, ' ') ilike ${`%${normalized}%`}
+        )
+      order by a.published_at desc, a.title asc
+      limit 60
+    `;
+    const fromDb = (rows as (DbArticleRow & {
+      slug: string;
+      topic_title: string;
+      public_path: string | null;
+    })[]).map((row) => ({
+      topic: {
+        slug: row.slug,
+        title: row.topic_title,
+        publicPath: row.public_path ?? `/topics/${row.slug}`,
+      },
+      article: articleFromRow(row),
+    }));
+    const seen = new Set(fromDb.map((result) => `${result.topic.slug}:${result.article.id}`));
+    return [...fromDb, ...matchesFallback.filter((result) => !seen.has(`${result.topic.slug}:${result.article.id}`))]
+      .slice(0, 60);
+  } catch {
+    return matchesFallback.slice(0, 60);
   }
 }
 

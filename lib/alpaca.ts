@@ -60,7 +60,7 @@ const fallbackArticles: NewsArticle[] = [
     updated_at: new Date().toISOString(),
     url: "https://alpaca.markets/data",
     symbols: ["SPY", "QQQ"],
-    source: "Market Brief",
+    source: "Alex's Curated News",
   },
   {
     id: -2,
@@ -71,7 +71,7 @@ const fallbackArticles: NewsArticle[] = [
     updated_at: new Date(Date.now() - 20 * 60_000).toISOString(),
     url: "https://alpaca.markets/data",
     symbols: ["DIA"],
-    source: "Market Brief",
+    source: "Alex's Curated News",
   },
   {
     id: -3,
@@ -82,7 +82,7 @@ const fallbackArticles: NewsArticle[] = [
     updated_at: new Date(Date.now() - 45 * 60_000).toISOString(),
     url: "https://alpaca.markets/data",
     symbols: ["IWM"],
-    source: "Market Brief",
+    source: "Alex's Curated News",
   },
 ];
 
