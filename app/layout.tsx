@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: "Market Brief",
     template: "%s · Market Brief",
   },
-  description: "A fast, focused view of the market stories that matter now.",
+  description: "Focused market coverage and evidence-ranked health research.",
 };
 
 export default function RootLayout({

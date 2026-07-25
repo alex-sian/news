@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "tsc --noEmit",
+    "refresh:ra": "node scripts/refresh-ra-news.mjs"
   },
   "engines": {
     "node": ">=20.9"

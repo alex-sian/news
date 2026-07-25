@@ -7,6 +7,7 @@ import { CloseIcon, MenuIcon, SearchIcon } from "./icons";
 
 const links = [
   { href: "/", label: "Home", eyebrow: "Latest market news" },
+  { href: "/ra-news", label: "RA News", eyebrow: "Research, treatment & relief" },
   { href: "/watchlists", label: "Watchlists", eyebrow: "Symbols you follow" },
   { href: "/settings", label: "Settings", eyebrow: "Your news preferences" },
 ];
