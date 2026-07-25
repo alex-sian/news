@@ -277,6 +277,10 @@ export const SOLID_STATE_BATTERY_SEEDS: TopicArticle[] = [
 
 export const SPORTS_TEAM_CATEGORIES = [
   "Latest",
+  "Trades & roster",
+  "Scores & games",
+  "Video",
+  "References",
   "Best & evergreen",
   "Official team news",
   "Roster & injuries",
@@ -422,7 +426,7 @@ export const DALLAS_MAVERICKS_SEEDS: TopicArticle[] = [
     publishedAt: "2026-01-01",
     reviewedAt: "2026-07-25",
     evidence: "News report",
-    tags: ["Latest", "Schedule & results", "Transactions"],
+    tags: ["Best & evergreen", "Schedule & results", "Transactions"],
     evergreen: true,
   },
   {

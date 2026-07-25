@@ -106,6 +106,7 @@ function TopicArticleCard({
 }
 
 export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
+  const isMavs = initialData.topic.slug === "dallas-mavericks";
   const [active, setActive] = useState("Latest");
   const [query, setQuery] = useState("");
   const [hideViewed, setHideViewed] = useState(false);
@@ -126,6 +127,12 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
         if (hideViewed && viewed) return false;
         if (active === "Viewed") return viewed;
         if (active === "Unread") return !viewed;
+        if (isMavs && active === "Latest" && article.evergreen && !normalizedQuery) {
+          return false;
+        }
+        if (active === "References" && !article.evergreen) {
+          return false;
+        }
         if (
           active === "Best & evergreen" &&
           !article.evergreen &&
@@ -154,14 +161,22 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
           .includes(normalizedQuery);
       })
       .sort((left, right) => {
+        if (active === "References") {
+          return left.source.localeCompare(right.source);
+        }
         if (active === "Best & evergreen") {
           return Number(Boolean(right.evergreen)) - Number(Boolean(left.evergreen));
         }
         return right.publishedAt.localeCompare(left.publishedAt);
       });
-  }, [active, hideViewed, initialData.articles, query, viewedIds]);
+  }, [active, hideViewed, initialData.articles, isMavs, query, viewedIds]);
 
   const unreadCount = initialData.articles.length - viewedIds.size;
+  const latestCount = initialData.articles.filter((article) => !article.evergreen).length;
+  const tradeCount = initialData.articles.filter((article) =>
+    article.tags.some((tag) => ["Trades & roster", "Transactions", "Roster & injuries"].includes(tag)),
+  ).length;
+  const videoCount = initialData.articles.filter((article) => article.tags.includes("Video")).length;
 
   return (
     <>
@@ -188,6 +203,26 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
               : "Open Admin and enable owner tracking on this device to sync viewed history."}
           </p>
         </section>
+
+        {isMavs && (
+          <section className="topic-pulse" aria-label="Mavericks pulse summary">
+            <button type="button" onClick={() => setActive("Latest")}>
+              <span>Newest first</span>
+              <strong>{latestCount}</strong>
+              <small>dated items</small>
+            </button>
+            <button type="button" onClick={() => setActive("Trades & roster")}>
+              <span>Roster pulse</span>
+              <strong>{tradeCount}</strong>
+              <small>trade, contract, injury</small>
+            </button>
+            <button type="button" onClick={() => setActive("Video")}>
+              <span>Video lane</span>
+              <strong>{videoCount}</strong>
+              <small>highlights and interviews</small>
+            </button>
+          </section>
+        )}
 
         <div className="ra-tools">
           <label className="ra-search">
@@ -226,7 +261,15 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
 
         <section className="ra-results-heading">
           <div>
-            <p className="kicker">{active === "Latest" ? "The full desk" : "Filtered view"}</p>
+            <p className="kicker">
+              {isMavs && active === "Latest"
+                ? "Newest Mavericks pulse"
+                : active === "References"
+                  ? "Source shelf"
+                  : active === "Latest"
+                    ? "The full desk"
+                    : "Filtered view"}
+            </p>
             <h2>{active}</h2>
           </div>
           <span>{visible.length} {visible.length === 1 ? "article" : "articles"}</span>

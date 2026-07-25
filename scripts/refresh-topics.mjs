@@ -3,10 +3,63 @@ import { neon } from "@neondatabase/serverless";
 
 const today = new Date().toISOString().slice(0, 10);
 const maxPerTopic = Number(process.env.TOPIC_REFRESH_LIMIT ?? 24);
+const mavsTopicLimit = Number(process.env.MAVERICKS_REFRESH_LIMIT ?? Math.max(maxPerTopic, 36));
+const mavsTextPattern =
+  /\bdallas\b|\bmavericks\b|\bmavs\b|\bluka\b|\bkyrie\b|\banthony davis\b|\bcooper flagg\b|\bnba draft\b|\btrade\b|\broster\b|\bcontract\b|\bfree agency\b/i;
+
+const mavsRssSources = [
+  {
+    url: "https://www.mavs.com/feed/",
+    source: "Dallas Mavericks",
+    evidence: "Primary source",
+    purpose: "Official team announcements, game coverage, community items, and organization framing.",
+  },
+  {
+    url: "https://sports.yahoo.com/nba/teams/dallas/rss.xml",
+    source: "Yahoo Sports",
+    evidence: "News report",
+    purpose: "Syndicated and national Mavericks headlines with scores, schedule, roster, and rumor context.",
+  },
+  {
+    url: "https://www.mavsmoneyball.com/rss/index.xml",
+    source: "Mavs Moneyball",
+    evidence: "Trade coverage",
+    purpose: "Team-specific fan and analysis coverage that often catches the argument around the news quickly.",
+  },
+  {
+    url: "https://thesmokingcuban.com/feed/",
+    source: "The Smoking Cuban",
+    evidence: "Trade coverage",
+    purpose: "Commentary-heavy Mavericks rumor reaction and fan-facing roster speculation.",
+  },
+  {
+    url: "https://www.hoopsrumors.com/dallas-mavericks/feed",
+    source: "Hoops Rumors",
+    evidence: "Trade coverage",
+    purpose: "Transaction and rumor monitoring from a leaguewide roster-movement site.",
+  },
+  {
+    url: "https://www.si.com/nba/mavericks/.rss/full/",
+    source: "Sports Illustrated Mavericks",
+    evidence: "News report",
+    purpose: "Additional team-specific news, analysis, and video-adjacent coverage.",
+  },
+];
+
+const mavsYoutubeSources = [
+  {
+    url: "https://www.youtube.com/@dallasmavericks",
+    source: "Dallas Mavericks YouTube",
+    evidence: "Primary source",
+    purpose: "Official video, interviews, highlights, and team-produced media.",
+  },
+];
 
 function clean(value = "") {
   return String(value)
     .replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
     .replace(/<[^>]+>/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
@@ -33,9 +86,23 @@ function dateFromUnknown(value) {
   return date.toISOString().slice(0, 10);
 }
 
+function articleTime(article) {
+  const time = new Date(article.publishedAt).getTime();
+  return Number.isNaN(time) ? 0 : time;
+}
+
 function rssField(item, field) {
   const match = item.match(new RegExp(`<${field}[^>]*>([\\s\\S]*?)<\\/${field}>`, "i"));
   return clean(match?.[1] ?? "");
+}
+
+function xmlAttribute(item, tag, attr) {
+  const match = item.match(new RegExp(`<${tag}\\b[^>]*\\s${attr}=["']([^"']+)["'][^>]*>`, "i"));
+  return clean(match?.[1] ?? "");
+}
+
+function sourceSlug(value) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
 function tagsFor(title, topicTitle, categories = []) {
@@ -58,20 +125,26 @@ function tagsFor(title, topicTitle, categories = []) {
 function sportsTagsFor(article) {
   const text = `${article.title} ${article.summary}`.toLowerCase();
   const tags = ["Latest"];
+  if (article.evidence === "Primary source") {
+    tags.push("Official team news");
+  }
   if (/injur|ankle|knee|hamstring|illness|questionable|probable|out\b/i.test(text)) {
     tags.push("Roster & injuries");
   }
   if (/trade|sign|waive|contract|extension|free agent|transaction/i.test(text)) {
-    tags.push("Transactions");
+    tags.push("Trades & roster", "Transactions");
   }
-  if (/score|schedule|standings|playoff|final|win|loss/i.test(text)) {
-    tags.push("Schedule & results");
+  if (/score|schedule|standings|playoff|final|win|loss|recap|highlights?/i.test(text)) {
+    tags.push("Scores & games", "Schedule & results");
   }
   if (/stat|rating|rank|efficiency|points|rebounds|assists/i.test(text)) {
     tags.push("Stats");
   }
   if (/analysis|why|how|grade|takeaway|preview/i.test(text)) {
     tags.push("Analysis");
+  }
+  if (/youtube\.com|youtu\.be|video|watch|interview|media day|podcast|highlights?/i.test(`${article.url} ${text}`)) {
+    tags.push("Video");
   }
   return [...new Set(tags)];
 }
@@ -130,7 +203,7 @@ async function espnMavericksArticles() {
         .map((category) => clean(category.description ?? category.text ?? category.type))
         .join(" ");
       const text = `${title} ${summary} ${categoryText}`.toLowerCase();
-      if (!/\bdallas\b|\bmavericks\b|\bmavs\b|\bluka\b|\bkyrie\b|\banthony davis\b|\bcooper flagg\b/.test(text)) {
+      if (!mavsTextPattern.test(text)) {
         return null;
       }
       const url =
@@ -159,6 +232,7 @@ async function espnMavericksArticles() {
       };
     })
     .filter(Boolean)
+    .sort((left, right) => articleTime(right) - articleTime(left))
     .slice(0, maxPerTopic);
 }
 
@@ -170,21 +244,19 @@ function parseRssArticles(xml, source, feedUrl, evidence = "News report") {
       const summary = rssField(item, "description") || `Recent Dallas Mavericks coverage from ${source}.`;
       const url = rssField(item, "link") || feedUrl;
       const text = `${title} ${summary}`.toLowerCase();
-      if (
-        !/\bdallas\b|\bmavericks\b|\bmavs\b|\bluka\b|\bkyrie\b|\banthony davis\b|\bcooper flagg\b|\bnba draft\b|\btrade\b/.test(
-          text,
-        )
-      ) {
+      if (!mavsTextPattern.test(text)) {
         return null;
       }
       const article = {
-        id: stableId(source.toLowerCase().replace(/[^a-z0-9]+/g, "-"), url || title),
+        id: stableId(sourceSlug(source), url || title),
         title,
         summary: summary.slice(0, 360),
         whyItMatters:
-          source === "Mavs Moneyball" || source === "The Smoking Cuban"
-            ? "This adds team-specific independent coverage and fan-facing analysis beyond official Mavericks and league pages."
-            : "This adds current Mavericks coverage from a non-official source.",
+          source === "Dallas Mavericks"
+            ? "This keeps the topic anchored to the team's latest official announcements and game coverage."
+            : source === "Mavs Moneyball" || source === "The Smoking Cuban"
+              ? "This adds team-specific independent coverage and fan-facing analysis beyond official Mavericks and league pages."
+              : "This adds current Mavericks coverage from a non-official source.",
         limitation:
           evidence === "Trade coverage"
             ? "This feed can include opinion, speculation, and rumor reaction. Use it for signal, then look for confirmation."
@@ -203,22 +275,70 @@ function parseRssArticles(xml, source, feedUrl, evidence = "News report") {
     .filter(Boolean);
 }
 
-async function rssFeedArticles(feedUrl, source, evidence) {
-  const response = await fetch(feedUrl, {
+async function rssFeedArticles({ url, source, evidence }) {
+  const response = await fetch(url, {
     headers: { "User-Agent": "MarketBriefTopicRefresh/1.0 (personal research project)" },
   });
   if (!response.ok) throw new Error(`${source} RSS failed: ${response.status}`);
-  return parseRssArticles(await response.text(), source, feedUrl, evidence);
+  return parseRssArticles(await response.text(), source, url, evidence);
+}
+
+function parseYoutubeArticles(xml, source, feedUrl, evidence = "News report") {
+  const entries = xml.match(/<entry\b[\s\S]*?<\/entry>/gi) ?? [];
+  return entries
+    .map((entry) => {
+      const title = rssField(entry, "title");
+      const summary = rssField(entry, "media:description") || rssField(entry, "summary") || `Recent Mavericks video from ${source}.`;
+      const url = xmlAttribute(entry, "link", "href") || feedUrl;
+      const article = {
+        id: stableId(sourceSlug(source), rssField(entry, "yt:videoId") || url || title),
+        title,
+        summary: summary.slice(0, 360),
+        whyItMatters:
+          source === "Dallas Mavericks YouTube"
+            ? "This adds official video, interviews, highlights, and team-produced context alongside written coverage."
+            : "This adds Mavericks video coverage that can surface interviews, film context, and fan discussion faster than articles.",
+        limitation:
+          "Video feeds are collected by publish time. Watch for title-driven hype, sponsor reads, and clips that need confirmation from reporting.",
+        source,
+        url,
+        publishedAt: dateFromUnknown(rssField(entry, "published") || rssField(entry, "updated")),
+        evidence,
+      };
+      return {
+        ...article,
+        tags: sportsTagsFor(article),
+        canonicalKey: url,
+      };
+    })
+    .filter((article) => article.title && article.url);
+}
+
+async function youtubeFeedArticles({ url, source, evidence }) {
+  const channelResponse = await fetch(url, {
+    headers: { "User-Agent": "MarketBriefTopicRefresh/1.0 (personal research project)" },
+  });
+  if (!channelResponse.ok) throw new Error(`${source} channel failed: ${channelResponse.status}`);
+  const channelHtml = await channelResponse.text();
+  const feedUrl =
+    channelHtml.match(/https:\/\/www\.youtube\.com\/feeds\/videos\.xml\?channel_id=[A-Za-z0-9_-]+/)?.[0]?.replace(/&amp;/g, "&") ??
+    channelHtml.match(/"channelId":"(UC[A-Za-z0-9_-]+)"/)?.[1]?.replace(
+      /^/,
+      "https://www.youtube.com/feeds/videos.xml?channel_id=",
+    );
+  if (!feedUrl) throw new Error(`${source} YouTube feed not found`);
+  const feedResponse = await fetch(feedUrl, {
+    headers: { "User-Agent": "MarketBriefTopicRefresh/1.0 (personal research project)" },
+  });
+  if (!feedResponse.ok) throw new Error(`${source} YouTube RSS failed: ${feedResponse.status}`);
+  return parseYoutubeArticles(await feedResponse.text(), source, feedUrl, evidence);
 }
 
 async function dallasMavericksArticles() {
-  const feeds = [
-    ["https://www.mavsmoneyball.com/rss/index.xml", "Mavs Moneyball", "Trade coverage"],
-    ["https://thesmokingcuban.com/feed/", "The Smoking Cuban", "Trade coverage"],
-  ];
   const settled = await Promise.allSettled([
     espnMavericksArticles(),
-    ...feeds.map(([url, source, evidence]) => rssFeedArticles(url, source, evidence)),
+    ...mavsRssSources.map((source) => rssFeedArticles(source)),
+    ...mavsYoutubeSources.map((source) => youtubeFeedArticles(source)),
   ]);
   const articles = settled.flatMap((result) => (result.status === "fulfilled" ? result.value : []));
   const seen = new Set();
@@ -229,7 +349,12 @@ async function dallasMavericksArticles() {
       seen.add(key);
       return true;
     })
-    .slice(0, maxPerTopic);
+    .sort((left, right) => {
+      const dateOrder = articleTime(right) - articleTime(left);
+      if (dateOrder !== 0) return dateOrder;
+      return left.title.localeCompare(right.title);
+    })
+    .slice(0, mavsTopicLimit);
 }
 
 async function upsertArticle(sql, topic, article) {

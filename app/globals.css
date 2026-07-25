@@ -383,6 +383,46 @@ button {
   color: var(--green);
 }
 
+.topic-pulse {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 1rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.topic-pulse button {
+  min-width: 0;
+  padding: 0.9rem 0;
+  border: 0;
+  border-right: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.topic-pulse button:last-child {
+  border-right: 0;
+}
+
+.topic-pulse span,
+.topic-pulse small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.topic-pulse strong {
+  display: block;
+  margin: 0.22rem 0;
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 5vw, 2.15rem);
+  letter-spacing: -0.035em;
+}
+
 .ra-empty {
   padding: 3rem 0;
   border-bottom: 1px solid var(--line);
