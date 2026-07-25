@@ -56,18 +56,12 @@ function sourceTone(source: string) {
 
 function TopicMedia({ article, linked = true }: { article: TopicArticle; linked?: boolean }) {
   const videoId = youtubeVideoId(article.url);
+  const imageUrl = article.imageUrl ?? (videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : null);
+  if (!imageUrl) return null;
   const isVideo = Boolean(videoId);
   const content = (
     <>
-      {videoId ? (
-        <img
-          src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
-          alt=""
-          loading="lazy"
-        />
-      ) : (
-        <span>{sourceMark(article.source)}</span>
-      )}
+      <img src={imageUrl} alt="" loading="lazy" />
       {isVideo && <b aria-hidden="true" />}
     </>
   );
@@ -123,7 +117,7 @@ function TopicArticleCard({
   }
 
   return (
-    <article className={`ra-card ${read ? "is-read" : ""}`}>
+    <article className={`ra-card ${article.imageUrl || youtubeVideoId(article.url) ? "has-media" : "no-media"} ${read ? "is-read" : ""}`}>
       <TopicMedia article={article} />
       <div className="ra-card-body">
         <div className="ra-card-topline">

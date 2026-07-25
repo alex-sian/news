@@ -101,6 +101,21 @@ function xmlAttribute(item, tag, attr) {
   return clean(match?.[1] ?? "");
 }
 
+function rawXmlAttribute(item, tag, attr) {
+  const match = item.match(new RegExp(`<${tag}\\b[^>]*\\s${attr}=["']([^"']+)["'][^>]*>`, "i"));
+  return match?.[1]?.replace(/&amp;/g, "&").trim() ?? "";
+}
+
+function rssImageUrl(item) {
+  return (
+    rawXmlAttribute(item, "media:content", "url") ||
+    rawXmlAttribute(item, "media:thumbnail", "url") ||
+    rawXmlAttribute(item, "enclosure", "url") ||
+    rawXmlAttribute(item, "image", "url") ||
+    ""
+  );
+}
+
 function sourceSlug(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
@@ -217,6 +232,10 @@ async function espnMavericksArticles() {
         item.links?.web?.href ??
         item.link?.href ??
         `https://www.espn.com/nba/story/_/id/${item.id}`;
+      const imageUrl =
+        item.images?.find((image) => image.url)?.url ??
+        item.images?.[0]?.url ??
+        null;
       const article = {
         id: stableId("espn", String(item.id ?? url ?? title)),
         title,
@@ -229,6 +248,7 @@ async function espnMavericksArticles() {
           "ESPN is a broad sports-news source. Treat rumors, anonymous sourcing, and opinion as weaker than official team or league confirmation.",
         source: "ESPN NBA",
         url,
+        imageUrl,
         publishedAt: String(item.published ?? item.lastModified ?? today).slice(0, 10),
         evidence: "News report",
       };
@@ -270,6 +290,7 @@ function parseRssArticles(xml, source, feedUrl, evidence = "News report") {
             : "Automatically collected sports coverage can repeat wire stories and should be deduped against other sources.",
         source,
         url,
+        imageUrl: rssImageUrl(item) || null,
         publishedAt: dateFromUnknown(rssField(item, "pubDate") || rssField(item, "dc:date")),
         evidence,
       };
@@ -297,8 +318,9 @@ function parseYoutubeArticles(xml, source, feedUrl, evidence = "News report") {
       const title = rssField(entry, "title");
       const summary = rssField(entry, "media:description") || rssField(entry, "summary") || `Recent Mavericks video from ${source}.`;
       const url = xmlAttribute(entry, "link", "href") || feedUrl;
+      const videoId = rssField(entry, "yt:videoId");
       const article = {
-        id: stableId(sourceSlug(source), rssField(entry, "yt:videoId") || url || title),
+        id: stableId(sourceSlug(source), videoId || url || title),
         title,
         summary: summary.slice(0, 360),
         whyItMatters:
@@ -309,6 +331,9 @@ function parseYoutubeArticles(xml, source, feedUrl, evidence = "News report") {
           "Video feeds are collected by publish time. Watch for title-driven hype, sponsor reads, and clips that need confirmation from reporting.",
         source,
         url,
+        imageUrl:
+          rawXmlAttribute(entry, "media:thumbnail", "url") ||
+          (videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : null),
         publishedAt: dateFromUnknown(rssField(entry, "published") || rssField(entry, "updated")),
         evidence,
       };
@@ -368,11 +393,11 @@ async function upsertArticle(sql, topic, article) {
   await sql`
     insert into articles (
       id, title, summary, why_it_matters, limitation, source, url,
-      published_at, reviewed_at, evidence, tags, evergreen, automated, canonical_key
+      image_url, published_at, reviewed_at, evidence, tags, evergreen, automated, canonical_key
     )
     values (
       ${article.id}, ${article.title}, ${article.summary}, ${article.whyItMatters},
-      ${article.limitation}, ${article.source}, ${article.url}, ${article.publishedAt},
+      ${article.limitation}, ${article.source}, ${article.url}, ${article.imageUrl ?? null}, ${article.publishedAt},
       ${today}, ${article.evidence}, ${article.tags}, false, true, ${article.canonicalKey}
     )
     on conflict (canonical_key)
@@ -383,6 +408,7 @@ async function upsertArticle(sql, topic, article) {
       limitation = excluded.limitation,
       source = excluded.source,
       url = excluded.url,
+      image_url = excluded.image_url,
       published_at = excluded.published_at,
       reviewed_at = excluded.reviewed_at,
       evidence = excluded.evidence,
@@ -403,6 +429,7 @@ async function upsertArticle(sql, topic, article) {
 async function main() {
   if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is required");
   const sql = neon(process.env.DATABASE_URL);
+  await sql`alter table articles add column if not exists image_url text`;
   const topics = await sql`
     select id, slug, title, categories
     from managed_topics

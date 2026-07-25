@@ -37,6 +37,7 @@ type DbArticleRow = {
   limitation: string;
   source: string;
   url: string;
+  image_url: string | null;
   published_at: string;
   reviewed_at: string;
   evidence: TopicArticle["evidence"];
@@ -68,6 +69,10 @@ export function ownerCookieHeader() {
 function sqlClient() {
   if (!process.env.DATABASE_URL) return null;
   return neon(process.env.DATABASE_URL);
+}
+
+async function ensureArticleImageColumn(sql: NonNullable<ReturnType<typeof sqlClient>>) {
+  await sql`alter table articles add column if not exists image_url text`;
 }
 
 function topicFromRow(row: DbTopicRow): ManagedTopic {
@@ -121,6 +126,7 @@ function articleFromRow(row: DbArticleRow): TopicArticle {
     limitation: row.limitation,
     source: row.source,
     url: row.url,
+    imageUrl: row.image_url,
     publishedAt: String(row.published_at).slice(0, 10),
     reviewedAt: String(row.reviewed_at).slice(0, 10),
     evidence: row.evidence,
@@ -213,9 +219,10 @@ export async function getTopicArticles(
   const sql = sqlClient();
   if (!sql) return fallback;
   try {
+    await ensureArticleImageColumn(sql);
     const rows = await sql`
       select a.id, a.title, a.summary, a.why_it_matters, a.limitation,
-        a.source, a.url, a.published_at::text, a.reviewed_at::text,
+        a.source, a.url, a.image_url, a.published_at::text, a.reviewed_at::text,
         a.evidence, a.tags, a.evergreen, a.automated, a.canonical_key,
         max(v.viewed_at)::text as viewed_at
       from articles a
@@ -262,10 +269,11 @@ export async function searchTopicArticles(query: string): Promise<TopicSearchArt
   const sql = sqlClient();
   if (!sql) return matchesFallback.slice(0, 60);
   try {
+    await ensureArticleImageColumn(sql);
     const rows = await sql`
       select t.slug, t.title as topic_title, t.public_path,
         a.id, a.title, a.summary, a.why_it_matters, a.limitation,
-        a.source, a.url, a.published_at::text, a.reviewed_at::text,
+        a.source, a.url, a.image_url, a.published_at::text, a.reviewed_at::text,
         a.evidence, a.tags, a.evergreen, a.automated, a.canonical_key,
         null::text as viewed_at
       from articles a
@@ -309,15 +317,16 @@ export async function markArticleViewed(
 ) {
   const sql = sqlClient();
   if (!sql) return { ok: true, persisted: false };
+  await ensureArticleImageColumn(sql);
   if (article) {
     await sql`
       insert into articles (
         id, title, summary, why_it_matters, limitation, source, url,
-        published_at, reviewed_at, evidence, tags, evergreen, automated, canonical_key
+        image_url, published_at, reviewed_at, evidence, tags, evergreen, automated, canonical_key
       )
       values (
         ${article.id}, ${article.title}, ${article.summary}, ${article.whyItMatters},
-        ${article.limitation}, ${article.source}, ${article.url}, ${article.publishedAt},
+        ${article.limitation}, ${article.source}, ${article.url}, ${article.imageUrl ?? null}, ${article.publishedAt},
         ${article.reviewedAt}, ${article.evidence}, ${article.tags}, ${Boolean(article.evergreen)},
         ${Boolean(article.automated)}, ${article.canonicalKey ?? article.url}
       )
@@ -329,6 +338,7 @@ export async function markArticleViewed(
         limitation = excluded.limitation,
         source = excluded.source,
         url = excluded.url,
+        image_url = excluded.image_url,
         published_at = excluded.published_at,
         reviewed_at = excluded.reviewed_at,
         evidence = excluded.evidence,
@@ -367,11 +377,12 @@ export async function clearViewedArticle(articleId: string) {
 export async function viewedArchive(query = ""): Promise<TopicArticle[]> {
   const sql = sqlClient();
   if (!sql) return [];
+  await ensureArticleImageColumn(sql);
   const normalized = query.trim();
   const rows = normalized
     ? await sql`
         select a.id, a.title, a.summary, a.why_it_matters, a.limitation,
-          a.source, a.url, a.published_at::text, a.reviewed_at::text,
+          a.source, a.url, a.image_url, a.published_at::text, a.reviewed_at::text,
           a.evidence, a.tags, a.evergreen, a.automated, a.canonical_key,
           v.viewed_at::text
         from article_views v
@@ -387,7 +398,7 @@ export async function viewedArchive(query = ""): Promise<TopicArticle[]> {
       `
     : await sql`
         select a.id, a.title, a.summary, a.why_it_matters, a.limitation,
-          a.source, a.url, a.published_at::text, a.reviewed_at::text,
+          a.source, a.url, a.image_url, a.published_at::text, a.reviewed_at::text,
           a.evidence, a.tags, a.evergreen, a.automated, a.canonical_key,
           v.viewed_at::text
         from article_views v

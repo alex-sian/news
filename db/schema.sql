@@ -23,6 +23,7 @@ create table if not exists articles (
   limitation text not null default '',
   source text not null default '',
   url text not null,
+  image_url text,
   published_at date not null,
   reviewed_at date not null default current_date,
   evidence text not null default 'Context',

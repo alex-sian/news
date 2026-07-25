@@ -52,6 +52,7 @@ export type TopicArticle = {
   limitation: string;
   source: string;
   url: string;
+  imageUrl?: string | null;
   publishedAt: string;
   reviewedAt: string;
   evidence: EvidenceLabel;
