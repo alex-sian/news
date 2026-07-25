@@ -4,6 +4,8 @@ import { neon } from "@neondatabase/serverless";
 const today = new Date().toISOString().slice(0, 10);
 const maxPerTopic = Number(process.env.TOPIC_REFRESH_LIMIT ?? 24);
 const mavsTopicLimit = Number(process.env.MAVERICKS_REFRESH_LIMIT ?? Math.max(maxPerTopic, 36));
+const mavsYoutubeSearchLimit = Number(process.env.MAVERICKS_YOUTUBE_SEARCH_LIMIT ?? 16);
+const mavsYoutubeSearchMaxHours = Number(process.env.MAVERICKS_YOUTUBE_SEARCH_MAX_HOURS ?? 48);
 const mavsTextPattern =
   /\bdallas\b|\bmavericks\b|\bmavs\b|\bluka\b|\bkyrie\b|\banthony davis\b|\bcooper flagg\b|\bnba draft\b|\btrade\b|\broster\b|\bcontract\b|\bfree agency\b/i;
 
@@ -56,6 +58,15 @@ const mavsYoutubeSources = [
   },
 ];
 
+const mavsYoutubeSearches = [
+  {
+    url: "https://www.youtube.com/results?search_query=dallas+mavericks&sp=EgIIAg%253D%253D",
+    source: "YouTube Mavericks search",
+    evidence: "Context",
+    purpose: "Fresh Mavericks video search results from the last couple of days, including creator reactions, podcasts, and rumors.",
+  },
+];
+
 function clean(value = "") {
   return String(value)
     .replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
@@ -75,6 +86,15 @@ function stableId(prefix, value) {
   return `${prefix}-${createHash("sha256").update(value).digest("hex").slice(0, 16)}`;
 }
 
+function decodeJavascriptString(value = "") {
+  return clean(
+    value
+      .replace(/\\u([0-9a-f]{4})/gi, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+      .replace(/\\"/g, '"')
+      .replace(/\\\\/g, "\\"),
+  );
+}
+
 function dateFromParts(parts) {
   const [year, month = 1, day = 1] = parts?.["date-parts"]?.[0] ?? [];
   if (!year) return today;
@@ -85,6 +105,29 @@ function dateFromUnknown(value) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return today;
   return date.toISOString().slice(0, 10);
+}
+
+function daysAgoDate(daysAgo) {
+  const date = new Date();
+  date.setUTCDate(date.getUTCDate() - daysAgo);
+  return date.toISOString().slice(0, 10);
+}
+
+function youtubeRelativeHours(value = "") {
+  const normalized = value.toLowerCase();
+  if (/minute|second|hour/.test(normalized)) return 0;
+  const amount = Number(normalized.match(/\d+/)?.[0] ?? 1);
+  if (normalized.includes("day")) return amount * 24;
+  if (normalized.includes("week")) return amount * 24 * 7;
+  if (normalized.includes("month")) return amount * 24 * 30;
+  if (normalized.includes("year")) return amount * 24 * 365;
+  return Number.POSITIVE_INFINITY;
+}
+
+function youtubeRelativeDate(value = "") {
+  const hours = youtubeRelativeHours(value);
+  if (!Number.isFinite(hours)) return today;
+  return daysAgoDate(Math.floor(hours / 24));
 }
 
 function articleTime(article) {
@@ -370,11 +413,67 @@ async function youtubeFeedArticles({ url, feedUrl: directFeedUrl, source, eviden
   return parseYoutubeArticles(await feedResponse.text(), source, feedUrl, evidence);
 }
 
+function parseYoutubeSearchArticles(html, source, evidence = "Context") {
+  const blocks = html.match(/\{"videoRenderer":\{[\s\S]*?(?=\},\{"videoRenderer"|\}\],"trackingParams")/g) ?? [];
+  const seen = new Set();
+  return blocks
+    .map((block) => {
+      const videoId = block.match(/"videoId":"([^"]+)"/)?.[1];
+      if (!videoId || seen.has(videoId)) return null;
+      seen.add(videoId);
+      const title = decodeJavascriptString(block.match(/"title":\{"runs":\[\{"text":"((?:\\.|[^"])*)"/)?.[1] ?? "");
+      const channel = decodeJavascriptString(block.match(/"ownerText":\{"runs":\[\{"text":"((?:\\.|[^"])*)"/)?.[1] ?? "YouTube");
+      const publishedText = decodeJavascriptString(
+        block.match(/"publishedTimeText":\{"simpleText":"((?:\\.|[^"])*)"/)?.[1] ?? "",
+      );
+      const summary = decodeJavascriptString(
+        block.match(/"descriptionSnippet":\{"runs":\[\{"text":"((?:\\.|[^"])*)"/)?.[1] ?? "",
+      );
+      const text = `${title} ${channel} ${summary}`.toLowerCase();
+      if (!mavsTextPattern.test(text)) return null;
+      if (youtubeRelativeHours(publishedText) > mavsYoutubeSearchMaxHours) return null;
+      const url = `https://www.youtube.com/watch?v=${videoId}`;
+      const article = {
+        id: stableId("youtube-search", videoId),
+        title,
+        summary: summary || `Fresh Mavericks video from ${channel}.`,
+        whyItMatters:
+          "This catches the freshest Mavericks videos from search, including creator reactions, podcasts, rumor updates, and quick-hit analysis.",
+        limitation:
+          "YouTube search can surface hype, aggregation, and weakly sourced rumor content. Treat it as a live pulse, then verify claims through reporting or official sources.",
+        source: channel === "YouTube" ? source : `YouTube: ${channel}`,
+        url,
+        imageUrl: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+        publishedAt: youtubeRelativeDate(publishedText),
+        evidence,
+      };
+      return {
+        ...article,
+        tags: sportsTagsFor(article),
+        canonicalKey: url,
+      };
+    })
+    .filter(Boolean)
+    .sort((left, right) => articleTime(right) - articleTime(left))
+    .slice(0, mavsYoutubeSearchLimit);
+}
+
+async function youtubeSearchArticles({ url, source, evidence }) {
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "Mozilla/5.0 (compatible; MarketBriefTopicRefresh/1.0; +https://news-njgv.onrender.com)",
+    },
+  });
+  if (!response.ok) throw new Error(`${source} search failed: ${response.status}`);
+  return parseYoutubeSearchArticles(await response.text(), source, evidence);
+}
+
 async function dallasMavericksArticles() {
   const settled = await Promise.allSettled([
     espnMavericksArticles(),
     ...mavsRssSources.map((source) => rssFeedArticles(source)),
     ...mavsYoutubeSources.map((source) => youtubeFeedArticles(source)),
+    ...mavsYoutubeSearches.map((source) => youtubeSearchArticles(source)),
   ]);
   const articles = settled.flatMap((result) => (result.status === "fulfilled" ? result.value : []));
   const seen = new Set();
