@@ -128,6 +128,12 @@ function raArticles(): TopicArticle[] {
   }));
 }
 
+function fallbackArticlesForSlug(slug: string) {
+  if (slug === "ra-news") return raArticles();
+  if (slug === "solid-state-batteries") return SOLID_STATE_BATTERY_SEEDS;
+  return [];
+}
+
 export function fallbackTopics() {
   return [RA_MANAGED_TOPIC, SOLID_STATE_BATTERIES_TOPIC];
 }
@@ -172,7 +178,7 @@ export async function getTopicArticles(
   slug: string,
   ownerTracking: boolean,
 ): Promise<TopicArticle[]> {
-  const fallback = slug === "ra-news" ? raArticles() : SOLID_STATE_BATTERY_SEEDS;
+  const fallback = fallbackArticlesForSlug(slug);
   const sql = sqlClient();
   if (!sql) return fallback;
   try {

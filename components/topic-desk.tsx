@@ -256,8 +256,16 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
           </div>
         ) : (
           <div className="ra-empty">
-            <strong>Nothing matches this view.</strong>
-            <p>Try another section, show viewed articles, or clear the search.</p>
+            <strong>
+              {initialData.articles.length
+                ? "Nothing matches this view."
+                : "This topic is created, but has no articles yet."}
+            </strong>
+            <p>
+              {initialData.articles.length
+                ? "Try another section, show viewed articles, or clear the search."
+                : "The next collection pass can add sources here. Until then, Admin still keeps the topic settings."}
+            </p>
             <button
               type="button"
               onClick={() => {
