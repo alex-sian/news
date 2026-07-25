@@ -28,21 +28,15 @@ function youtubeVideoId(url: string) {
   try {
     const parsed = new URL(url);
     if (parsed.hostname.includes("youtu.be")) return parsed.pathname.split("/").filter(Boolean)[0];
-    if (parsed.hostname.includes("youtube.com")) return parsed.searchParams.get("v");
+    if (parsed.hostname.includes("youtube.com")) {
+      const parts = parsed.pathname.split("/").filter(Boolean);
+      if (parts[0] === "shorts" || parts[0] === "embed") return parts[1] ?? null;
+      return parsed.searchParams.get("v");
+    }
   } catch {
     return null;
   }
   return null;
-}
-
-function sourceMark(source: string) {
-  return source
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((word) => word[0])
-    .join("")
-    .toUpperCase();
 }
 
 function sourceTone(source: string) {
@@ -52,6 +46,43 @@ function sourceTone(source: string) {
   if (key.includes("hoops") || key.includes("realgm") || key.includes("spotrac")) return "roster";
   if (key.includes("smoking") || key.includes("moneyball")) return "fan";
   return "default";
+}
+
+function ArticleContext({
+  article,
+  read,
+  markUnread,
+}: {
+  article: TopicArticle;
+  read: boolean;
+  markUnread: () => void;
+}) {
+  return (
+    <details className="article-context">
+      <summary>Context</summary>
+      <p className="ra-summary">{article.summary}</p>
+      <div className="ra-analysis">
+        <p>
+          <strong>Why it matters</strong>
+          {article.whyItMatters}
+        </p>
+        <p>
+          <strong>Keep in mind</strong>
+          {article.limitation}
+        </p>
+      </div>
+      <div className="ra-tags" aria-label="Article topics">
+        {article.tags.map((tag) => (
+          <span key={tag}>{tag}</span>
+        ))}
+      </div>
+      {read && (
+        <button type="button" onClick={markUnread}>
+          Mark unread
+        </button>
+      )}
+    </details>
+  );
 }
 
 function TopicMedia({ article, linked = true }: { article: TopicArticle; linked?: boolean }) {
@@ -118,12 +149,16 @@ function TopicArticleCard({
 
   return (
     <article className={`ra-card ${article.imageUrl || youtubeVideoId(article.url) ? "has-media" : "no-media"} ${read ? "is-read" : ""}`}>
-      <TopicMedia article={article} />
+      <div className="ra-card-side">
+        <TopicMedia article={article} />
+        <ArticleContext article={article} read={read} markUnread={markUnread} />
+      </div>
       <div className="ra-card-body">
         <div className="ra-card-topline">
           <span className={`evidence-badge ${evidenceTone[article.evidence]}`}>
             {article.evidence}
           </span>
+          <span>{article.source}</span>
           <span>{displayDate(article.publishedAt)}</span>
           {article.evergreen && <span className="hawaii-badge">Evergreen</span>}
           {read && <span className="read-label">Viewed</span>}
@@ -133,35 +168,17 @@ function TopicArticleCard({
             {article.title}
           </a>
         </h2>
-        <p className="ra-summary">{article.summary}</p>
-        <div className="ra-analysis">
-          <p>
-            <strong>Why it matters</strong>
-            {article.whyItMatters}
-          </p>
-          <p>
-            <strong>Keep in mind</strong>
-            {article.limitation}
-          </p>
-        </div>
-        <div className="ra-tags" aria-label="Article topics">
-          {article.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
-        </div>
         <footer>
           <span>{article.source}</span>
           <div className="topic-card-actions">
-            {read && (
-              <button type="button" onClick={markUnread}>
-                Mark unread
-              </button>
-            )}
             <a href={article.url} target="_blank" rel="noreferrer" onClick={markViewed}>
               Read original <span aria-hidden="true">↗</span>
             </a>
           </div>
         </footer>
+        <div className="article-context-inline">
+          <ArticleContext article={article} read={read} markUnread={markUnread} />
+        </div>
       </div>
     </article>
   );
@@ -246,10 +263,10 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
   return (
     <>
       <SiteHeader />
-      <main className="ra-shell">
+      <main className={`ra-shell ${isMavs ? "mavs-shell" : ""}`}>
         <section className="ra-masthead topic-masthead">
           <div>
-            <p className="kicker">Managed topic</p>
+            <p className="kicker">{isMavs ? "Mavs pulse" : "Managed topic"}</p>
             <h1>{initialData.topic.title}</h1>
             <p className="ra-deck">{initialData.topic.deck}</p>
           </div>

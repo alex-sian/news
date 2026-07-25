@@ -49,6 +49,7 @@ const mavsRssSources = [
 const mavsYoutubeSources = [
   {
     url: "https://www.youtube.com/@dallasmavericks",
+    feedUrl: "https://www.youtube.com/feeds/videos.xml?user=dallasmavericks",
     source: "Dallas Mavericks YouTube",
     evidence: "Primary source",
     purpose: "Official video, interviews, highlights, and team-produced media.",
@@ -346,18 +347,21 @@ function parseYoutubeArticles(xml, source, feedUrl, evidence = "News report") {
     .filter((article) => article.title && article.url);
 }
 
-async function youtubeFeedArticles({ url, source, evidence }) {
-  const channelResponse = await fetch(url, {
-    headers: { "User-Agent": "MarketBriefTopicRefresh/1.0 (personal research project)" },
-  });
-  if (!channelResponse.ok) throw new Error(`${source} channel failed: ${channelResponse.status}`);
-  const channelHtml = await channelResponse.text();
-  const feedUrl =
-    channelHtml.match(/https:\/\/www\.youtube\.com\/feeds\/videos\.xml\?channel_id=[A-Za-z0-9_-]+/)?.[0]?.replace(/&amp;/g, "&") ??
-    channelHtml.match(/"channelId":"(UC[A-Za-z0-9_-]+)"/)?.[1]?.replace(
-      /^/,
-      "https://www.youtube.com/feeds/videos.xml?channel_id=",
-    );
+async function youtubeFeedArticles({ url, feedUrl: directFeedUrl, source, evidence }) {
+  let feedUrl = directFeedUrl;
+  if (!feedUrl) {
+    const channelResponse = await fetch(url, {
+      headers: { "User-Agent": "MarketBriefTopicRefresh/1.0 (personal research project)" },
+    });
+    if (!channelResponse.ok) throw new Error(`${source} channel failed: ${channelResponse.status}`);
+    const channelHtml = await channelResponse.text();
+    feedUrl =
+      channelHtml.match(/https:\/\/www\.youtube\.com\/feeds\/videos\.xml\?channel_id=[A-Za-z0-9_-]+/)?.[0]?.replace(/&amp;/g, "&") ??
+      channelHtml.match(/"channelId":"(UC[A-Za-z0-9_-]+)"/)?.[1]?.replace(
+        /^/,
+        "https://www.youtube.com/feeds/videos.xml?channel_id=",
+      );
+  }
   if (!feedUrl) throw new Error(`${source} YouTube feed not found`);
   const feedResponse = await fetch(feedUrl, {
     headers: { "User-Agent": "MarketBriefTopicRefresh/1.0 (personal research project)" },
