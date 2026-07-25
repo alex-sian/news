@@ -283,6 +283,8 @@ export const SPORTS_TEAM_CATEGORIES = [
   "Schedule & results",
   "Transactions",
   "Analysis",
+  "Draft & prospects",
+  "Front office",
   "Stats",
 ] as const;
 
@@ -353,6 +355,125 @@ export const DALLAS_MAVERICKS_SEEDS: TopicArticle[] = [
     reviewedAt: "2026-07-25",
     evidence: "Context",
     tags: ["Best & evergreen", "Stats"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-moneyball",
+    title: "Mavs Moneyball Mavericks coverage",
+    summary:
+      "SB Nation’s Mavericks site follows roster moves, trade rumors, draft angles, game takeaways, and fan-facing analysis.",
+    whyItMatters:
+      "This adds the independent/team-obsessive layer that official pages miss: what people who actually follow Dallas closely are arguing about.",
+    limitation:
+      "It includes opinion and rumor analysis. Treat it as useful context, not confirmation.",
+    source: "Mavs Moneyball",
+    url: "https://www.mavsmoneyball.com/",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "Trade coverage",
+    tags: ["Best & evergreen", "Analysis", "Transactions"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-dallas-morning-news",
+    title: "Dallas Morning News Mavericks coverage",
+    summary:
+      "Local Dallas sports coverage for Mavericks reporting, columns, roster context, and beat-driven team updates.",
+    whyItMatters:
+      "Local beat coverage is often better than generic national news for injuries, front-office context, and what is happening around the team.",
+    limitation:
+      "Some articles may require a subscription or limited free access.",
+    source: "The Dallas Morning News",
+    url: "https://www.dallasnews.com/sports/mavericks/",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "News report",
+    tags: ["Best & evergreen", "Analysis", "Roster & injuries"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-athletic-team-page",
+    title: "The Athletic Dallas Mavericks coverage",
+    summary:
+      "The Athletic’s Mavericks page collects deeper reporting, team analysis, player stories, and NBA context.",
+    whyItMatters:
+      "This is a strong source for longer-form analysis when a quick headline feed is too thin.",
+    limitation:
+      "Most coverage requires a subscription.",
+    source: "The Athletic",
+    url: "https://www.nytimes.com/athletic/nba/team/mavericks/",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "News report",
+    tags: ["Best & evergreen", "Analysis", "Roster & injuries"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-yahoo-sports",
+    title: "Yahoo Sports Dallas Mavericks news",
+    summary:
+      "Yahoo’s Mavericks stream mixes wire stories, national NBA coverage, schedule context, and roster headlines.",
+    whyItMatters:
+      "It broadens the page beyond official/team sites and catches syndicated stories that may not appear in one narrow feed.",
+    limitation:
+      "Aggregation can repeat stories from other outlets, so dedupe and source labels matter.",
+    source: "Yahoo Sports",
+    url: "https://sports.yahoo.com/nba/teams/dallas/",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "News report",
+    tags: ["Latest", "Schedule & results", "Transactions"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-spotrac",
+    title: "Dallas Mavericks contracts and salary cap table",
+    summary:
+      "Spotrac tracks Mavericks contracts, cap allocations, free-agent timing, exceptions, and roster spending.",
+    whyItMatters:
+      "Trade and signing rumors make more sense when you can see the cap sheet underneath them.",
+    limitation:
+      "Cap data can change quickly around transactions and may differ from team or league interpretations.",
+    source: "Spotrac",
+    url: "https://www.spotrac.com/nba/dallas-mavericks/cap",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "Context",
+    tags: ["Best & evergreen", "Transactions", "Front office"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-real-gm",
+    title: "RealGM Dallas Mavericks roster and transactions",
+    summary:
+      "RealGM provides roster, depth chart, transaction, draft-rights, and team-history context for Dallas.",
+    whyItMatters:
+      "It is handy when a rumor involves a fringe roster spot, draft rights, or past transaction trail.",
+    limitation:
+      "It is a reference source, not reporting. Use it to check structure, not intent.",
+    source: "RealGM",
+    url: "https://basketball.realgm.com/nba/teams/Dallas-Mavericks/6/Home",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "Context",
+    tags: ["Stats", "Transactions", "Front office"],
+    evergreen: true,
+  },
+  {
+    id: "mavs-fansided-smoking-cuban",
+    title: "The Smoking Cuban Mavericks coverage",
+    summary:
+      "FanSided’s Mavericks site publishes frequent team-specific opinion, rumor reactions, player analysis, and roster speculation.",
+    whyItMatters:
+      "It can surface the broader fan conversation and recurring arguments around Dallas faster than national outlets.",
+    limitation:
+      "This is commentary-heavy. I label it accordingly and would not treat it as a validation source by itself.",
+    source: "The Smoking Cuban",
+    url: "https://thesmokingcuban.com/",
+    publishedAt: "2026-01-01",
+    reviewedAt: "2026-07-25",
+    evidence: "Trade coverage",
+    tags: ["Analysis", "Transactions", "Draft & prospects"],
     evergreen: true,
   },
 ];

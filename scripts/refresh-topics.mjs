@@ -6,8 +6,13 @@ const maxPerTopic = Number(process.env.TOPIC_REFRESH_LIMIT ?? 24);
 
 function clean(value = "") {
   return String(value)
+    .replace(/<!\[CDATA\[(.*?)\]\]>/gs, "$1")
     .replace(/<[^>]+>/g, " ")
     .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -20,6 +25,17 @@ function dateFromParts(parts) {
   const [year, month = 1, day = 1] = parts?.["date-parts"]?.[0] ?? [];
   if (!year) return today;
   return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+function dateFromUnknown(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return today;
+  return date.toISOString().slice(0, 10);
+}
+
+function rssField(item, field) {
+  const match = item.match(new RegExp(`<${field}[^>]*>([\\s\\S]*?)<\\/${field}>`, "i"));
+  return clean(match?.[1] ?? "");
 }
 
 function tagsFor(title, topicTitle, categories = []) {
@@ -146,6 +162,76 @@ async function espnMavericksArticles() {
     .slice(0, maxPerTopic);
 }
 
+function parseRssArticles(xml, source, feedUrl, evidence = "News report") {
+  const items = xml.match(/<item\b[\s\S]*?<\/item>/gi) ?? [];
+  return items
+    .map((item) => {
+      const title = rssField(item, "title");
+      const summary = rssField(item, "description") || `Recent Dallas Mavericks coverage from ${source}.`;
+      const url = rssField(item, "link") || feedUrl;
+      const text = `${title} ${summary}`.toLowerCase();
+      if (
+        !/\bdallas\b|\bmavericks\b|\bmavs\b|\bluka\b|\bkyrie\b|\banthony davis\b|\bcooper flagg\b|\bnba draft\b|\btrade\b/.test(
+          text,
+        )
+      ) {
+        return null;
+      }
+      const article = {
+        id: stableId(source.toLowerCase().replace(/[^a-z0-9]+/g, "-"), url || title),
+        title,
+        summary: summary.slice(0, 360),
+        whyItMatters:
+          source === "Mavs Moneyball" || source === "The Smoking Cuban"
+            ? "This adds team-specific independent coverage and fan-facing analysis beyond official Mavericks and league pages."
+            : "This adds current Mavericks coverage from a non-official source.",
+        limitation:
+          evidence === "Trade coverage"
+            ? "This feed can include opinion, speculation, and rumor reaction. Use it for signal, then look for confirmation."
+            : "Automatically collected sports coverage can repeat wire stories and should be deduped against other sources.",
+        source,
+        url,
+        publishedAt: dateFromUnknown(rssField(item, "pubDate") || rssField(item, "dc:date")),
+        evidence,
+      };
+      return {
+        ...article,
+        tags: sportsTagsFor(article),
+        canonicalKey: url,
+      };
+    })
+    .filter(Boolean);
+}
+
+async function rssFeedArticles(feedUrl, source, evidence) {
+  const response = await fetch(feedUrl, {
+    headers: { "User-Agent": "MarketBriefTopicRefresh/1.0 (personal research project)" },
+  });
+  if (!response.ok) throw new Error(`${source} RSS failed: ${response.status}`);
+  return parseRssArticles(await response.text(), source, feedUrl, evidence);
+}
+
+async function dallasMavericksArticles() {
+  const feeds = [
+    ["https://www.mavsmoneyball.com/rss/index.xml", "Mavs Moneyball", "Trade coverage"],
+    ["https://thesmokingcuban.com/feed/", "The Smoking Cuban", "Trade coverage"],
+  ];
+  const settled = await Promise.allSettled([
+    espnMavericksArticles(),
+    ...feeds.map(([url, source, evidence]) => rssFeedArticles(url, source, evidence)),
+  ]);
+  const articles = settled.flatMap((result) => (result.status === "fulfilled" ? result.value : []));
+  const seen = new Set();
+  return articles
+    .filter((article) => {
+      const key = article.canonicalKey ?? article.url ?? article.title;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, maxPerTopic);
+}
+
 async function upsertArticle(sql, topic, article) {
   await sql`
     insert into articles (
@@ -197,7 +283,7 @@ async function main() {
   for (const topic of topics) {
     const articles =
       topic.slug === "dallas-mavericks"
-        ? await espnMavericksArticles()
+        ? await dallasMavericksArticles()
         : await crossrefForTopic(topic);
     for (const article of articles) {
       await upsertArticle(sql, topic, article);
