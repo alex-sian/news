@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { CloseIcon, MenuIcon, SearchIcon } from "./icons";
+import { TopicNav } from "./topic-nav";
 
 type NavLink = {
   href: string;
@@ -94,6 +95,9 @@ export function SiteHeader() {
             AS
           </button>
         </div>
+        <Suspense fallback={<div className="topic-nav" aria-hidden="true" />}>
+          <TopicNav />
+        </Suspense>
       </header>
 
       <div className={`drawer-layer ${open ? "is-open" : ""}`} aria-hidden={!open}>

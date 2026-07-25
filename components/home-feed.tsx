@@ -1,129 +1,123 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import type { HomePayload } from "@/lib/alpaca";
-import { FeedStory, HeroStory, CompactStory } from "./news-card";
+import { marketStory, type HomeDeskStory } from "@/lib/home-desks";
+import { ArrowIcon, BookmarkIcon } from "./icons";
 import { MarketStrip } from "./market-strip";
 import { SiteHeader } from "./site-header";
 
-const filters = ["Top", "Latest", "Markets", "Technology", "Economy"];
-
-const marketSymbols = new Set([
-  "SPY",
-  "DIA",
-  "QQQ",
-  "IWM",
-  "VXX",
-  "VIX",
-  "TLT",
-  "GLD",
-  "USO",
-  "XLF",
-  "XLE",
-  "XLK",
-]);
-
-const technologySymbols = new Set([
-  "AAPL",
-  "AMD",
-  "AMZN",
-  "AVGO",
-  "GOOG",
-  "GOOGL",
-  "INTC",
-  "META",
-  "MSFT",
-  "MU",
-  "NFLX",
-  "NVDA",
-  "ORCL",
-  "PLTR",
-  "TSLA",
-]);
-
-const economyTerms = [
-  "fed",
-  "federal reserve",
-  "inflation",
-  "jobs",
-  "payroll",
-  "cpi",
-  "gdp",
-  "tariff",
-  "treasury",
-  "yield",
-  "interest rate",
-  "economy",
-  "recession",
-];
-
-const marketTerms = [
-  "market",
-  "stocks",
-  "shares",
-  "futures",
-  "wall street",
-  "rally",
-  "selloff",
-  "s&p",
-  "nasdaq",
-  "dow",
-  "volatility",
-];
-
-const technologyTerms = [
-  "ai",
-  "artificial intelligence",
-  "chip",
-  "semiconductor",
-  "software",
-  "cloud",
-  "data center",
-  "technology",
-  "cyber",
-];
-
-function includesTopic(
-  article: HomePayload["articles"][number],
-  symbols: Set<string>,
-  terms: string[],
-) {
-  const text = `${article.headline} ${article.summary}`.toLowerCase();
-  return article.symbols.some((symbol) => symbols.has(symbol)) ||
-    terms.some((term) => text.includes(term));
+function timeAgo(value: string) {
+  const then = new Date(value.includes("T") ? value : `${value}T12:00:00`).getTime();
+  const minutes = Math.max(1, Math.round((Date.now() - then) / 60_000));
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.round(minutes / 60);
+  if (hours < 24) return `${hours}h ago`;
+  return `${Math.round(hours / 24)}d ago`;
 }
 
-function filterArticles(
-  articles: HomePayload["articles"],
-  filter: string,
-) {
-  if (filter === "Top") return articles;
-  if (filter === "Latest") {
-    return [...articles].sort(
-      (left, right) =>
-        new Date(right.updated_at).getTime() -
-        new Date(left.updated_at).getTime(),
-    );
+function StoryTags({ story }: { story: HomeDeskStory }) {
+  if (story.kind === "topic") {
+    return <a className="desk-tag" href={story.deskHref}>{story.deskLabel}</a>;
   }
-  if (filter === "Markets") {
-    return articles.filter((article) =>
-      includesTopic(article, marketSymbols, marketTerms),
-    );
-  }
-  if (filter === "Technology") {
-    return articles.filter((article) =>
-      includesTopic(article, technologySymbols, technologyTerms),
-    );
-  }
-  return articles.filter((article) =>
-    includesTopic(article, new Set(), economyTerms),
+  return (
+    <div className="symbol-tags" aria-label="Related symbols">
+      {story.symbols.slice(0, 3).map((symbol) => (
+        <a key={symbol} href={`/symbol/${symbol}`}>{symbol}</a>
+      ))}
+    </div>
   );
 }
 
-export function HomeFeed({ initialData }: { initialData: HomePayload }) {
+function DeskHero({ story }: { story: HomeDeskStory }) {
+  return (
+    <article className={`home-hero ${story.image ? "has-image" : ""}`}>
+      {story.image ? (
+        // Images originate with the source publisher via Alpaca.
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={story.image} alt="" />
+      ) : (
+        <div className="home-hero-art" aria-hidden="true">
+          <span>{story.kind === "market" ? "MARKET" : "TOPIC"}</span>
+          <strong>{story.deskLabel.split(" ").slice(0, 2).join(" ")}</strong>
+        </div>
+      )}
+      <div className="home-hero-copy">
+        <div className="story-meta">
+          <a className="desk-tag" href={story.deskHref}>{story.deskLabel}</a>
+          <span>{story.source}</span>
+          <time>{timeAgo(story.publishedAt)}</time>
+        </div>
+        <h1><a href={story.href} target="_blank" rel="noreferrer">{story.title}</a></h1>
+        <p>{story.summary}</p>
+        <div className="story-actions">
+          <StoryTags story={story} />
+          <a href={story.href} target="_blank" rel="noreferrer">Read story <ArrowIcon /></a>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function CompactDeskStory({ story }: { story: HomeDeskStory }) {
+  return (
+    <article className="compact-story">
+      <div className="compact-copy">
+        <div className="story-meta">
+          <a className="desk-tag" href={story.deskHref}>{story.deskLabel}</a>
+          <span>{story.source}</span>
+        </div>
+        <h2><a href={story.href} target="_blank" rel="noreferrer">{story.title}</a></h2>
+        <StoryTags story={story} />
+      </div>
+      {story.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={story.image} alt="" />
+      ) : (
+        <div className="story-thumb" aria-hidden="true">{story.deskLabel.slice(0, 5).toUpperCase()}</div>
+      )}
+    </article>
+  );
+}
+
+function FeedDeskStory({ story }: { story: HomeDeskStory }) {
+  return (
+    <article className="feed-story">
+      <div className="feed-copy">
+        <div className="story-meta">
+          <a className="desk-tag" href={story.deskHref}>{story.deskLabel}</a>
+          <span>{story.source}</span>
+          <time>{timeAgo(story.publishedAt)}</time>
+        </div>
+        <h3><a href={story.href} target="_blank" rel="noreferrer">{story.title}</a></h3>
+        {story.summary && <p>{story.summary}</p>}
+        <StoryTags story={story} />
+      </div>
+      <div className="feed-side">
+        {story.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={story.image} alt="" />
+        ) : (
+          <div className="story-thumb" aria-hidden="true">{story.deskLabel.slice(0, 5).toUpperCase()}</div>
+        )}
+        <button type="button" aria-label="Save story" title="Save story"><BookmarkIcon /></button>
+      </div>
+    </article>
+  );
+}
+
+export function HomeFeed({
+  initialData,
+  topicStories,
+}: {
+  initialData: HomePayload;
+  topicStories: HomeDeskStory[];
+}) {
   const [data, setData] = useState(initialData);
-  const [active, setActive] = useState("Top");
   const [refreshing, setRefreshing] = useState(false);
+  const searchParams = useSearchParams();
+  const marketsOnly = searchParams.get("desk") === "markets";
 
   const refresh = useCallback(async () => {
     setRefreshing(true);
@@ -135,10 +129,27 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
     }
   }, []);
 
-  const visibleArticles = filterArticles(data.articles, active);
-  const [lead, ...rest] = visibleArticles;
-  const topStories = rest.slice(0, 3);
-  const latest = rest.slice(3);
+  const stories = useMemo(() => {
+    const marketStories = data.articles.map(marketStory);
+    const all = marketsOnly ? marketStories : [...marketStories, ...topicStories];
+    return all.sort((left, right) =>
+      new Date(right.publishedAt).getTime() - new Date(left.publishedAt).getTime(),
+    );
+  }, [data.articles, marketsOnly, topicStories]);
+
+  const featured = useMemo(() => {
+    if (marketsOnly) return stories.slice(0, 4);
+    const seen = new Set<string>();
+    return stories.filter((story) => {
+      if (seen.has(story.deskLabel)) return false;
+      seen.add(story.deskLabel);
+      return true;
+    }).slice(0, 4);
+  }, [marketsOnly, stories]);
+  const [lead, ...topStories] = featured;
+  const featuredIds = new Set(featured.map((story) => story.id));
+  const latest = stories.filter((story) => !featuredIds.has(story.id));
+  const deskCount = new Set(stories.map((story) => story.deskLabel)).size;
 
   return (
     <>
@@ -147,45 +158,30 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
       <main className="page-shell">
         <section className="page-intro">
           <div>
-            <p className="kicker">Your market, in focus</p>
-            <h2>Good {new Date().getHours() < 12 ? "morning" : new Date().getHours() < 18 ? "afternoon" : "evening"}.</h2>
+            <p className="kicker">{marketsOnly ? "Market desk" : "Your news desks"}</p>
+            <h2>{marketsOnly ? "Market Brief." : "Latest across your topics."}</h2>
           </div>
           <div className="feed-status">
             <span className={data.isLive ? "live-dot" : "status-dot"} />
-            {data.isLive ? "Live Alpaca feed" : data.message}
-            <button type="button" onClick={refresh} disabled={refreshing}>
-              {refreshing ? "Refreshing…" : "Refresh"}
-            </button>
+            {data.isLive ? "Market feed live" : data.message}
+            <button type="button" onClick={refresh} disabled={refreshing}>{refreshing ? "Refreshing…" : "Refresh"}</button>
           </div>
         </section>
 
-        <nav className="topic-tabs" aria-label="News sections">
-          {filters.map((filter) => (
-            <button
-              type="button"
-              key={filter}
-              className={active === filter ? "active" : ""}
-              onClick={() => setActive(filter)}
-            >
-              {filter}
-            </button>
-          ))}
-        </nav>
+        <section className="desk-overview" aria-label="Home feed context">
+          <p>{marketsOnly ? "The latest Alpaca market coverage." : `A cross-section of the newest reporting from ${deskCount} desks — market coverage plus the topics you follow.`}</p>
+          {!marketsOnly && <a href="/?desk=markets">View market desk <ArrowIcon /></a>}
+        </section>
 
         {lead && (
-          <section className="lead-grid" aria-label="Top market stories">
-            <HeroStory article={lead} />
+          <section className="lead-grid" aria-label="Latest news from each desk">
+            <DeskHero story={lead} />
             <div className="top-stories">
               <div className="section-heading">
-                <div>
-                  <p className="kicker">Developing</p>
-                  <h2>Top stories</h2>
-                </div>
-                <span>{topStories.length} updates</span>
+                <div><p className="kicker">Also new</p><h2>From your desks</h2></div>
+                <span>{topStories.length} desks</span>
               </div>
-              {topStories.map((article) => (
-                <CompactStory article={article} key={article.id} />
-              ))}
+              {topStories.map((story) => <CompactDeskStory story={story} key={story.id} />)}
             </div>
           </section>
         )}
@@ -193,83 +189,34 @@ export function HomeFeed({ initialData }: { initialData: HomePayload }) {
         <section className="content-grid">
           <div className="latest-column">
             <div className="section-heading latest-heading">
-              <div>
-                <p className="kicker">News desk</p>
-                <h2>{active === "Top" ? "Latest" : active}</h2>
-              </div>
-              <span>
-                {visibleArticles.length
-                  ? `${visibleArticles.length} stories`
-                  : "No matching stories"}
-              </span>
+              <div><p className="kicker">{marketsOnly ? "Market news" : "All desks"}</p><h2>{marketsOnly ? "Latest market coverage" : "Latest reporting"}</h2></div>
+              <span>{stories.length} stories</span>
             </div>
             <div className="feed-list">
-              {visibleArticles.length ? (
-                (latest.length ? latest : topStories).map((article) => (
-                  <FeedStory article={article} key={article.id} />
-                ))
-              ) : (
-                <div className="empty-topic">
-                  <strong>No current {active.toLowerCase()} stories.</strong>
-                  <p>
-                    Try another topic or refresh for the newest Alpaca feed.
-                  </p>
-                  <button type="button" onClick={() => setActive("Top")}>
-                    Show top stories
-                  </button>
-                </div>
+              {latest.length ? latest.map((story) => <FeedDeskStory story={story} key={story.id} />) : (
+                <div className="empty-topic"><strong>No additional current stories.</strong><p>Refresh the market feed or choose a topic above.</p></div>
               )}
             </div>
           </div>
 
           <aside className="right-rail">
             <section className="rail-card">
-              <div className="section-heading">
-                <div>
-                  <p className="kicker">Personal</p>
-                  <h2>Your watchlist</h2>
-                </div>
-                <a href="/watchlists">Open</a>
-              </div>
-              <div className="empty-watchlist">
-                <div className="watchlist-spark" aria-hidden="true">
-                  <i />
-                  <i />
-                  <i />
-                  <i />
-                  <i />
-                </div>
-                <strong>Build your market view</strong>
-                <p>Add symbols to keep their news and price action close.</p>
-                <a href="/watchlists">Create watchlist</a>
+              <div className="section-heading"><div><p className="kicker">Your desks</p><h2>Topics</h2></div></div>
+              <div className="home-topic-list">
+                <a href="/?desk=markets"><strong>Markets</strong><span>Alpaca market news and symbol research</span></a>
+                {topicStories.reduce<HomeDeskStory[]>((items, story) => items.some((item) => item.deskHref === story.deskHref) ? items : [...items, story], []).map((story) => (
+                  <a href={story.deskHref} key={story.deskHref}><strong>{story.deskLabel}</strong><span>Open this research desk</span></a>
+                ))}
               </div>
             </section>
-
             <section className="rail-card about-feed">
-              <p className="kicker">About this feed</p>
-              <h2>Broad market coverage from Alpaca</h2>
-              <p>
-                Stories are refreshed from Alpaca’s latest stock and crypto
-                news feed and linked to the original source.
-              </p>
-              <div className="feed-fact">
-                <span>Last checked</span>
-                <strong>
-                  {new Date(data.updatedAt).toLocaleTimeString([], {
-                    hour: "numeric",
-                    minute: "2-digit",
-                  })}
-                </strong>
-              </div>
+              <p className="kicker">About this home</p><h2>One place to re-enter your reading.</h2>
+              <p>Each topic retains its own filters and source context. Home surfaces the newest item from every desk before the full combined stream.</p>
             </section>
           </aside>
         </section>
       </main>
-      <footer className="site-footer">
-        <span>Market Brief</span>
-        <p>Market information for context, not investment advice.</p>
-        <span>Powered by Alpaca</span>
-      </footer>
+      <footer className="site-footer"><span>Market Brief</span><p>Information for context, not investment advice.</p><span>Powered by your selected sources</span></footer>
     </>
   );
 }
