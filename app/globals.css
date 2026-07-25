@@ -234,8 +234,8 @@ button {
 
 .ra-card {
   display: grid;
-  grid-template-columns: minmax(5.5rem, 28vw) minmax(0, 1fr);
-  gap: 0.9rem;
+  grid-template-columns: 4.4rem minmax(0, 1fr);
+  gap: 0.85rem;
   min-width: 0;
   padding: 1.4rem 0;
   border-bottom: 1px solid var(--line);
@@ -253,8 +253,8 @@ button {
 .topic-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  min-height: 5.5rem;
+  aspect-ratio: 1;
+  min-height: 4.4rem;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -273,7 +273,7 @@ button {
 
 .topic-media > span {
   font-family: var(--serif);
-  font-size: clamp(1.35rem, 7vw, 2.4rem);
+  font-size: clamp(1rem, 5vw, 1.45rem);
   font-weight: 800;
   letter-spacing: 0;
 }
@@ -527,13 +527,19 @@ button {
 }
 
 .topic-video-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  display: flex;
   gap: 0.8rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.topic-video-list::-webkit-scrollbar {
+  display: none;
 }
 
 .topic-video-list > a {
-  min-width: 0;
+  width: min(72vw, 18rem);
+  flex: 0 0 auto;
   display: grid;
   gap: 0.45rem;
 }
@@ -619,7 +625,7 @@ button {
   }
 
   .ra-card {
-    grid-template-columns: minmax(7rem, 0.42fr) minmax(0, 1fr);
+    grid-template-columns: 5.5rem minmax(0, 1fr);
   }
 
   .ra-card footer {

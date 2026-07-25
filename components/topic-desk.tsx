@@ -56,7 +56,7 @@ function sourceTone(source: string) {
 
 function TopicMedia({ article, linked = true }: { article: TopicArticle; linked?: boolean }) {
   const videoId = youtubeVideoId(article.url);
-  const isVideo = article.tags.includes("Video") || Boolean(videoId);
+  const isVideo = Boolean(videoId);
   const content = (
     <>
       {videoId ? (
@@ -246,7 +246,7 @@ export function TopicDesk({ initialData }: { initialData: TopicPayload }) {
   ).length;
   const videoCount = initialData.articles.filter((article) => article.tags.includes("Video")).length;
   const videoArticles = initialData.articles
-    .filter((article) => article.tags.includes("Video"))
+    .filter((article) => article.tags.includes("Video") && youtubeVideoId(article.url))
     .slice(0, 3);
 
   return (

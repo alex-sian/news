@@ -125,6 +125,8 @@ function tagsFor(title, topicTitle, categories = []) {
 function sportsTagsFor(article) {
   const text = `${article.title} ${article.summary}`.toLowerCase();
   const tags = ["Latest"];
+  const source = article.source.toLowerCase();
+  const url = article.url.toLowerCase();
   if (article.evidence === "Primary source") {
     tags.push("Official team news");
   }
@@ -143,7 +145,12 @@ function sportsTagsFor(article) {
   if (/analysis|why|how|grade|takeaway|preview/i.test(text)) {
     tags.push("Analysis");
   }
-  if (/youtube\.com|youtu\.be|video|watch|interview|media day|podcast|highlights?/i.test(`${article.url} ${text}`)) {
+  if (
+    url.includes("youtube.com") ||
+    url.includes("youtu.be") ||
+    source.includes("youtube") ||
+    source.includes("video")
+  ) {
     tags.push("Video");
   }
   return [...new Set(tags)];
