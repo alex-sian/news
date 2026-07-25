@@ -244,11 +244,15 @@ export async function getSymbolPayload(input: string, requestedRange?: string): 
 
   try {
     const end = new Date();
-    const marketHours = end.getUTCDay() > 0 && end.getUTCDay() < 6 && end.getUTCHours() >= 13 && end.getUTCHours() < 20;
-    const range = requestedRange ?? (marketHours ? "1D" : "1D");
-    const config: Record<string, { days: number; timeframe: string }> = { "1D": { days: 1, timeframe: marketHours ? "5Min" : "1Day" }, "5D": { days: 5, timeframe: "15Min" }, "10D": { days: 10, timeframe: "30Min" }, "30D": { days: 30, timeframe: "1Hour" }, "6M": { days: 183, timeframe: "1Day" }, "1Y": { days: 365, timeframe: "1Day" } };
+    const range = requestedRange ?? "1D";
+    const config: Record<string, { days: number; timeframe: string }> = { "1D": { days: 1, timeframe: "5Min" }, "5D": { days: 5, timeframe: "15Min" }, "10D": { days: 10, timeframe: "30Min" }, "30D": { days: 30, timeframe: "1Hour" }, "6M": { days: 183, timeframe: "1Day" }, "1Y": { days: 365, timeframe: "1Day" } };
     const selection = config[range] ?? config["1D"];
-    const start = new Date(end.getTime() - selection.days * 86_400_000);
+    let start = new Date(end.getTime() - selection.days * 86_400_000);
+    if (range === "1D") {
+      const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(end);
+      const part = (type: string) => parts.find((item) => item.type === type)?.value;
+      start = new Date(Date.UTC(Number(part("year")), Number(part("month")) - 1, Number(part("day")), 13, 30));
+    }
     const [snapshotResponse, barsResponse, newsResponse] = await Promise.all([
       fetch(`https://data.alpaca.markets/v2/stocks/${symbol}/snapshot?feed=iex`, { headers: headers(key, secret), next: { revalidate: 60 } }),
       fetch(`https://data.alpaca.markets/v2/stocks/${symbol}/bars?timeframe=${selection.timeframe}&start=${start.toISOString()}&end=${end.toISOString()}&feed=iex`, { headers: headers(key, secret), next: { revalidate: 300 } }),
