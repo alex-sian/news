@@ -39,6 +39,7 @@ export type SymbolPayload = {
   changePercent: number | null;
   bars: { t: string; c: number }[];
   articles: NewsArticle[];
+  metrics: { open: number | null; high: number | null; low: number | null; volume: number | null; previousClose: number | null };
 };
 
 const MARKET_SYMBOLS = [
@@ -147,7 +148,7 @@ async function getNews(key: string, secret: string) {
 }
 
 type Snapshot = {
-  dailyBar?: { c?: number };
+  dailyBar?: { c?: number; o?: number; h?: number; l?: number; v?: number };
   prevDailyBar?: { c?: number };
   latestTrade?: { p?: number };
 };
@@ -240,7 +241,7 @@ export async function getHomePayload(): Promise<HomePayload> {
 export async function getSymbolPayload(input: string, requestedRange?: string): Promise<SymbolPayload> {
   const symbol = input.toUpperCase().replace(/[^A-Z.]/g, "").slice(0, 12);
   const { key, secret } = credentials();
-  if (!symbol || !key || !secret) return { symbol, price: null, change: null, changePercent: null, bars: [], articles: [] };
+  if (!symbol || !key || !secret) return { symbol, price: null, change: null, changePercent: null, bars: [], articles: [], metrics: { open: null, high: null, low: null, volume: null, previousClose: null } };
 
   try {
     const end = new Date();
@@ -264,8 +265,8 @@ export async function getSymbolPayload(input: string, requestedRange?: string): 
     const price = snapshot.latestTrade?.p ?? snapshot.dailyBar?.c ?? null;
     const previous = snapshot.prevDailyBar?.c ?? null;
     const change = price !== null && previous !== null ? price - previous : null;
-    return { symbol, price, change, changePercent: change !== null && previous ? change / previous * 100 : null, bars: rawBars.bars ?? [], articles: (rawNews.news ?? []).map(normalizeArticle) };
+    return { symbol, price, change, changePercent: change !== null && previous ? change / previous * 100 : null, bars: rawBars.bars ?? [], articles: (rawNews.news ?? []).map(normalizeArticle), metrics: { open: snapshot.dailyBar?.o ?? null, high: snapshot.dailyBar?.h ?? null, low: snapshot.dailyBar?.l ?? null, volume: snapshot.dailyBar?.v ?? null, previousClose: previous } };
   } catch {
-    return { symbol, price: null, change: null, changePercent: null, bars: [], articles: [] };
+    return { symbol, price: null, change: null, changePercent: null, bars: [], articles: [], metrics: { open: null, high: null, low: null, volume: null, previousClose: null } };
   }
 }
