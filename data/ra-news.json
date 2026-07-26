@@ -488,24 +488,6 @@
     "automated": true
   },
   {
-    "id": "pubmed-42251905",
-    "title": "Lactate-related diagnostic signature in rheumatoid arthritis: WGCNA and LASSO analysis with experimental validation.",
-    "summary": "A peer-reviewed publication examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
-    "whyItMatters": "This is newly indexed primary literature. Use the abstract and full paper to judge the population, intervention, outcomes, and applicability.",
-    "limitation": "Automatic collection confirms indexing and article type, not that the finding should change treatment. The publisher may restrict full-text access.",
-    "source": "Immunology letters / PubMed",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/42251905/",
-    "publishedAt": "2026-07-26",
-    "reviewedAt": "2026-07-26",
-    "evidence": "Evidence review",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "doi": "10.1016/j.imlet.2026.107200",
-    "pmid": "42251905",
-    "automated": true
-  },
-  {
     "id": "trial-NCT07620392",
     "title": "An Extension Study to Assess Long-Term Safety and Efficacy of Afimkibart in Participants With Rheumatoid Arthritis",
     "summary": "PHASE2 clinical trial studying Afimkibart. Status: recruiting.",
@@ -767,6 +749,24 @@
     ],
     "doi": "10.1007/s10067-026-08274-w",
     "pmid": "42418113"
+  },
+  {
+    "id": "pubmed-42502362",
+    "title": "Aggrecan and polymeric immunoglobulin receptor in extracellular vesicles of patients with seropositive rheumatoid arthritis.",
+    "summary": "A peer-reviewed publication examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
+    "whyItMatters": "This is newly indexed primary literature. Use the abstract and full paper to judge the population, intervention, outcomes, and applicability.",
+    "limitation": "Automatic collection confirms indexing and article type, not that the finding should change treatment. The publisher may restrict full-text access.",
+    "source": "Journal of translational autoimmunity / PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42502362/",
+    "publishedAt": "2026-07-08",
+    "reviewedAt": "2026-07-26",
+    "evidence": "Evidence review",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "doi": "10.1016/j.jtauto.2026.100387",
+    "pmid": "42502362",
+    "automated": true
   },
   {
     "id": "pubmed-42436654",
