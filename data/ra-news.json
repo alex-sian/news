@@ -488,6 +488,42 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07137598",
+    "title": "A Study to Assess the Efficacy and Safety of RO7790121 in Participants With Moderate to Severe Rheumatoid Arthritis Who Have Not Responded to or Who Cannot Tolerate Tumor Necrosis Factor (TNF) and/or Janus Kinase (JAK Inhibitors)",
+    "summary": "PHASE2 clinical trial studying Afimkibart, Placebo. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Hoffmann-La Roche / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07137598",
+    "publishedAt": "2026-07-27",
+    "reviewedAt": "2026-07-27",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Enbrel & TNF inhibitors",
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07137598",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07534332",
+    "title": "Disulfiram in Rheumatoid Arthritis",
+    "summary": "PHASE2 clinical trial studying Placebo, Disulfiram (DSF). Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "University of Oklahoma / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07534332",
+    "publishedAt": "2026-07-27",
+    "reviewedAt": "2026-07-27",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07534332",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07620392",
     "title": "An Extension Study to Assess Long-Term Safety and Efficacy of Afimkibart in Participants With Rheumatoid Arthritis",
     "summary": "PHASE2 clinical trial studying Afimkibart. Status: recruiting.",
@@ -506,20 +542,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT04876781",
-    "title": "Korean Post-marketing Surveillance for Xeljanz XR",
-    "summary": "clinical trial studying Tofacitinib XR. Status: recruiting.",
+    "id": "trial-NCT01425892",
+    "title": "The Pathogenesis and Natural History of Sjogren's Disease",
+    "summary": "clinical trial. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Pfizer / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT04876781",
+    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT01425892",
     "publishedAt": "2026-07-27",
     "reviewedAt": "2026-07-27",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT04876781",
+    "trialId": "NCT01425892",
     "automated": true
   },
   {
@@ -558,37 +594,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT01425892",
-    "title": "The Pathogenesis and Natural History of Sjogren's Disease",
-    "summary": "clinical trial. Status: recruiting.",
+    "id": "trial-NCT04876781",
+    "title": "Korean Post-marketing Surveillance for Xeljanz XR",
+    "summary": "clinical trial studying Tofacitinib XR. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT01425892",
+    "source": "Pfizer / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT04876781",
     "publishedAt": "2026-07-27",
     "reviewedAt": "2026-07-27",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT01425892",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07721142",
-    "title": "Integrated Clinical Study of Traditional Chinese and Western Medicine for Refractory Rheumatoid Arthritis",
-    "summary": "PHASE4 clinical trial studying Kunxian Capsule, Kunxian Capsule Placebo. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Shanghai Guanghua Hospital of Integrated Traditional Chinese and Western Medicine / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07721142",
-    "publishedAt": "2026-07-27",
-    "reviewedAt": "2026-07-27",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07721142",
+    "trialId": "NCT04876781",
     "automated": true
   },
   {
@@ -627,6 +646,23 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07721142",
+    "title": "Integrated Clinical Study of Traditional Chinese and Western Medicine for Refractory Rheumatoid Arthritis",
+    "summary": "PHASE4 clinical trial studying Kunxian Capsule, Kunxian Capsule Placebo. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Shanghai Guanghua Hospital of Integrated Traditional Chinese and Western Medicine / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07721142",
+    "publishedAt": "2026-07-27",
+    "reviewedAt": "2026-07-27",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07721142",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07281456",
     "title": "Safety of Tofacitinib, an Oral Janus Kinase Inhibitor, in Primary Sjogren Disease",
     "summary": "PHASE2 clinical trial studying Tofacitinib. Status: recruiting.",
@@ -659,40 +695,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07180537",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07401732",
-    "title": "Dysphagia in Rheumatoid Arthritis",
-    "summary": "clinical trial studying flexible fiberoptic pharyngolaryngoscopy. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Tanta University / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07401732",
-    "publishedAt": "2026-07-27",
-    "reviewedAt": "2026-07-27",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07401732",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT05936970",
-    "title": "Prospective, Multi-Center, Observational, Whole Blood Specimen Collection Study in Participants With Rheumatoid Arthritis With Inadequate Response or Intolerance to a DMARD Starting a New bDMARD or tsDMARD Treatment +/- csDMARD",
-    "summary": "clinical trial. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Aqtual, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT05936970",
-    "publishedAt": "2026-07-27",
-    "reviewedAt": "2026-07-27",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT05936970",
     "automated": true
   },
   {
