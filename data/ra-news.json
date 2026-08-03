@@ -506,20 +506,73 @@
     "automated": true
   },
   {
-    "id": "trial-NCT06741969",
-    "title": "Nipocalimab in Moderate to Severe Sjogren's Disease",
-    "summary": "PHASE3 clinical trial studying Nipocalimab, Placebo, Standard of care treatment. Status: active not recruiting.",
+    "id": "trial-NCT07284797",
+    "title": "A Phase 1 Open-label Study to Evaluate Safety in Healthy Participants and Participants With Autoimmune Diseases",
+    "summary": "PHASE1 clinical trial studying XmAb657. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Janssen Research & Development, LLC / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06741969",
+    "source": "Xencor, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07284797",
+    "publishedAt": "2026-08-03",
+    "reviewedAt": "2026-08-03",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07284797",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07230353",
+    "title": "A Phase 1b Open-label Study to Evaluate Safety of Plamotamab in Participants With Rheumatoid Arthritis",
+    "summary": "PHASE1 clinical trial studying Plamotamab. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Xencor, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07230353",
+    "publishedAt": "2026-08-03",
+    "reviewedAt": "2026-08-03",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07230353",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT05869955",
+    "title": "A Study of CC-97540, CD-19-Targeted Nex-T CAR T Cells, in Participants With Severe, Refractory Autoimmune Diseases (Breakfree-1)",
+    "summary": "PHASE1 clinical trial studying CC-97540, Fludarabine, Cyclophosphamide. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Juno Therapeutics, Inc., a Bristol-Myers Squibb Company / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT05869955",
     "publishedAt": "2026-08-03",
     "reviewedAt": "2026-08-03",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT06741969",
+    "trialId": "NCT05869955",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT04876781",
+    "title": "Korean Post-marketing Surveillance for Xeljanz XR",
+    "summary": "clinical trial studying Tofacitinib XR. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Pfizer / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT04876781",
+    "publishedAt": "2026-08-03",
+    "reviewedAt": "2026-08-03",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT04876781",
     "automated": true
   },
   {
@@ -540,23 +593,6 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07363590",
-    "title": "A Clinical Study of MK-1045 in People With Lupus or Rheumatoid Arthritis (MK-1045-004)",
-    "summary": "PHASE1 clinical trial studying MK-1045. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Merck Sharp & Dohme LLC / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07363590",
-    "publishedAt": "2026-08-03",
-    "reviewedAt": "2026-08-03",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07363590",
-    "automated": true
-  },
-  {
     "id": "trial-NCT06991114",
     "title": "AlloNK®, an Allogeneic Non-genetically Modified, Cord Blood-derived NK Cell Therapy, in Combination With Rituximab, Studied in Relapsing Forms of B-cell Dependent Rheumatologic Diseases.",
     "summary": "PHASE2 clinical trial studying Allogeneic NK Cells. Status: recruiting.",
@@ -571,6 +607,40 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT06991114",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT06741969",
+    "title": "Nipocalimab in Moderate to Severe Sjogren's Disease",
+    "summary": "PHASE3 clinical trial studying Nipocalimab, Placebo, Standard of care treatment. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Janssen Research & Development, LLC / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06741969",
+    "publishedAt": "2026-08-03",
+    "reviewedAt": "2026-08-03",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT06741969",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07363590",
+    "title": "A Clinical Study of MK-1045 in People With Lupus or Rheumatoid Arthritis (MK-1045-004)",
+    "summary": "PHASE1 clinical trial studying MK-1045. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Merck Sharp & Dohme LLC / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07363590",
+    "publishedAt": "2026-08-03",
+    "reviewedAt": "2026-08-03",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07363590",
     "automated": true
   },
   {
@@ -592,6 +662,23 @@
     "automated": true
   },
   {
+    "id": "trial-NCT06570798",
+    "title": "A Phase 2 Master Protocol Assessing Inebilizumab and Blinatumomab in Autoimmune Diseases",
+    "summary": "PHASE2 clinical trial studying Inebilizumab, Blinatumomab. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Amgen / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06570798",
+    "publishedAt": "2026-08-03",
+    "reviewedAt": "2026-08-03",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT06570798",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07737743",
     "title": "A Phase 2a/b Study to Assess the Efficacy, Safety and Tolerability of DDY391 in Participants With Sjögren's Disease",
     "summary": "PHASE2 clinical trial studying DDY391, Placebo. Status: not yet recruiting.",
@@ -610,23 +697,6 @@
     "automated": true
   },
   {
-    "id": "trial-NCT06570798",
-    "title": "A Phase 2 Master Protocol Assessing Inebilizumab and Blinatumomab in Autoimmune Diseases",
-    "summary": "PHASE2 clinical trial studying Inebilizumab, Blinatumomab. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Amgen / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06570798",
-    "publishedAt": "2026-08-03",
-    "reviewedAt": "2026-08-03",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06570798",
-    "automated": true
-  },
-  {
     "id": "trial-NCT07201558",
     "title": "Study Evaluating Safety, Tolerability, PK/PD of Surovatamig in Adult RA or SLE Participants",
     "summary": "PHASE1 clinical trial studying Surovatamig. Status: recruiting.",
@@ -642,74 +712,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07201558",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07564154",
-    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
-    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07564154",
-    "publishedAt": "2026-08-03",
-    "reviewedAt": "2026-08-03",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07564154",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07732582",
-    "title": "Sjogren's Mini-Pill Oral and Gut Microbiome Study",
-    "summary": "NA clinical trial studying Mini-Pill. Status: not yet recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Tufts University / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07732582",
-    "publishedAt": "2026-08-03",
-    "reviewedAt": "2026-08-03",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07732582",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT02327884",
-    "title": "Characterization of Diseases With Salivary Gland Involvement",
-    "summary": "clinical trial. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT02327884",
-    "publishedAt": "2026-08-03",
-    "reviewedAt": "2026-08-03",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT02327884",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07729995",
-    "title": "BAFF CAR-T Cells (LMY-922) for Treatment of Refractory Autoimmune Disease",
-    "summary": "PHASE1 clinical trial studying LMY-922. Status: not yet recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Luminary Therapeutics / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07729995",
-    "publishedAt": "2026-08-03",
-    "reviewedAt": "2026-08-03",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07729995",
     "automated": true
   },
   {
