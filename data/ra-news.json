@@ -506,21 +506,88 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07284797",
-    "title": "A Phase 1 Open-label Study to Evaluate Safety in Healthy Participants and Participants With Autoimmune Diseases",
-    "summary": "PHASE1 clinical trial studying XmAb657. Status: recruiting.",
+    "id": "trial-NCT07744828",
+    "title": "A Study to Evaluate Pharmacokinetics of DRL_AB in Healthy Male Participants",
+    "summary": "PHASE1 clinical trial studying DRL_AB. Status: not yet recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Xencor, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07284797",
+    "source": "Dr. Reddy's Laboratories Limited / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07744828",
     "publishedAt": "2026-08-04",
     "reviewedAt": "2026-08-04",
     "evidence": "Clinical trial record",
     "tags": [
-      "Safety, vaccines & monitoring",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07284797",
+    "trialId": "NCT07744828",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT02281747",
+    "title": "Frequency and Complications of Major Orthopedic Procedures in Medicare Beneficiaries",
+    "summary": "clinical trial. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT02281747",
+    "publishedAt": "2026-08-04",
+    "reviewedAt": "2026-08-04",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT02281747",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07745426",
+    "title": "Clinical Study Comparing Diosmin vs Rebamipide as Adjuvant Therapies vs Conventional Therapy in Patients With Rheumatoid Arthritis",
+    "summary": "PHASE2 clinical trial studying Diosmin, Rebamipide 100mg, Convential medical treatment. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Tanta University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07745426",
+    "publishedAt": "2026-08-04",
+    "reviewedAt": "2026-08-04",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07745426",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT01425892",
+    "title": "The Pathogenesis and Natural History of Sjogren's Disease",
+    "summary": "clinical trial. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT01425892",
+    "publishedAt": "2026-08-04",
+    "reviewedAt": "2026-08-04",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT01425892",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT04876781",
+    "title": "Korean Post-marketing Surveillance for Xeljanz XR",
+    "summary": "clinical trial studying Tofacitinib XR. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Pfizer / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT04876781",
+    "publishedAt": "2026-08-04",
+    "reviewedAt": "2026-08-04",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT04876781",
     "automated": true
   },
   {
@@ -542,6 +609,24 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07284797",
+    "title": "A Phase 1 Open-label Study to Evaluate Safety in Healthy Participants and Participants With Autoimmune Diseases",
+    "summary": "PHASE1 clinical trial studying XmAb657. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Xencor, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07284797",
+    "publishedAt": "2026-08-04",
+    "reviewedAt": "2026-08-04",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07284797",
+    "automated": true
+  },
+  {
     "id": "trial-NCT05869955",
     "title": "A Study of CC-97540, CD-19-Targeted Nex-T CAR T Cells, in Participants With Severe, Refractory Autoimmune Diseases (Breakfree-1)",
     "summary": "PHASE1 clinical trial studying CC-97540, Fludarabine, Cyclophosphamide. Status: active not recruiting.",
@@ -556,74 +641,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT05869955",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT04876781",
-    "title": "Korean Post-marketing Surveillance for Xeljanz XR",
-    "summary": "clinical trial studying Tofacitinib XR. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Pfizer / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT04876781",
-    "publishedAt": "2026-08-04",
-    "reviewedAt": "2026-08-04",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT04876781",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT03816345",
-    "title": "Testing an Immunotherapy Anti-cancer Drug, Nivolumab, for Advanced Cancers in Patients With Autoimmune Disorders, AIM-NIVO",
-    "summary": "PHASE1 clinical trial studying Biospecimen Collection, Cabozantinib, Fluoropyrimidine. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Cancer Institute (NCI) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT03816345",
-    "publishedAt": "2026-08-04",
-    "reviewedAt": "2026-08-04",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT03816345",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06991114",
-    "title": "AlloNK®, an Allogeneic Non-genetically Modified, Cord Blood-derived NK Cell Therapy, in Combination With Rituximab, Studied in Relapsing Forms of B-cell Dependent Rheumatologic Diseases.",
-    "summary": "PHASE2 clinical trial studying Allogeneic NK Cells. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Artiva Biotherapeutics, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06991114",
-    "publishedAt": "2026-08-04",
-    "reviewedAt": "2026-08-04",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06991114",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06741969",
-    "title": "Nipocalimab in Moderate to Severe Sjogren's Disease",
-    "summary": "PHASE3 clinical trial studying Nipocalimab, Placebo, Standard of care treatment. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Janssen Research & Development, LLC / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06741969",
-    "publishedAt": "2026-08-04",
-    "reviewedAt": "2026-08-04",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06741969",
     "automated": true
   },
   {
@@ -644,74 +661,54 @@
     "automated": true
   },
   {
-    "id": "trial-NCT06712628",
-    "title": "A Comparison Study of Persistence of UPadacitinib vs. TNF-inhibitoRs In a German Real-world SettING",
-    "summary": "clinical trial. Status: recruiting.",
+    "id": "trial-NCT03816345",
+    "title": "Testing an Immunotherapy Anti-cancer Drug, Nivolumab, for Advanced Cancers in Patients With Autoimmune Disorders, AIM-NIVO",
+    "summary": "PHASE1 clinical trial studying Biospecimen Collection, Cabozantinib, Fluoropyrimidine. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "AbbVie / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06712628",
+    "source": "National Cancer Institute (NCI) / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT03816345",
     "publishedAt": "2026-08-04",
     "reviewedAt": "2026-08-04",
     "evidence": "Clinical trial record",
     "tags": [
-      "Enbrel & TNF inhibitors",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT06712628",
+    "trialId": "NCT03816345",
     "automated": true
   },
   {
-    "id": "trial-NCT06570798",
-    "title": "A Phase 2 Master Protocol Assessing Inebilizumab and Blinatumomab in Autoimmune Diseases",
-    "summary": "PHASE2 clinical trial studying Inebilizumab, Blinatumomab. Status: recruiting.",
+    "id": "trial-NCT06741969",
+    "title": "Nipocalimab in Moderate to Severe Sjogren's Disease",
+    "summary": "PHASE3 clinical trial studying Nipocalimab, Placebo, Standard of care treatment. Status: active not recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Amgen / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06570798",
+    "source": "Janssen Research & Development, LLC / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06741969",
     "publishedAt": "2026-08-04",
     "reviewedAt": "2026-08-04",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT06570798",
+    "trialId": "NCT06741969",
     "automated": true
   },
   {
-    "id": "trial-NCT07737743",
-    "title": "A Phase 2a/b Study to Assess the Efficacy, Safety and Tolerability of DDY391 in Participants With Sjögren's Disease",
-    "summary": "PHASE2 clinical trial studying DDY391, Placebo. Status: not yet recruiting.",
+    "id": "trial-NCT06991114",
+    "title": "AlloNK®, an Allogeneic Non-genetically Modified, Cord Blood-derived NK Cell Therapy, in Combination With Rituximab, Studied in Relapsing Forms of B-cell Dependent Rheumatologic Diseases.",
+    "summary": "PHASE2 clinical trial studying Allogeneic NK Cells. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Novartis Pharmaceuticals / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07737743",
+    "source": "Artiva Biotherapeutics, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06991114",
     "publishedAt": "2026-08-04",
     "reviewedAt": "2026-08-04",
     "evidence": "Clinical trial record",
     "tags": [
-      "Safety, vaccines & monitoring",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07737743",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07201558",
-    "title": "Study Evaluating Safety, Tolerability, PK/PD of Surovatamig in Adult RA or SLE Participants",
-    "summary": "PHASE1 clinical trial studying Surovatamig. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "AstraZeneca / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07201558",
-    "publishedAt": "2026-08-04",
-    "reviewedAt": "2026-08-04",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07201558",
+    "trialId": "NCT06991114",
     "automated": true
   },
   {
