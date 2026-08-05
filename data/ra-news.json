@@ -506,23 +506,6 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07744828",
-    "title": "A Study to Evaluate Pharmacokinetics of DRL_AB in Healthy Male Participants",
-    "summary": "PHASE1 clinical trial studying DRL_AB. Status: not yet recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Dr. Reddy's Laboratories Limited / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07744828",
-    "publishedAt": "2026-08-05",
-    "reviewedAt": "2026-08-05",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07744828",
-    "automated": true
-  },
-  {
     "id": "trial-NCT02281747",
     "title": "Frequency and Complications of Major Orthopedic Procedures in Medicare Beneficiaries",
     "summary": "clinical trial. Status: active not recruiting.",
@@ -537,23 +520,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT02281747",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07745426",
-    "title": "Clinical Study Comparing Diosmin vs Rebamipide as Adjuvant Therapies vs Conventional Therapy in Patients With Rheumatoid Arthritis",
-    "summary": "PHASE2 clinical trial studying Diosmin, Rebamipide 100mg, Convential medical treatment. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Tanta University / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07745426",
-    "publishedAt": "2026-08-05",
-    "reviewedAt": "2026-08-05",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07745426",
     "automated": true
   },
   {
@@ -574,20 +540,37 @@
     "automated": true
   },
   {
-    "id": "trial-NCT04876781",
-    "title": "Korean Post-marketing Surveillance for Xeljanz XR",
-    "summary": "clinical trial studying Tofacitinib XR. Status: recruiting.",
+    "id": "trial-NCT07744828",
+    "title": "A Study to Evaluate Pharmacokinetics of DRL_AB in Healthy Male Participants",
+    "summary": "PHASE1 clinical trial studying DRL_AB. Status: not yet recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Pfizer / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT04876781",
+    "source": "Dr. Reddy's Laboratories Limited / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07744828",
     "publishedAt": "2026-08-05",
     "reviewedAt": "2026-08-05",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT04876781",
+    "trialId": "NCT07744828",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07745426",
+    "title": "Clinical Study Comparing Diosmin vs Rebamipide as Adjuvant Therapies vs Conventional Therapy in Patients With Rheumatoid Arthritis",
+    "summary": "PHASE2 clinical trial studying Diosmin, Rebamipide 100mg, Convential medical treatment. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Tanta University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07745426",
+    "publishedAt": "2026-08-05",
+    "reviewedAt": "2026-08-05",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07745426",
     "automated": true
   },
   {
@@ -609,21 +592,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07284797",
-    "title": "A Phase 1 Open-label Study to Evaluate Safety in Healthy Participants and Participants With Autoimmune Diseases",
-    "summary": "PHASE1 clinical trial studying XmAb657. Status: recruiting.",
+    "id": "trial-NCT04876781",
+    "title": "Korean Post-marketing Surveillance for Xeljanz XR",
+    "summary": "clinical trial studying Tofacitinib XR. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Xencor, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07284797",
+    "source": "Pfizer / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT04876781",
     "publishedAt": "2026-08-05",
     "reviewedAt": "2026-08-05",
     "evidence": "Clinical trial record",
     "tags": [
-      "Safety, vaccines & monitoring",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07284797",
+    "trialId": "NCT04876781",
     "automated": true
   },
   {
@@ -644,20 +626,21 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07363590",
-    "title": "A Clinical Study of MK-1045 in People With Lupus or Rheumatoid Arthritis (MK-1045-004)",
-    "summary": "PHASE1 clinical trial studying MK-1045. Status: recruiting.",
+    "id": "trial-NCT07284797",
+    "title": "A Phase 1 Open-label Study to Evaluate Safety in Healthy Participants and Participants With Autoimmune Diseases",
+    "summary": "PHASE1 clinical trial studying XmAb657. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Merck Sharp & Dohme LLC / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07363590",
+    "source": "Xencor, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07284797",
     "publishedAt": "2026-08-05",
     "reviewedAt": "2026-08-05",
     "evidence": "Clinical trial record",
     "tags": [
+      "Safety, vaccines & monitoring",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07363590",
+    "trialId": "NCT07284797",
     "automated": true
   },
   {
@@ -678,20 +661,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT06741969",
-    "title": "Nipocalimab in Moderate to Severe Sjogren's Disease",
-    "summary": "PHASE3 clinical trial studying Nipocalimab, Placebo, Standard of care treatment. Status: active not recruiting.",
+    "id": "trial-NCT07363590",
+    "title": "A Clinical Study of MK-1045 in People With Lupus or Rheumatoid Arthritis (MK-1045-004)",
+    "summary": "PHASE1 clinical trial studying MK-1045. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Janssen Research & Development, LLC / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06741969",
+    "source": "Merck Sharp & Dohme LLC / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07363590",
     "publishedAt": "2026-08-05",
     "reviewedAt": "2026-08-05",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT06741969",
+    "trialId": "NCT07363590",
     "automated": true
   },
   {
@@ -709,6 +692,23 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT06991114",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT06741969",
+    "title": "Nipocalimab in Moderate to Severe Sjogren's Disease",
+    "summary": "PHASE3 clinical trial studying Nipocalimab, Placebo, Standard of care treatment. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Janssen Research & Development, LLC / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06741969",
+    "publishedAt": "2026-08-05",
+    "reviewedAt": "2026-08-05",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT06741969",
     "automated": true
   },
   {
