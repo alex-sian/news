@@ -524,22 +524,107 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07754552",
-    "title": "DEVELOPMENT AND EVALUATION OF THE EFFECTIVENESS OF THE SMART-HAND PROTOCOL FOR HAND REHABILITATION IN PATIENTS WITH RHEUMATOID ARTHRITIS",
-    "summary": "NA clinical trial studying SMART-HAND Protocol, Conventional Hand Rehabilitation, Joint Protection and Ergonomic Education. Status: not yet recruiting.",
+    "id": "trial-NCT07245992",
+    "title": "A Study of F8IL10 Intra-articular Treatment in Rheumatoid Arthritis",
+    "summary": "PHASE1 clinical trial studying F8IL10. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Istanbul University - Cerrahpasa / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07754552",
+    "source": "Philogen S.p.A. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07245992",
     "publishedAt": "2026-08-11",
     "reviewedAt": "2026-08-11",
     "evidence": "Clinical trial record",
     "tags": [
-      "Exercise & mobility",
-      "Trials & emerging treatments",
-      "Relief without prescriptions"
+      "Trials & emerging treatments"
     ],
-    "trialId": "NCT07754552",
+    "trialId": "NCT07245992",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT05197036",
+    "title": "A Global Clinical Study Investigating the Safety and Effectiveness of Smith and Nephew's Porous Knee System in Patients Who Need a Total Knee Replacement Due to Degenerative Arthritis, Post-traumatic Arthritis or Inflammatory Arthritis",
+    "summary": "clinical trial studying Total Knee Arthroplasty. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Smith & Nephew, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT05197036",
+    "publishedAt": "2026-08-11",
+    "reviewedAt": "2026-08-11",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT05197036",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07041099",
+    "title": "A Study of CLN-978, a Subcutaneously Administered CD19-directed T Cell Engager, in Subjects With Sjogren's Disease",
+    "summary": "PHASE1 clinical trial studying CLN-978. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Cullinan Therapeutics Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07041099",
+    "publishedAt": "2026-08-11",
+    "reviewedAt": "2026-08-11",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07041099",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07704580",
+    "title": "Phase 1b/2 Study of IV Sarilumab in Adult With RA",
+    "summary": "PHASE1, PHASE2 clinical trial studying Sarilumab, SAR153191 SC, Sarilumab, SAR153191 IV. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Sanofi / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07704580",
+    "publishedAt": "2026-08-11",
+    "reviewedAt": "2026-08-11",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07704580",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07564154",
+    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
+    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07564154",
+    "publishedAt": "2026-08-11",
+    "reviewedAt": "2026-08-11",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07564154",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT06977724",
+    "title": "A Study to Assess Adverse Events, How the Drug Moves Through the Body and Effectiveness of Intravenous Infusions of ABBV-319 in Adult Participants With Systemic Lupus Erythematosus (SLE), Sjogren's Disease (SjD) and Rheumatoid Arthritis (RA)",
+    "summary": "PHASE1 clinical trial studying ABBV-319. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "AbbVie / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06977724",
+    "publishedAt": "2026-08-11",
+    "reviewedAt": "2026-08-11",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT06977724",
     "automated": true
   },
   {
@@ -577,6 +662,25 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07754552",
+    "title": "DEVELOPMENT AND EVALUATION OF THE EFFECTIVENESS OF THE SMART-HAND PROTOCOL FOR HAND REHABILITATION IN PATIENTS WITH RHEUMATOID ARTHRITIS",
+    "summary": "NA clinical trial studying SMART-HAND Protocol, Conventional Hand Rehabilitation, Joint Protection and Ergonomic Education. Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Istanbul University - Cerrahpasa / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07754552",
+    "publishedAt": "2026-08-11",
+    "reviewedAt": "2026-08-11",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Exercise & mobility",
+      "Trials & emerging treatments",
+      "Relief without prescriptions"
+    ],
+    "trialId": "NCT07754552",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07404865",
     "title": "Phase 3 Study of Telitacicept in Active Primary Sjögren's Disease",
     "summary": "PHASE3 clinical trial studying Telitacicept, Placebo. Status: recruiting.",
@@ -591,24 +695,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07404865",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06977724",
-    "title": "A Study to Assess Adverse Events, How the Drug Moves Through the Body and Effectiveness of Intravenous Infusions of ABBV-319 in Adult Participants With Systemic Lupus Erythematosus (SLE), Sjogren's Disease (SjD) and Rheumatoid Arthritis (RA)",
-    "summary": "PHASE1 clinical trial studying ABBV-319. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "AbbVie / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06977724",
-    "publishedAt": "2026-08-11",
-    "reviewedAt": "2026-08-11",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06977724",
     "automated": true
   },
   {
@@ -643,91 +729,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT06733935",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06570798",
-    "title": "A Phase 2 Master Protocol Assessing Inebilizumab and Blinatumomab in Autoimmune Diseases",
-    "summary": "PHASE2 clinical trial studying Inebilizumab, Blinatumomab. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Amgen / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06570798",
-    "publishedAt": "2026-08-11",
-    "reviewedAt": "2026-08-11",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06570798",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT01425892",
-    "title": "The Pathogenesis and Natural History of Sjogren's Disease",
-    "summary": "clinical trial. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT01425892",
-    "publishedAt": "2026-08-11",
-    "reviewedAt": "2026-08-11",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT01425892",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07748728",
-    "title": "TLL-018 in Patients With Moderate to Severe Active Rheumatoid Arthritis With Inadequate Response or Intolerance to csDMARDs",
-    "summary": "PHASE2 clinical trial studying TLL-018, Placebo. Status: not yet recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Hangzhou Highlightll Pharmaceutical Co., Ltd / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07748728",
-    "publishedAt": "2026-08-11",
-    "reviewedAt": "2026-08-11",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07748728",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07744828",
-    "title": "A Study to Evaluate Pharmacokinetics of DRL_AB in Healthy Male Participants",
-    "summary": "PHASE1 clinical trial studying DRL_AB. Status: not yet recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Dr. Reddy's Laboratories Limited / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07744828",
-    "publishedAt": "2026-08-11",
-    "reviewedAt": "2026-08-11",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07744828",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT02281747",
-    "title": "Frequency and Complications of Major Orthopedic Procedures in Medicare Beneficiaries",
-    "summary": "clinical trial. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT02281747",
-    "publishedAt": "2026-08-11",
-    "reviewedAt": "2026-08-11",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT02281747",
     "automated": true
   },
   {
