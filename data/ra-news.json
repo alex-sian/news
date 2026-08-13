@@ -559,23 +559,6 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07760662",
-    "title": "Oxidative Stress and Cardiovascular Risk in Patients With Rheumatoid Arthritis",
-    "summary": "clinical trial. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "University of La Laguna / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07760662",
-    "publishedAt": "2026-08-13",
-    "reviewedAt": "2026-08-13",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07760662",
-    "automated": true
-  },
-  {
     "id": "trial-NCT07754552",
     "title": "Development and Evaluation of the Effectiveness of the SMART-HAND Protocol for Hand Rehabilitation in Patients With Rheumatoid Arthritis",
     "summary": "NA clinical trial studying SMART-HAND Protocol, Conventional Hand Rehabilitation, Joint Protection and Ergonomic Education. Status: not yet recruiting.",
@@ -595,20 +578,38 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07564154",
-    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
-    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
+    "id": "trial-NCT07760662",
+    "title": "Oxidative Stress and Cardiovascular Risk in Patients With Rheumatoid Arthritis",
+    "summary": "clinical trial. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07564154",
+    "source": "University of La Laguna / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07760662",
     "publishedAt": "2026-08-13",
     "reviewedAt": "2026-08-13",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07564154",
+    "trialId": "NCT07760662",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT05197036",
+    "title": "A Global Clinical Study Investigating the Safety and Effectiveness of Smith and Nephew's Porous Knee System in Patients Who Need a Total Knee Replacement Due to Degenerative Arthritis, Post-traumatic Arthritis or Inflammatory Arthritis",
+    "summary": "clinical trial studying Total Knee Arthroplasty. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Smith & Nephew, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT05197036",
+    "publishedAt": "2026-08-13",
+    "reviewedAt": "2026-08-13",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT05197036",
     "automated": true
   },
   {
@@ -646,6 +647,23 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07564154",
+    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
+    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07564154",
+    "publishedAt": "2026-08-13",
+    "reviewedAt": "2026-08-13",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07564154",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07245992",
     "title": "A Study of F8IL10 Intra-articular Treatment in Rheumatoid Arthritis",
     "summary": "PHASE1 clinical trial studying F8IL10. Status: recruiting.",
@@ -663,21 +681,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT05197036",
-    "title": "A Global Clinical Study Investigating the Safety and Effectiveness of Smith and Nephew's Porous Knee System in Patients Who Need a Total Knee Replacement Due to Degenerative Arthritis, Post-traumatic Arthritis or Inflammatory Arthritis",
-    "summary": "clinical trial studying Total Knee Arthroplasty. Status: active not recruiting.",
+    "id": "trial-NCT07180537",
+    "title": "Creating Health Course Study for People With Rheumatological Conditions and Mood Disorders",
+    "summary": "NA clinical trial studying Creating Health Online Course, Delayed access to Creating Health Online Course. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Smith & Nephew, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT05197036",
+    "source": "Terry L. Wahls / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07180537",
     "publishedAt": "2026-08-13",
     "reviewedAt": "2026-08-13",
     "evidence": "Clinical trial record",
     "tags": [
-      "Safety, vaccines & monitoring",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT05197036",
+    "trialId": "NCT07180537",
     "automated": true
   },
   {
@@ -696,23 +713,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT06977724",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07180537",
-    "title": "Creating Health Course Study for People With Rheumatological Conditions and Mood Disorders",
-    "summary": "NA clinical trial studying Creating Health Online Course, Delayed access to Creating Health Online Course. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Terry L. Wahls / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07180537",
-    "publishedAt": "2026-08-13",
-    "reviewedAt": "2026-08-13",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07180537",
     "automated": true
   },
   {
