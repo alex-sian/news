@@ -524,6 +524,25 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07754552",
+    "title": "Development and Evaluation of the Effectiveness of the SMART-HAND Protocol for Hand Rehabilitation in Patients With Rheumatoid Arthritis",
+    "summary": "NA clinical trial studying SMART-HAND Protocol, Conventional Hand Rehabilitation, Joint Protection and Ergonomic Education. Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Istanbul University - Cerrahpasa / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07754552",
+    "publishedAt": "2026-08-14",
+    "reviewedAt": "2026-08-14",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Exercise & mobility",
+      "Trials & emerging treatments",
+      "Relief without prescriptions"
+    ],
+    "trialId": "NCT07754552",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07761767",
     "title": "Self-Care Education for Joint Stiffness and Functional Ability in Rheumatoid Arthritis",
     "summary": "NA clinical trial studying self care educational program for the study group, Routine care. Status: not yet recruiting.",
@@ -538,6 +557,23 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07761767",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07760662",
+    "title": "Oxidative Stress and Cardiovascular Risk in Patients With Rheumatoid Arthritis",
+    "summary": "clinical trial. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "University of La Laguna / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07760662",
+    "publishedAt": "2026-08-14",
+    "reviewedAt": "2026-08-14",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07760662",
     "automated": true
   },
   {
@@ -559,39 +595,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07754552",
-    "title": "Development and Evaluation of the Effectiveness of the SMART-HAND Protocol for Hand Rehabilitation in Patients With Rheumatoid Arthritis",
-    "summary": "NA clinical trial studying SMART-HAND Protocol, Conventional Hand Rehabilitation, Joint Protection and Ergonomic Education. Status: not yet recruiting.",
+    "id": "trial-NCT07245992",
+    "title": "A Study of F8IL10 Intra-articular Treatment in Rheumatoid Arthritis",
+    "summary": "PHASE1 clinical trial studying F8IL10. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Istanbul University - Cerrahpasa / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07754552",
-    "publishedAt": "2026-08-14",
-    "reviewedAt": "2026-08-14",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Exercise & mobility",
-      "Trials & emerging treatments",
-      "Relief without prescriptions"
-    ],
-    "trialId": "NCT07754552",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07760662",
-    "title": "Oxidative Stress and Cardiovascular Risk in Patients With Rheumatoid Arthritis",
-    "summary": "clinical trial. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "University of La Laguna / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07760662",
+    "source": "Philogen S.p.A. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07245992",
     "publishedAt": "2026-08-14",
     "reviewedAt": "2026-08-14",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07760662",
+    "trialId": "NCT07245992",
     "automated": true
   },
   {
@@ -610,6 +627,23 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT05197036",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07564154",
+    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
+    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07564154",
+    "publishedAt": "2026-08-14",
+    "reviewedAt": "2026-08-14",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07564154",
     "automated": true
   },
   {
@@ -647,72 +681,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07564154",
-    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
-    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
+    "id": "trial-NCT07737470",
+    "title": "Inflammatory Disease Biobank for Immunophenotyping and Cardiovascular Research",
+    "summary": "clinical trial. Status: not yet recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07564154",
+    "source": "Assistance Publique - Hôpitaux de Paris / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07737470",
     "publishedAt": "2026-08-14",
     "reviewedAt": "2026-08-14",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07564154",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07245992",
-    "title": "A Study of F8IL10 Intra-articular Treatment in Rheumatoid Arthritis",
-    "summary": "PHASE1 clinical trial studying F8IL10. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Philogen S.p.A. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07245992",
-    "publishedAt": "2026-08-14",
-    "reviewedAt": "2026-08-14",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07245992",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07180537",
-    "title": "Creating Health Course Study for People With Rheumatological Conditions and Mood Disorders",
-    "summary": "NA clinical trial studying Creating Health Online Course, Delayed access to Creating Health Online Course. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Terry L. Wahls / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07180537",
-    "publishedAt": "2026-08-14",
-    "reviewedAt": "2026-08-14",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07180537",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06977724",
-    "title": "A Study to Assess Adverse Events, How the Drug Moves Through the Body and Effectiveness of Intravenous Infusions of ABBV-319 in Adult Participants With Systemic Lupus Erythematosus (SLE), Sjogren's Disease (SjD) and Rheumatoid Arthritis (RA)",
-    "summary": "PHASE1 clinical trial studying ABBV-319. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "AbbVie / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06977724",
-    "publishedAt": "2026-08-14",
-    "reviewedAt": "2026-08-14",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06977724",
+    "trialId": "NCT07737470",
     "automated": true
   },
   {
@@ -730,6 +712,23 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07404865",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07180537",
+    "title": "Creating Health Course Study for People With Rheumatological Conditions and Mood Disorders",
+    "summary": "NA clinical trial studying Creating Health Online Course, Delayed access to Creating Health Online Course. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Terry L. Wahls / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07180537",
+    "publishedAt": "2026-08-14",
+    "reviewedAt": "2026-08-14",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07180537",
     "automated": true
   },
   {
