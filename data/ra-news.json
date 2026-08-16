@@ -506,24 +506,6 @@
     "automated": true
   },
   {
-    "id": "pubmed-42269330",
-    "title": "Comprehensive metabolic profiling of Dictamni Cortex in normal and rheumatoid arthritis rats using UHPLC-Q/TOF-MS/MS coupled with polygonal mass defect filtering.",
-    "summary": "A preclinical study examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
-    "whyItMatters": "This is newly indexed primary literature. Use the abstract and full paper to judge the population, intervention, outcomes, and applicability.",
-    "limitation": "Laboratory or animal findings are early-stage evidence and often do not translate into a safe or effective human treatment.",
-    "source": "Journal of pharmaceutical and biomedical analysis / PubMed",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/42269330/",
-    "publishedAt": "2026-08-16",
-    "reviewedAt": "2026-08-16",
-    "evidence": "Preclinical study",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "doi": "10.1016/j.jpba.2026.117596",
-    "pmid": "42269330",
-    "automated": true
-  },
-  {
     "id": "trial-NCT07754552",
     "title": "Development and Evaluation of the Effectiveness of the SMART-HAND Protocol for Hand Rehabilitation in Patients With Rheumatoid Arthritis",
     "summary": "NA clinical trial studying SMART-HAND Protocol, Conventional Hand Rehabilitation, Joint Protection and Ergonomic Education. Status: not yet recruiting.",
@@ -765,6 +747,24 @@
     ],
     "doi": "10.1016/j.mex.2026.104053",
     "pmid": "42494481",
+    "automated": true
+  },
+  {
+    "id": "pubmed-42604140",
+    "title": "Ninety-day venous thromboembolism incidence and associated risk factors after total and reverse shoulder arthroplasty: a national database analysis.",
+    "summary": "A peer-reviewed publication examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
+    "whyItMatters": "This is newly indexed primary literature. Use the abstract and full paper to judge the population, intervention, outcomes, and applicability.",
+    "limitation": "Automatic collection confirms indexing and article type, not that the finding should change treatment. The publisher may restrict full-text access.",
+    "source": "Journal of shoulder and elbow arthroplasty / PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42604140/",
+    "publishedAt": "2026-07-15",
+    "reviewedAt": "2026-08-16",
+    "evidence": "Evidence review",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "doi": "10.1016/j.jsea.2026.100061",
+    "pmid": "42604140",
     "automated": true
   },
   {
