@@ -506,6 +506,41 @@
     "automated": true
   },
   {
+    "id": "trial-NCT04817969",
+    "title": "Persona Ti-Nidium Post-Market Clinical Follow-up",
+    "summary": "NA clinical trial studying Zimmer Biomet Persona Ti-Nidium Total Knee System. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Zimmer Biomet / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT04817969",
+    "publishedAt": "2026-08-17",
+    "reviewedAt": "2026-08-17",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT04817969",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07627893",
+    "title": "Complementary Herbal Approach to Rheumatoid Management Study (CHARMS)",
+    "summary": "PHASE2, PHASE3 clinical trial studying Shu Bi Ning (modified Si Miao Xiao Bi), Methotrexate, Shu Bi Ning placebo. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Singapore General Hospital / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07627893",
+    "publishedAt": "2026-08-17",
+    "reviewedAt": "2026-08-17",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Methotrexate",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07627893",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07754552",
     "title": "Development and Evaluation of the Effectiveness of the SMART-HAND Protocol for Hand Rehabilitation in Patients With Rheumatoid Arthritis",
     "summary": "NA clinical trial studying SMART-HAND Protocol, Conventional Hand Rehabilitation, Joint Protection and Ergonomic Education. Status: not yet recruiting.",
@@ -542,23 +577,6 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07760662",
-    "title": "Oxidative Stress and Cardiovascular Risk in Patients With Rheumatoid Arthritis",
-    "summary": "clinical trial. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "University of La Laguna / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07760662",
-    "publishedAt": "2026-08-17",
-    "reviewedAt": "2026-08-17",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07760662",
-    "automated": true
-  },
-  {
     "id": "trial-NCT06801119",
     "title": "Efficacy and Safety of HN2301 in Autoimmune Diseases（AIDs）",
     "summary": "PHASE1 clinical trial studying HN2301 injection. Status: recruiting.",
@@ -577,6 +595,23 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07760662",
+    "title": "Oxidative Stress and Cardiovascular Risk in Patients With Rheumatoid Arthritis",
+    "summary": "clinical trial. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "University of La Laguna / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07760662",
+    "publishedAt": "2026-08-17",
+    "reviewedAt": "2026-08-17",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07760662",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07245992",
     "title": "A Study of F8IL10 Intra-articular Treatment in Rheumatoid Arthritis",
     "summary": "PHASE1 clinical trial studying F8IL10. Status: recruiting.",
@@ -591,6 +626,57 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07245992",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07041099",
+    "title": "A Study of CLN-978, a Subcutaneously Administered CD19-directed T Cell Engager, in Subjects With Sjogren's Disease",
+    "summary": "PHASE1 clinical trial studying CLN-978. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Cullinan Therapeutics Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07041099",
+    "publishedAt": "2026-08-17",
+    "reviewedAt": "2026-08-17",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07041099",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07704580",
+    "title": "Phase 1b/2 Study of IV Sarilumab in Adult With RA",
+    "summary": "PHASE1, PHASE2 clinical trial studying Sarilumab, SAR153191 SC, Sarilumab, SAR153191 IV. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Sanofi / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07704580",
+    "publishedAt": "2026-08-17",
+    "reviewedAt": "2026-08-17",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07704580",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07564154",
+    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
+    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07564154",
+    "publishedAt": "2026-08-17",
+    "reviewedAt": "2026-08-17",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07564154",
     "automated": true
   },
   {
@@ -612,57 +698,6 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07564154",
-    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
-    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07564154",
-    "publishedAt": "2026-08-17",
-    "reviewedAt": "2026-08-17",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07564154",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07704580",
-    "title": "Phase 1b/2 Study of IV Sarilumab in Adult With RA",
-    "summary": "PHASE1, PHASE2 clinical trial studying Sarilumab, SAR153191 SC, Sarilumab, SAR153191 IV. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Sanofi / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07704580",
-    "publishedAt": "2026-08-17",
-    "reviewedAt": "2026-08-17",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07704580",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07041099",
-    "title": "A Study of CLN-978, a Subcutaneously Administered CD19-directed T Cell Engager, in Subjects With Sjogren's Disease",
-    "summary": "PHASE1 clinical trial studying CLN-978. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Cullinan Therapeutics Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07041099",
-    "publishedAt": "2026-08-17",
-    "reviewedAt": "2026-08-17",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07041099",
-    "automated": true
-  },
-  {
     "id": "trial-NCT07737470",
     "title": "Inflammatory Disease Biobank for Immunophenotyping and Cardiovascular Research",
     "summary": "clinical trial. Status: not yet recruiting.",
@@ -677,40 +712,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07737470",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07404865",
-    "title": "Phase 3 Study of Telitacicept in Active Primary Sjögren's Disease",
-    "summary": "PHASE3 clinical trial studying Telitacicept, Placebo. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Vor Biopharma / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07404865",
-    "publishedAt": "2026-08-17",
-    "reviewedAt": "2026-08-17",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07404865",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07180537",
-    "title": "Creating Health Course Study for People With Rheumatological Conditions and Mood Disorders",
-    "summary": "NA clinical trial studying Creating Health Online Course, Delayed access to Creating Health Online Course. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Terry L. Wahls / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07180537",
-    "publishedAt": "2026-08-17",
-    "reviewedAt": "2026-08-17",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07180537",
     "automated": true
   },
   {
