@@ -506,6 +506,111 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07772466",
+    "title": "Atherosclerosis in Early Rheumatoid Arthritis Patients Using Atherogenic Index of the Plasma and Carotid Intima Media Thickness",
+    "summary": "clinical trial. Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Assiut University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07772466",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Newly diagnosed",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07772466",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT05277025",
+    "title": "Pain Processing in Inflammatory and Non-Inflammatory Chronic Pain Syndromes",
+    "summary": "clinical trial. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "University of Florida / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT05277025",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT05277025",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT05985915",
+    "title": "A Randomized, Double-blind 2-arm, Followed by an Open-label 1-arm, NEPTUNUS Extension Study to Assess the Long-term Safety and Efficacy of Ianalumab in Patients With Sjogrens Syndrome.",
+    "summary": "PHASE3 clinical trial studying Ianalumab (VAY736), Placebo. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Novartis Pharmaceuticals / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT05985915",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT05985915",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT06392711",
+    "title": "Dose-Escalation Trial of Mesenchymal Stromal Cells in Patients With Medical Xerostomia",
+    "summary": "PHASE1 clinical trial studying Mesenchymal Stromal Cells (MSC) Dose Level 0, Mesenchymal Stromal Cells (MSC) Dose Level 1. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "University of Wisconsin, Madison / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06392711",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT06392711",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07774507",
+    "title": "Twenty-four Hour Movement Behaviors and Atherosclerotic Risk",
+    "summary": "clinical trial. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "São Paulo State University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07774507",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07774507",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07621809",
+    "title": "Two Arm, Double-blind, Phase III Study Assessing Efficacy and Safety of Ianalumab Versus Placebo, in Participants With Sjögren's Disease With High Symptom Burden",
+    "summary": "PHASE3 clinical trial studying VAY736, Placebo. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Novartis Pharmaceuticals / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07621809",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07621809",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07151157",
     "title": "Therapeutic Value of Sirolimus in Refractory Adult-Onset Still's Disease",
     "summary": "NA clinical trial studying add-on sirolimus therapy. Status: active not recruiting.",
@@ -540,21 +645,21 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07621809",
-    "title": "Two Arm, Double-blind, Phase III Study Assessing Efficacy and Safety of Ianalumab Versus Placebo, in Participants With Sjögren's Disease With High Symptom Burden",
-    "summary": "PHASE3 clinical trial studying VAY736, Placebo. Status: recruiting.",
+    "id": "trial-NCT07627893",
+    "title": "Complementary Herbal Approach to Rheumatoid Management Study (CHARMS)",
+    "summary": "PHASE2, PHASE3 clinical trial studying Shu Bi Ning (modified Si Miao Xiao Bi), Methotrexate, Shu Bi Ning placebo. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Novartis Pharmaceuticals / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07621809",
+    "source": "Singapore General Hospital / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07627893",
     "publishedAt": "2026-08-19",
     "reviewedAt": "2026-08-19",
     "evidence": "Clinical trial record",
     "tags": [
-      "Safety, vaccines & monitoring",
+      "Methotrexate",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07621809",
+    "trialId": "NCT07627893",
     "automated": true
   },
   {
@@ -572,24 +677,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT04817969",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07627893",
-    "title": "Complementary Herbal Approach to Rheumatoid Management Study (CHARMS)",
-    "summary": "PHASE2, PHASE3 clinical trial studying Shu Bi Ning (modified Si Miao Xiao Bi), Methotrexate, Shu Bi Ning placebo. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Singapore General Hospital / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07627893",
-    "publishedAt": "2026-08-19",
-    "reviewedAt": "2026-08-19",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Methotrexate",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07627893",
     "automated": true
   },
   {
@@ -626,93 +713,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07761767",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06801119",
-    "title": "Efficacy and Safety of HN2301 in Autoimmune Diseases（AIDs）",
-    "summary": "PHASE1 clinical trial studying HN2301 injection. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Shenzhen MagicRNA Biotechnology Co., Ltd / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06801119",
-    "publishedAt": "2026-08-19",
-    "reviewedAt": "2026-08-19",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06801119",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07760662",
-    "title": "Oxidative Stress and Cardiovascular Risk in Patients With Rheumatoid Arthritis",
-    "summary": "clinical trial. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "University of La Laguna / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07760662",
-    "publishedAt": "2026-08-19",
-    "reviewedAt": "2026-08-19",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07760662",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07245992",
-    "title": "A Study of F8IL10 Intra-articular Treatment in Rheumatoid Arthritis",
-    "summary": "PHASE1 clinical trial studying F8IL10. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Philogen S.p.A. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07245992",
-    "publishedAt": "2026-08-19",
-    "reviewedAt": "2026-08-19",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07245992",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07564154",
-    "title": "A First-in-human Study of KT502 in Adult Participants With Rheumatoid Arthritis (RA)",
-    "summary": "PHASE1 clinical trial studying KT502. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Kali Therapeutics, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07564154",
-    "publishedAt": "2026-08-19",
-    "reviewedAt": "2026-08-19",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07564154",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT05197036",
-    "title": "A Global Clinical Study Investigating the Safety and Effectiveness of Smith and Nephew's Porous Knee System in Patients Who Need a Total Knee Replacement Due to Degenerative Arthritis, Post-traumatic Arthritis or Inflammatory Arthritis",
-    "summary": "clinical trial studying Total Knee Arthroplasty. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Smith & Nephew, Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT05197036",
-    "publishedAt": "2026-08-19",
-    "reviewedAt": "2026-08-19",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT05197036",
     "automated": true
   },
   {
