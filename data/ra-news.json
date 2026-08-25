@@ -506,20 +506,56 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07782788",
-    "title": "Predictors of Cardiac Arrhythmia in Rheumatoid Arthritis Patients",
-    "summary": "clinical trial. Status: not yet recruiting.",
+    "id": "trial-NCT03312465",
+    "title": "Anatomical Shoulder Domelock System Study",
+    "summary": "clinical trial studying AS Domelock System. Status: active not recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Assiut University / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07782788",
+    "source": "Zimmer Biomet / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT03312465",
     "publishedAt": "2026-08-25",
     "reviewedAt": "2026-08-25",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07782788",
+    "trialId": "NCT03312465",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07137598",
+    "title": "A Study to Assess the Efficacy and Safety of RO7790121 in Participants With Moderate to Severe Rheumatoid Arthritis Who Have Not Responded to or Who Cannot Tolerate Tumor Necrosis Factor (TNF) and/or Janus Kinase (JAK Inhibitors)",
+    "summary": "PHASE2 clinical trial studying Afimkibart, Placebo. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Hoffmann-La Roche / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07137598",
+    "publishedAt": "2026-08-25",
+    "reviewedAt": "2026-08-25",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Enbrel & TNF inhibitors",
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07137598",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT04594993",
+    "title": "INFINITY™ With ADAPTIS™ Technology Study",
+    "summary": "clinical trial studying INFINITY™ with ADAPTIS™ Technology Total Ankle System. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Stryker Trauma and Extremities / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT04594993",
+    "publishedAt": "2026-08-25",
+    "reviewedAt": "2026-08-25",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT04594993",
     "automated": true
   },
   {
@@ -537,6 +573,23 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07782450",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07782788",
+    "title": "Predictors of Cardiac Arrhythmia in Rheumatoid Arthritis Patients",
+    "summary": "clinical trial. Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Assiut University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07782788",
+    "publishedAt": "2026-08-25",
+    "reviewedAt": "2026-08-25",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07782788",
     "automated": true
   },
   {
@@ -571,23 +624,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT02281747",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07473154",
-    "title": "Controlling Hyperactive Immunity With Long-lived Lymphocytes",
-    "summary": "PHASE1, PHASE2 clinical trial studying QEL-005. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Quell Therapeutics Limited / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07473154",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07473154",
     "automated": true
   },
   {
@@ -643,6 +679,23 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07473154",
+    "title": "Controlling Hyperactive Immunity With Long-lived Lymphocytes",
+    "summary": "PHASE1, PHASE2 clinical trial studying QEL-005. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Quell Therapeutics Limited / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07473154",
+    "publishedAt": "2026-08-25",
+    "reviewedAt": "2026-08-25",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07473154",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07774507",
     "title": "Twenty-four Hour Movement Behaviors and Atherosclerotic Risk",
     "summary": "clinical trial. Status: recruiting.",
@@ -657,59 +710,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07774507",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT05277025",
-    "title": "Pain Processing in Inflammatory and Non-Inflammatory Chronic Pain Syndromes",
-    "summary": "clinical trial. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "University of Florida / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT05277025",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT05277025",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT05985915",
-    "title": "A Randomized, Double-blind 2-arm, Followed by an Open-label 1-arm, NEPTUNUS Extension Study to Assess the Long-term Safety and Efficacy of Ianalumab in Patients With Sjogrens Syndrome.",
-    "summary": "PHASE3 clinical trial studying Ianalumab (VAY736), Placebo. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Novartis Pharmaceuticals / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT05985915",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT05985915",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07772466",
-    "title": "Atherosclerosis in Early Rheumatoid Arthritis Patients Using Atherogenic Index of the Plasma and Carotid Intima Media Thickness",
-    "summary": "clinical trial. Status: not yet recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Assiut University / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07772466",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Newly diagnosed",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07772466",
     "automated": true
   },
   {
