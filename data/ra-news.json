@@ -506,20 +506,38 @@
     "automated": true
   },
   {
-    "id": "trial-NCT03312465",
-    "title": "Anatomical Shoulder Domelock System Study",
-    "summary": "clinical trial studying AS Domelock System. Status: active not recruiting.",
+    "id": "trial-NCT07201558",
+    "title": "Study Evaluating Safety, Tolerability, PK/PD of Surovatamig in Adult RA or SLE Participants",
+    "summary": "PHASE1 clinical trial studying Surovatamig. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Zimmer Biomet / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT03312465",
+    "source": "AstraZeneca / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07201558",
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07201558",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT04594993",
+    "title": "INFINITY™ With ADAPTIS™ Technology Study",
+    "summary": "clinical trial studying INFINITY™ with ADAPTIS™ Technology Total Ankle System. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Stryker Trauma and Extremities / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT04594993",
     "publishedAt": "2026-08-26",
     "reviewedAt": "2026-08-26",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT03312465",
+    "trialId": "NCT04594993",
     "automated": true
   },
   {
@@ -542,20 +560,37 @@
     "automated": true
   },
   {
-    "id": "trial-NCT04594993",
-    "title": "INFINITY™ With ADAPTIS™ Technology Study",
-    "summary": "clinical trial studying INFINITY™ with ADAPTIS™ Technology Total Ankle System. Status: active not recruiting.",
+    "id": "trial-NCT03312465",
+    "title": "Anatomical Shoulder Domelock System Study",
+    "summary": "clinical trial studying AS Domelock System. Status: active not recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Stryker Trauma and Extremities / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT04594993",
+    "source": "Zimmer Biomet / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT03312465",
     "publishedAt": "2026-08-26",
     "reviewedAt": "2026-08-26",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT04594993",
+    "trialId": "NCT03312465",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT02281747",
+    "title": "Frequency and Complications of Major Orthopedic Procedures in Medicare Beneficiaries",
+    "summary": "clinical trial. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT02281747",
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT02281747",
     "automated": true
   },
   {
@@ -610,40 +645,6 @@
     "automated": true
   },
   {
-    "id": "trial-NCT02281747",
-    "title": "Frequency and Complications of Major Orthopedic Procedures in Medicare Beneficiaries",
-    "summary": "clinical trial. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT02281747",
-    "publishedAt": "2026-08-26",
-    "reviewedAt": "2026-08-26",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT02281747",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06570798",
-    "title": "A Phase 2 Master Protocol Assessing Inebilizumab and Blinatumomab in Autoimmune Diseases",
-    "summary": "PHASE2 clinical trial studying Inebilizumab, Blinatumomab. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Amgen / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06570798",
-    "publishedAt": "2026-08-26",
-    "reviewedAt": "2026-08-26",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06570798",
-    "automated": true
-  },
-  {
     "id": "trial-NCT07779616",
     "title": "Study of PTC844 in Participants With Active Rheumatoid Arthritis",
     "summary": "PHASE2 clinical trial studying PTC844, Placebo. Status: not yet recruiting.",
@@ -658,24 +659,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07779616",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07620392",
-    "title": "An Extension Study to Assess Long-Term Safety and Efficacy of Afimkibart in Participants With Rheumatoid Arthritis",
-    "summary": "PHASE2 clinical trial studying Afimkibart. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Hoffmann-La Roche / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07620392",
-    "publishedAt": "2026-08-26",
-    "reviewedAt": "2026-08-26",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07620392",
     "automated": true
   },
   {
@@ -696,20 +679,38 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07774507",
-    "title": "Twenty-four Hour Movement Behaviors and Atherosclerotic Risk",
-    "summary": "clinical trial. Status: recruiting.",
+    "id": "trial-NCT06570798",
+    "title": "A Phase 2 Master Protocol Assessing Inebilizumab and Blinatumomab in Autoimmune Diseases",
+    "summary": "PHASE2 clinical trial studying Inebilizumab, Blinatumomab. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "São Paulo State University / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07774507",
+    "source": "Amgen / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06570798",
     "publishedAt": "2026-08-26",
     "reviewedAt": "2026-08-26",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07774507",
+    "trialId": "NCT06570798",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07620392",
+    "title": "An Extension Study to Assess Long-Term Safety and Efficacy of Afimkibart in Participants With Rheumatoid Arthritis",
+    "summary": "PHASE2 clinical trial studying Afimkibart. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Hoffmann-La Roche / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07620392",
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07620392",
     "automated": true
   },
   {
