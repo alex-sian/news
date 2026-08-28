@@ -506,21 +506,122 @@
     "automated": true
   },
   {
-    "id": "trial-NCT04862117",
-    "title": "Long Term Extension of Safety and Efficacy of Vagus Nerve Stimulator in Patients With Rheumatoid Arthritis (RA)",
-    "summary": "NA clinical trial studying SetPoint Medical Neurostimulation of the Cholinergic Anti-inflammatory Pathway System. Status: active not recruiting.",
+    "id": "trial-NCT07782450",
+    "title": "A Study to Learn About a Medicine Called PF-08154225 in Participants With Autoimmune Diseases",
+    "summary": "PHASE1, PHASE2 clinical trial studying PF-08154225. Status: not yet recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "SetPoint Medical Corporation / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT04862117",
+    "source": "Pfizer / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07782450",
     "publishedAt": "2026-08-28",
     "reviewedAt": "2026-08-28",
     "evidence": "Clinical trial record",
     "tags": [
-      "Safety, vaccines & monitoring",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT04862117",
+    "trialId": "NCT07782450",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT06741969",
+    "title": "Nipocalimab in Moderate to Severe Sjogren's Disease",
+    "summary": "PHASE3 clinical trial studying Nipocalimab, Placebo, Standard of care treatment. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Janssen Research & Development, LLC / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06741969",
+    "publishedAt": "2026-08-28",
+    "reviewedAt": "2026-08-28",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT06741969",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT03063593",
+    "title": "UK Infinity, Post-Market Clinical Follow-up Study",
+    "summary": "clinical trial. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Stryker Trauma and Extremities / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT03063593",
+    "publishedAt": "2026-08-28",
+    "reviewedAt": "2026-08-28",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT03063593",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT06631638",
+    "title": "EMPHASYS Cup Positioning in THA With Non-Invasive Navigation (Velys Hip Navigation (VHN))",
+    "summary": "NA clinical trial studying EMPHASYS Cup with VHN. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "DePuy Orthopaedics / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT06631638",
+    "publishedAt": "2026-08-28",
+    "reviewedAt": "2026-08-28",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT06631638",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07363590",
+    "title": "A Clinical Study of MK-1045 in People With Lupus or Rheumatoid Arthritis (MK-1045-004)",
+    "summary": "PHASE1 clinical trial studying MK-1045. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Merck Sharp & Dohme LLC / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07363590",
+    "publishedAt": "2026-08-28",
+    "reviewedAt": "2026-08-28",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07363590",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT05868148",
+    "title": "Shoulder iD™ Primary Reversed Glenoid Outcomes Clinical Study",
+    "summary": "clinical trial studying Shoulder iD™ Primary Reversed Glenoid. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Stryker Trauma and Extremities / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT05868148",
+    "publishedAt": "2026-08-28",
+    "reviewedAt": "2026-08-28",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT05868148",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT02327884",
+    "title": "Characterization of Diseases With Salivary Gland Involvement",
+    "summary": "clinical trial. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT02327884",
+    "publishedAt": "2026-08-28",
+    "reviewedAt": "2026-08-28",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT02327884",
     "automated": true
   },
   {
@@ -538,23 +639,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT01425892",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07791199",
-    "title": "Continued Access to Deucravacitinib for Adult SLE/SjD and Pediatric PsO/PsA Study Completers",
-    "summary": "PHASE3 clinical trial studying Deucravacitinib. Status: not yet recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Bristol-Myers Squibb / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07791199",
-    "publishedAt": "2026-08-28",
-    "reviewedAt": "2026-08-28",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07791199",
     "automated": true
   },
   {
@@ -592,6 +676,23 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07791199",
+    "title": "Continued Access to Deucravacitinib for Adult SLE/SjD and Pediatric PsO/PsA Study Completers",
+    "summary": "PHASE3 clinical trial studying Deucravacitinib. Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Bristol-Myers Squibb / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07791199",
+    "publishedAt": "2026-08-28",
+    "reviewedAt": "2026-08-28",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07791199",
+    "automated": true
+  },
+  {
     "id": "trial-NCT06583980",
     "title": "INSELMA - a Randomised Controlled Trial",
     "summary": "NA clinical trial studying Interdisciplinary Nurse-coordinated self-management support for people with inflammatory arthritis and substantial disease impact. Status: recruiting.",
@@ -606,111 +707,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT06583980",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07201558",
-    "title": "Study Evaluating Safety, Tolerability, PK/PD of Surovatamig in Adult RA or SLE Participants",
-    "summary": "PHASE1 clinical trial studying Surovatamig. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "AstraZeneca / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07201558",
-    "publishedAt": "2026-08-28",
-    "reviewedAt": "2026-08-28",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07201558",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT03312465",
-    "title": "Anatomical Shoulder Domelock System Study",
-    "summary": "clinical trial studying AS Domelock System. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Zimmer Biomet / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT03312465",
-    "publishedAt": "2026-08-28",
-    "reviewedAt": "2026-08-28",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT03312465",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT04594993",
-    "title": "INFINITY™ With ADAPTIS™ Technology Study",
-    "summary": "clinical trial studying INFINITY™ with ADAPTIS™ Technology Total Ankle System. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Stryker Trauma and Extremities / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT04594993",
-    "publishedAt": "2026-08-28",
-    "reviewedAt": "2026-08-28",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT04594993",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07137598",
-    "title": "A Study to Assess the Efficacy and Safety of RO7790121 in Participants With Moderate to Severe Rheumatoid Arthritis Who Have Not Responded to or Who Cannot Tolerate Tumor Necrosis Factor (TNF) and/or Janus Kinase (JAK Inhibitors)",
-    "summary": "PHASE2 clinical trial studying Afimkibart, Placebo. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Hoffmann-La Roche / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07137598",
-    "publishedAt": "2026-08-28",
-    "reviewedAt": "2026-08-28",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Enbrel & TNF inhibitors",
-      "Safety, vaccines & monitoring",
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07137598",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07412704",
-    "title": "A Study of BMS-986528 in Participants With Refractory Rheumatoid Arthritis",
-    "summary": "PHASE1, PHASE2 clinical trial studying BMS-986528. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Bristol-Myers Squibb / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07412704",
-    "publishedAt": "2026-08-28",
-    "reviewedAt": "2026-08-28",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07412704",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT02281747",
-    "title": "Frequency and Complications of Major Orthopedic Procedures in Medicare Beneficiaries",
-    "summary": "clinical trial. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT02281747",
-    "publishedAt": "2026-08-28",
-    "reviewedAt": "2026-08-28",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT02281747",
     "automated": true
   },
   {
