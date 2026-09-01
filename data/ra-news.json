@@ -488,24 +488,6 @@
     "automated": true
   },
   {
-    "id": "pubmed-42520888",
-    "title": "Divergent neurobehavioral effects of hydroxychloroquine and leflunomide in a rat model of rheumatoid arthritis.",
-    "summary": "A preclinical study examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
-    "whyItMatters": "This is newly indexed primary literature. Use the abstract and full paper to judge the population, intervention, outcomes, and applicability.",
-    "limitation": "Laboratory or animal findings are early-stage evidence and often do not translate into a safe or effective human treatment.",
-    "source": "Neuropharmacology / PubMed",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/42520888/",
-    "publishedAt": "2026-09-01",
-    "reviewedAt": "2026-09-01",
-    "evidence": "Preclinical study",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "doi": "10.1016/j.neuropharm.2026.111122",
-    "pmid": "42520888",
-    "automated": true
-  },
-  {
     "id": "trial-NCT03510442",
     "title": "Natural History, Genetics, and Pathophysiology of Systemic Juvenile Idiopathic Arthritis, Adult-Onset Still's Disease, and Related Conditions",
     "summary": "clinical trial. Status: recruiting.",
@@ -726,6 +708,24 @@
     ],
     "doi": "10.1016/j.ijpx.2026.100617",
     "pmid": "42495156",
+    "automated": true
+  },
+  {
+    "id": "pubmed-42676849",
+    "title": "Primary distal humeral resection in total elbow arthroplasty for rheumatoid arthritis: a comparative study of functional outcomes and reoperation rates.",
+    "summary": "A peer-reviewed publication examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
+    "whyItMatters": "This is newly indexed primary literature. Use the abstract and full paper to judge the population, intervention, outcomes, and applicability.",
+    "limitation": "Automatic collection confirms indexing and article type, not that the finding should change treatment. The publisher may restrict full-text access.",
+    "source": "Journal of shoulder and elbow arthroplasty / PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42676849/",
+    "publishedAt": "2026-07-17",
+    "reviewedAt": "2026-09-01",
+    "evidence": "Evidence review",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "doi": "10.1016/j.jsea.2026.100066",
+    "pmid": "42676849",
     "automated": true
   },
   {
