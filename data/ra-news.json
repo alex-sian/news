@@ -488,6 +488,58 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07800351",
+    "title": "Nicorandil in Atherosclerosis Risk in Patients With Rheumatoid Arthritis",
+    "summary": "PHASE3 clinical trial studying Nicorandil 10 MG Oral scored Tablet, DMARD maintenance. Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Tanta University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07800351",
+    "publishedAt": "2026-09-02",
+    "reviewedAt": "2026-09-02",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07800351",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07800871",
+    "title": "FT839 in Autoimmune Diseases",
+    "summary": "PHASE1, PHASE2 clinical trial studying FT839. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Fate Therapeutics / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07800871",
+    "publishedAt": "2026-09-02",
+    "reviewedAt": "2026-09-02",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07800871",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07544225",
+    "title": "Study Investigating the Safety of Anti-CD19 CAR-T Cells Therapy Produced at Gustave Roussy for Adults With Severe and Refractory Systemic Autoimmune Rheumatic Diseases",
+    "summary": "PHASE1 clinical trial studying anti-CD19 CAR-T cells. Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Gustave Roussy, Cancer Campus, Grand Paris / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07544225",
+    "publishedAt": "2026-09-02",
+    "reviewedAt": "2026-09-02",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07544225",
+    "automated": true
+  },
+  {
     "id": "trial-NCT03510442",
     "title": "Natural History, Genetics, and Pathophysiology of Systemic Juvenile Idiopathic Arthritis, Adult-Onset Still's Disease, and Related Conditions",
     "summary": "clinical trial. Status: recruiting.",
@@ -522,37 +574,21 @@
     "automated": true
   },
   {
-    "id": "trial-NCT02327884",
-    "title": "Characterization of Diseases With Salivary Gland Involvement",
-    "summary": "clinical trial. Status: recruiting.",
+    "id": "trial-NCT07796516",
+    "title": "Efficacy and Safety of Telitacicept in the Treatment of Refractory Rheumatoid Arthritis",
+    "summary": "PHASE2 clinical trial studying Telitacicept 160mg, Standard therapy. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT02327884",
+    "source": "Peking University People's Hospital / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07796516",
     "publishedAt": "2026-09-02",
     "reviewedAt": "2026-09-02",
     "evidence": "Clinical trial record",
     "tags": [
+      "Safety, vaccines & monitoring",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT02327884",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT02281747",
-    "title": "Frequency and Complications of Major Orthopedic Procedures in Medicare Beneficiaries",
-    "summary": "clinical trial. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT02281747",
-    "publishedAt": "2026-09-02",
-    "reviewedAt": "2026-09-02",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT02281747",
+    "trialId": "NCT07796516",
     "automated": true
   },
   {
@@ -573,38 +609,37 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07796516",
-    "title": "Efficacy and Safety of Telitacicept in the Treatment of Refractory Rheumatoid Arthritis",
-    "summary": "PHASE2 clinical trial studying Telitacicept 160mg, Standard therapy. Status: recruiting.",
+    "id": "trial-NCT02281747",
+    "title": "Frequency and Complications of Major Orthopedic Procedures in Medicare Beneficiaries",
+    "summary": "clinical trial. Status: active not recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Peking University People's Hospital / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07796516",
+    "source": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT02281747",
     "publishedAt": "2026-09-02",
     "reviewedAt": "2026-09-02",
     "evidence": "Clinical trial record",
     "tags": [
-      "Safety, vaccines & monitoring",
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07796516",
+    "trialId": "NCT02281747",
     "automated": true
   },
   {
-    "id": "trial-NCT07793786",
-    "title": "Subclinical Hypothyroidism and Disease Activity in Rheumatoid Arthritis",
-    "summary": "clinical trial. Status: not yet recruiting.",
+    "id": "trial-NCT02327884",
+    "title": "Characterization of Diseases With Salivary Gland Involvement",
+    "summary": "clinical trial. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Assiut University / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07793786",
+    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT02327884",
     "publishedAt": "2026-09-02",
     "reviewedAt": "2026-09-02",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07793786",
+    "trialId": "NCT02327884",
     "automated": true
   },
   {
@@ -625,20 +660,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT01425892",
-    "title": "The Pathogenesis and Natural History of Sjogren's Disease",
-    "summary": "clinical trial. Status: recruiting.",
+    "id": "trial-NCT07793786",
+    "title": "Subclinical Hypothyroidism and Disease Activity in Rheumatoid Arthritis",
+    "summary": "clinical trial. Status: not yet recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Dental and Craniofacial Research (NIDCR) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT01425892",
+    "source": "Assiut University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07793786",
     "publishedAt": "2026-09-02",
     "reviewedAt": "2026-09-02",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT01425892",
+    "trialId": "NCT07793786",
     "automated": true
   },
   {
@@ -656,40 +691,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07782450",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06741969",
-    "title": "Nipocalimab in Moderate to Severe Sjogren's Disease",
-    "summary": "PHASE3 clinical trial studying Nipocalimab, Placebo, Standard of care treatment. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Janssen Research & Development, LLC / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06741969",
-    "publishedAt": "2026-09-02",
-    "reviewedAt": "2026-09-02",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06741969",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT06631638",
-    "title": "EMPHASYS Cup Positioning in THA With Non-Invasive Navigation (Velys Hip Navigation (VHN))",
-    "summary": "NA clinical trial studying EMPHASYS Cup with VHN. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "DePuy Orthopaedics / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT06631638",
-    "publishedAt": "2026-09-02",
-    "reviewedAt": "2026-09-02",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT06631638",
     "automated": true
   },
   {
