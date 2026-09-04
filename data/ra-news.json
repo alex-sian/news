@@ -488,6 +488,59 @@
     "automated": true
   },
   {
+    "id": "trial-NCT07048197",
+    "title": "A Study to Assess Safety, Cellular Kinetics and Exploratory Efficacy of Rapcabtagene Autoleucel in Rheumatoid Arthritis and Sjogren's Disease",
+    "summary": "PHASE1, PHASE2 clinical trial studying Rapcabtagene autoleucel. Status: active not recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Novartis Pharmaceuticals / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07048197",
+    "publishedAt": "2026-09-04",
+    "reviewedAt": "2026-09-04",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07048197",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07805109",
+    "title": "Subclinical Renal Dysfunction in Rheumatoid Arthritis",
+    "summary": "clinical trial. Status: not yet recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Assiut University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07805109",
+    "publishedAt": "2026-09-04",
+    "reviewedAt": "2026-09-04",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07805109",
+    "automated": true
+  },
+  {
+    "id": "trial-NCT07737743",
+    "title": "A Phase 2a/b Study to Assess the Efficacy, Safety and Tolerability of DDY391 in Participants With Sjögren's Disease",
+    "summary": "PHASE2 clinical trial studying DDY391, Placebo. Status: recruiting.",
+    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
+    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
+    "source": "Novartis Pharmaceuticals / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07737743",
+    "publishedAt": "2026-09-04",
+    "reviewedAt": "2026-09-04",
+    "evidence": "Clinical trial record",
+    "tags": [
+      "Safety, vaccines & monitoring",
+      "Trials & emerging treatments"
+    ],
+    "trialId": "NCT07737743",
+    "automated": true
+  },
+  {
     "id": "trial-NCT07643038",
     "title": "Treatment Strategy for Patients With RA-ILD",
     "summary": "PHASE4 clinical trial studying Tocilizumab, Rituximab (RTX), Methotrexate. Status: not yet recruiting.",
@@ -506,20 +559,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07276958",
-    "title": "A Study of LY4298445 in Healthy Participants and Participants With Systemic Lupus Erythematosus (SLE) or Rheumatoid Arthritis (RA)",
-    "summary": "PHASE1 clinical trial studying LY4298445, LY4298445. Status: recruiting.",
+    "id": "trial-NCT07052032",
+    "title": "An Open-label Study of CND261 in Seropositive Rheumatoid Arthritis",
+    "summary": "PHASE1 clinical trial studying CND261. Status: active not recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Eli Lilly and Company / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07276958",
+    "source": "Candid Therapeutics / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07052032",
     "publishedAt": "2026-09-04",
     "reviewedAt": "2026-09-04",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07276958",
+    "trialId": "NCT07052032",
     "automated": true
   },
   {
@@ -542,20 +595,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07801261",
-    "title": "Evaluation of Functional Disability in Rheumatoid Arthritis Patients",
-    "summary": "clinical trial. Status: not yet recruiting.",
+    "id": "trial-NCT07276958",
+    "title": "A Study of LY4298445 in Healthy Participants and Participants With Systemic Lupus Erythematosus (SLE) or Rheumatoid Arthritis (RA)",
+    "summary": "PHASE1 clinical trial studying LY4298445, LY4298445. Status: recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Sohag University / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07801261",
+    "source": "Eli Lilly and Company / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07276958",
     "publishedAt": "2026-09-04",
     "reviewedAt": "2026-09-04",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07801261",
+    "trialId": "NCT07276958",
     "automated": true
   },
   {
@@ -576,20 +629,20 @@
     "automated": true
   },
   {
-    "id": "trial-NCT07052032",
-    "title": "An Open-label Study of CND261 in Seropositive Rheumatoid Arthritis",
-    "summary": "PHASE1 clinical trial studying CND261. Status: active not recruiting.",
+    "id": "trial-NCT07801261",
+    "title": "Evaluation of Functional Disability in Rheumatoid Arthritis Patients",
+    "summary": "clinical trial. Status: not yet recruiting.",
     "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
     "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Candid Therapeutics / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07052032",
+    "source": "Sohag University / ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/study/NCT07801261",
     "publishedAt": "2026-09-04",
     "reviewedAt": "2026-09-04",
     "evidence": "Clinical trial record",
     "tags": [
       "Trials & emerging treatments"
     ],
-    "trialId": "NCT07052032",
+    "trialId": "NCT07801261",
     "automated": true
   },
   {
@@ -642,57 +695,6 @@
       "Trials & emerging treatments"
     ],
     "trialId": "NCT07800351",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07800871",
-    "title": "FT839 in Autoimmune Diseases",
-    "summary": "PHASE1, PHASE2 clinical trial studying FT839. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Fate Therapeutics / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07800871",
-    "publishedAt": "2026-09-04",
-    "reviewedAt": "2026-09-04",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07800871",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT03510442",
-    "title": "Natural History, Genetics, and Pathophysiology of Systemic Juvenile Idiopathic Arthritis, Adult-Onset Still's Disease, and Related Conditions",
-    "summary": "clinical trial. Status: recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "National Institute of Arthritis and Musculoskeletal and Skin Diseases (NIAMS) / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT03510442",
-    "publishedAt": "2026-09-04",
-    "reviewedAt": "2026-09-04",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT03510442",
-    "automated": true
-  },
-  {
-    "id": "trial-NCT07675226",
-    "title": "Bioequivalence Study of SKI-O-703 in Healthy Adults Under Fed Conditions",
-    "summary": "PHASE1 clinical trial studying SKI-O-703 API in Capsules, SKI-O-703 Formulated Granules in Capsules. Status: active not recruiting.",
-    "whyItMatters": "The registry shows what researchers are testing now and provides official eligibility, locations, endpoints, and sponsor details.",
-    "limitation": "A trial listing is not evidence that an intervention works. Results may be years away, negative, or never published.",
-    "source": "Oscotec Inc. / ClinicalTrials.gov",
-    "url": "https://clinicaltrials.gov/study/NCT07675226",
-    "publishedAt": "2026-09-04",
-    "reviewedAt": "2026-09-04",
-    "evidence": "Clinical trial record",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "trialId": "NCT07675226",
     "automated": true
   },
   {
