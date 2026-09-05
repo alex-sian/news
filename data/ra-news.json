@@ -198,6 +198,24 @@
     "automated": true
   },
   {
+    "id": "pubmed-42641416",
+    "title": "Spatiotemporal synergistic drug co-delivery via a dual-crosslinked liposomal platform for potent NETs blockade in rheumatoid arthritis.",
+    "summary": "A peer-reviewed publication examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
+    "whyItMatters": "This is newly indexed primary literature. Use the abstract and full paper to judge the population, intervention, outcomes, and applicability.",
+    "limitation": "Automatic collection confirms indexing and article type, not that the finding should change treatment. The publisher may restrict full-text access.",
+    "source": "Colloids and surfaces. B, Biointerfaces / PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42641416/",
+    "publishedAt": "2026-09-05",
+    "reviewedAt": "2026-09-05",
+    "evidence": "Evidence review",
+    "tags": [
+      "Trials & emerging treatments"
+    ],
+    "doi": "10.1016/j.colsurfb.2026.116110",
+    "pmid": "42641416",
+    "automated": true
+  },
+  {
     "id": "pubmed-42574721",
     "title": "A narrative review of the epidemiological and mechanistic associations between ABO blood groups and diseases: focusing on cardiovascular diseases, cancers, diabetes, malaria, COVID-19 and rheumatic diseases.",
     "summary": "A peer-reviewed publication examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
@@ -467,24 +485,6 @@
     ],
     "doi": "10.1080/07853890.2026.2613484",
     "pmid": "41574450",
-    "automated": true
-  },
-  {
-    "id": "pubmed-41572584",
-    "title": "Effect of autoimmune diseases on aplastic anemia: a bidirectional two-sample Mendelian randomization study.",
-    "summary": "A peer-reviewed publication examining rheumatoid arthritis, indexed by the U.S. National Library of Medicine.",
-    "whyItMatters": "This is newly indexed primary literature. Use the abstract and full paper to judge the population, intervention, outcomes, and applicability.",
-    "limitation": "Automatic collection confirms indexing and article type, not that the finding should change treatment. The publisher may restrict full-text access.",
-    "source": "Hematology (Amsterdam, Netherlands) / PubMed",
-    "url": "https://pubmed.ncbi.nlm.nih.gov/41572584/",
-    "publishedAt": "2026-09-05",
-    "reviewedAt": "2026-09-05",
-    "evidence": "Evidence review",
-    "tags": [
-      "Trials & emerging treatments"
-    ],
-    "doi": "10.1080/16078454.2026.2617680",
-    "pmid": "41572584",
     "automated": true
   },
   {
